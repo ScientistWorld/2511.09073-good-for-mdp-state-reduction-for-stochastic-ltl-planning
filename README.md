@@ -60,11 +60,11 @@ The primary metric is automaton state count; lower is better. The packaged evalu
 
 ## Baselines and Targets
 
-Reference targets are taken from the paper's Table 2 for delayed-response (`TDR`) and Liberouter (`LIB`) repeated-reachability formula families, plus Appendix N/Table 5 for Nested Conjunction Sequence (`NCS`) formulas. The target method should match the proposed construction's state counts and improve over the reported reduced Owl/Slim automata where applicable.
+Reference targets are taken from the paper's Table 2 for delayed-response (`TDR`) and Liberouter (`LIB`) repeated-reachability formula families, plus Appendix N/Table 5 for Nested Conjunction Sequence (`NCS`) formulas. A candidate method should produce compact automata that preserve the specified recurring finite-pattern semantics and improve over the reported reduced Owl/Slim automata where applicable.
 
 ## Evaluation Protocol
 
-Run `bash scripts/method.sh` to generate automata for all benchmark formulas in `data/gf_benchmarks.json` and evaluate them. `scripts/evaluate.sh` reads `outputs/gfm_gf_results.json` and writes `scoring/scores.json`.
+Generate an artifact containing one automaton result per benchmark formula in `data/gf_benchmarks.json`, then run `bash scripts/evaluate.sh <artifact.json>`. By default, the evaluator reads `outputs/results.json` and writes `scoring/scores.json`.
 
 ---
 
@@ -244,6 +244,31 @@ Run `bash scripts/method.sh` to generate automata for all benchmark formulas in 
 - Audited the continued workspace and found no surrogate implementation or evaluator leakage: `method/` generates automata artifacts and `eval/` scores those artifacts independently.
 - Re-ran `scripts/reproduce.sh`, `python validate.py --compare`, shell syntax checks, and Python bytecode compilation successfully.
 - Kept the milestone at `core_claim`; restoring `core_claim_plus` would overstate the current scope because the full Redux pipeline and external automata baselines are still not implemented.
+
+</details>
+
+### Iteration 8: gpt-5.5 (verifier)
+- **Milestone**: `core_claim` | **Status**: done
+- **Working time**: 7m | **GPU**: 0.0h
+- **Jobs**: 4 total (4 completed, 0 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-31 20:47] - core_claim
+- Implemented and validated the paper's Section 6 direct GFM construction for `GF phi` co-safety formulas on TDR, LIB, and NCS benchmark families.
+- Reproduced the proposed GFM-GF state counts for Table 2 TDR/LIB and Appendix N NCS, with structural and ultimately-periodic trace semantic checks passing.
+- Scope note: this environment reproduces the direct `GF phi` construction claim, not the full Section 5 Redux pipeline over arbitrary GFM automata.
+
+### [2026-05-31 20:51] - core_claim
+- Audited the continued workspace and found no surrogate implementation or evaluator leakage: `method/` generates automata artifacts and `eval/` scores those artifacts independently.
+- Re-ran `scripts/reproduce.sh`, `python validate.py --compare`, shell syntax checks, and Python bytecode compilation successfully.
+- Kept the milestone at `core_claim`; restoring `core_claim_plus` would overstate the current scope because the full Redux pipeline and external automata baselines are still not implemented.
+
+### [2026-05-31 21:16] - core_claim
+- Final verification cleaned method-agnostic scoring names, the reusable artifact path, and benchmark data separation.
+- Re-ran `scripts/method.sh`, train/test evaluators, `python validate.py --compare`, Python compilation, and JSON validation successfully.
+- Kept the milestone at `core_claim`; the environment is usable as a gym for the packaged recurring co-safety benchmark claim.
 
 </details>
 
