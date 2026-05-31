@@ -4,4 +4,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Held-out formula-size split; 21 train metrics, 21 test metrics; primary compactness is formula-size-weighted mean states and differs train/test (TDR 9.333/9.125, LIB 15.286/17.25, NCS 7.714/8.625); semantic constraints pass at 1.0 and balanced generated traces avoid always-accept/reject shortcut saturation."
+notes: "Packaging audit passed: no external artifacts are required; download.sh creates data/downloads and committed code has no shared/ references."
