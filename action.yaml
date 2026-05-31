@@ -4,4 +4,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Packaging audit passed: no external artifacts are required; download.sh creates data/downloads and committed code has no shared/ references."
+notes: "Core claim is complete: the packaged direct GF co-safety construction reproduces TDR, LIB, and NCS state counts with semantic checks, and prior CPU container jobs plus validate.py --compare passed."
