@@ -126,7 +126,7 @@ Run `bash scripts/method.sh` to generate automata for all benchmark formulas in 
 
 # Reproduction Milestones
 
-**Current: core_claim**
+**Current: method_runs**
 
 ## Stop Justification
-- Completed at milestone `core_claim`.
+- Completed at milestone `method_runs`.

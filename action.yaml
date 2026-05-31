@@ -1,8 +1,8 @@
 # IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends. Sleeping blocks the entire pipeline.
-action: done
-gpus: 0
-test: true
-milestone: core_claim
-notes: "Container job 1707ed70-62d passed. Core direct GF co-safety construction claim is reproduced and packaged."
+action: pending
+gpus: 1
+test: false
+milestone: method_runs
+notes: ""
