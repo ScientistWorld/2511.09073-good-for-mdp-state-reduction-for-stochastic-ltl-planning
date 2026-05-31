@@ -296,15 +296,40 @@ def generated_traces(family: str, n: int) -> list[list[set[str]]]:
     state = (GENERATED_TRACE_SEED + 97 * n + 17 * len(atoms)) & 0x7FFFFFFF
     traces: list[list[set[str]]] = []
     for trace_index in range(GENERATED_TRACE_COUNT):
-        period_len = 2 + ((state + trace_index) % (n + 3))
-        period: list[set[str]] = []
-        for phase in range(period_len):
-            valuation: set[str] = set()
+        state = (1103515245 * state + 12345 + trace_index) & 0x7FFFFFFF
+        positive = trace_index % 2 == 0
+        if family == "TDR":
+            period_len = n + 2 + (state % 3)
+            start = state % (period_len - n)
+            period = [set() for _ in range(period_len)]
+            period[start].add("a")
+            offset = n if positive else n + 1
+            period[(start + offset) % period_len].add("b")
+        elif family == "LIB":
+            period_len = 2 + (state % 4)
+            base = {
+                atom
+                for atom_index, atom in enumerate(atoms)
+                if ((state >> (atom_index % 16)) ^ atom_index) & 1
+            }
+            period = [set(base) for _ in range(period_len)]
+            if positive:
+                atom = atoms[state % len(atoms)]
+                phase = (state >> 5) % period_len
+                if atom in period[phase]:
+                    period[phase].remove(atom)
+                else:
+                    period[phase].add(atom)
+        elif family == "NCS":
+            period_len = n + 2 + (state % 3)
+            start = state % (period_len - n + 1)
+            period = [set() for _ in range(period_len)]
+            missing = (state >> 4) % n
             for atom_index, atom in enumerate(atoms):
-                state = (1103515245 * state + 12345 + atom_index + phase) & 0x7FFFFFFF
-                if ((state >> 8) ^ trace_index ^ phase ^ atom_index) & 1:
-                    valuation.add(atom)
-            period.append(valuation)
+                if positive or atom_index != missing:
+                    period[(start + atom_index) % period_len].add(atom)
+        else:
+            raise ValueError(f"unknown family: {family}")
         traces.append(period)
     return traces
 

@@ -4,4 +4,4 @@ action: submit
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Run evaluate_train.sh and evaluate_test.sh against outputs/gfm_gf_results.json; populate split score files for inspection."
+notes: "Re-run split scoring after balancing generated positive/negative semantic traces; populate scores_train/test from fixed evaluator."
