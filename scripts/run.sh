@@ -13,4 +13,5 @@ set -e
 
 cd /home/user
 
-bash scripts/reproduce.sh
+bash scripts/evaluate_train.sh outputs scoring/scores_train.json
+bash scripts/evaluate_test.sh outputs scoring/scores_test.json scoring/scores_train.json

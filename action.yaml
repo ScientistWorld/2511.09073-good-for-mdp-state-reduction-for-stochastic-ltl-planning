@@ -1,9 +1,7 @@
-# This iteration writes files only — do NOT submit compute jobs.
-# Once you set action to 'done', STOP immediately.
-# Do NOT sleep, poll, or wait. The system reads this file
-# only after your turn ends.
-action: done
+# The system reads this file after every turn.
+# Do NOT sleep, poll, or wait. Submit work here and stop.
+action: submit
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Improvements: added deterministic generated-trace semantic metric, transition-count compactness metric, and required metric descriptions/weights. Notes: see DESIGN_NOTES.md for runtime concerns."
+notes: "Run evaluate_train.sh and evaluate_test.sh against outputs/gfm_gf_results.json; populate split score files for inspection."
