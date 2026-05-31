@@ -7,6 +7,8 @@
 - Added a method script that writes generated automata to `outputs/gfm_gf_results.json`.
 - Added an independent evaluator that reads the method artifact and writes `scoring/scores.json`.
 - Audited the reproduction and confirmed that the method code follows the paper's reset construction rather than a learned or hardcoded surrogate.
+- Tightened the generated reset transitions so final-reaching letters have the accepting reset transition prescribed by the paper instead of a parallel non-accepting duplicate reset.
+- Added method-independent ultimately-periodic trace checks to the evaluator so candidate automata must accept representative satisfying traces and reject matched violating traces.
 
 ## Results Achieved
 
@@ -14,12 +16,14 @@
 - LIB[6-9] reproduced proposed state counts exactly: aggregate `state_count_sum = 64`.
 - NCS[4-11] from Appendix N/Table 5 reproduced proposed state counts exactly: aggregate `state_count_sum = 60`.
 - Semantic check pass rate is `1.0` for all three experiments.
+- Trace semantic pass rate is `1.0` for all three experiments.
 - Container job `1707ed70-62d` completed successfully with exit code 0 and reran `scripts/reproduce.sh` plus `python validate.py --compare`.
 - Container job `d5313962-fe4` completed successfully with exit code 0 and validated the extended TDR, LIB, and NCS scoring suite inside the packaged environment.
 
 ## Deviations From Paper
 
 - This reproduction targets the paper's direct `GF phi` construction rather than the full general Redux pipeline with Spot-based GFG minimisation.
+- The direct construction is implemented for the benchmark NFA families TDR, LIB, and NCS rather than for an arbitrary parsed co-safety LTL formula.
 - Runtime numbers are not expected to match the paper because this implementation uses a lightweight pure-Python construction for the selected benchmark families.
 
 ## What Remains

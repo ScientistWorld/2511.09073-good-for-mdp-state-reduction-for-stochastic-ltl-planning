@@ -7,7 +7,7 @@ Tests whether compact automata can be constructed for delayed-response repeated-
 
 ## Constraint: tdr_direct_gf
 The constructed automata must still represent the intended delayed-response condition rather than becoming small by dropping required accepting behavior.
-- **Metric**: `semantic_check_pass_rate` (higher is better)
+- **Metrics**: `semantic_check_pass_rate`, `trace_semantics_pass_rate` (higher is better)
 
 ## Primary: lib_direct_gf
 Tests whether compact automata can be constructed for repeated signal-change liveness specifications.
@@ -16,7 +16,7 @@ Tests whether compact automata can be constructed for repeated signal-change liv
 
 ## Constraint: lib_direct_gf
 The constructed automata must still include the accepting reset behavior required for every signal-change case.
-- **Metric**: `semantic_check_pass_rate` (higher is better)
+- **Metrics**: `semantic_check_pass_rate`, `trace_semantics_pass_rate` (higher is better)
 
 ## Primary: ncs_direct_gf
 Tests whether compact automata can be constructed for nested conjunction sequence repeated-reachability specifications from Appendix N/Table 5.
@@ -25,4 +25,4 @@ Tests whether compact automata can be constructed for nested conjunction sequenc
 
 ## Constraint: ncs_direct_gf
 The constructed automata must still preserve every sequence-progress transition and the accepting reset after the final required observation.
-- **Metric**: `semantic_check_pass_rate` (higher is better)
+- **Metrics**: `semantic_check_pass_rate`, `trace_semantics_pass_rate` (higher is better)

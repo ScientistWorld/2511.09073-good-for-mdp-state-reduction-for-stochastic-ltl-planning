@@ -17,4 +17,6 @@ set -e
 
 cd /home/user
 
-# TODO: run baseline
+echo "No runnable Owl/Slim baseline is packaged; baselines in scoring/reference.json are paper-reported comparison points." >&2
+echo "Use bash scripts/method.sh to reproduce the implemented direct GFM-GF construction." >&2
+exit 2

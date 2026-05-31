@@ -113,6 +113,15 @@ def build_ncs_nfa(n: int) -> NFA:
     return NFA(states=states, initial="q0", finals=[final], transitions=transitions)
 
 
+def complement_simple_condition(condition: str) -> str:
+    """Complement the atom/negated-atom guards used in the benchmark NFAs."""
+    if condition == "true":
+        raise ValueError("cannot represent complement of true with the simple guard format")
+    if condition.startswith("!"):
+        return condition[1:]
+    return f"!{condition}"
+
+
 def direct_gfm_from_nfa(nfa: NFA) -> GFM:
     """Apply the paper's reset construction from an NFA for phi to GFM for GF phi."""
     finals = set(nfa.finals)
@@ -126,9 +135,10 @@ def direct_gfm_from_nfa(nfa: NFA) -> GFM:
             by_src[edge.src].append(edge)
 
     for state in gfm_states:
-        transitions.append(GfmTransition(state, nfa.initial, "true", False, "reset"))
+        final_edges: list[NfaTransition] = []
         for edge in by_src[state]:
             if edge.dst in finals:
+                final_edges.append(edge)
                 transitions.append(
                     GfmTransition(state, nfa.initial, edge.condition, True, "final_reset")
                 )
@@ -136,6 +146,15 @@ def direct_gfm_from_nfa(nfa: NFA) -> GFM:
                 transitions.append(
                     GfmTransition(state, edge.dst, edge.condition, False, "nfa_progress")
                 )
+        if not final_edges:
+            transitions.append(GfmTransition(state, nfa.initial, "true", False, "reset"))
+        elif len(final_edges) == 1:
+            reset_condition = complement_simple_condition(final_edges[0].condition)
+            transitions.append(GfmTransition(state, nfa.initial, reset_condition, False, "reset"))
+        else:
+            raise ValueError(
+                f"{state} has multiple final-reaching guards; add symbolic disjointness support"
+            )
 
     return GFM(states=gfm_states, initial=nfa.initial, transitions=transitions)
 

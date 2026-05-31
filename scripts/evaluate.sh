@@ -29,4 +29,10 @@ mkdir -p scoring
 INPUT="${1:-outputs/gfm_gf_results.json}"
 OUTPUT="${2:-scoring/scores.json}"
 
+if [ ! -f "$INPUT" ]; then
+  echo "Missing method artifact: $INPUT" >&2
+  echo "Run 'bash scripts/method.sh' first, or pass an explicit artifact path." >&2
+  exit 2
+fi
+
 python eval/evaluate_gf.py --input "$INPUT" --output "$OUTPUT"

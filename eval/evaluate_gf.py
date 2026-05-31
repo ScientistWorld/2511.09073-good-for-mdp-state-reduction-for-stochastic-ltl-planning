@@ -12,6 +12,118 @@ def load_json(path: str | Path) -> dict:
     return json.loads(Path(path).read_text())
 
 
+def condition_holds(condition: str, valuation: set[str]) -> bool:
+    """Evaluate the simple symbolic guards emitted by method/direct_gfm.py."""
+    condition = condition.strip()
+    if condition == "true":
+        return True
+    if condition.startswith("!"):
+        return condition[1:] not in valuation
+    return condition in valuation
+
+
+def accepts_periodic_word(row: dict, period: list[set[str]]) -> bool:
+    """Check nondeterministic Buchi acceptance on an infinite periodic word.
+
+    The generated automata are small.  For a purely periodic input word, Buchi
+    acceptance reduces to reachability of a product SCC that contains at least
+    one accepting transition.
+    """
+    states = row["gfm"]["states"]
+    transitions = row["gfm"]["transitions"]
+    initial = row["gfm"]["initial"]
+    period_len = len(period)
+
+    graph: dict[tuple[str, int], list[tuple[tuple[str, int], bool]]] = {}
+    for state in states:
+        for phase, valuation in enumerate(period):
+            node = (state, phase)
+            next_phase = (phase + 1) % period_len
+            graph[node] = [
+                ((edge["dst"], next_phase), bool(edge["accepting"]))
+                for edge in transitions
+                if edge["src"] == state and condition_holds(edge["condition"], valuation)
+            ]
+
+    start = (initial, 0)
+    reachable: set[tuple[str, int]] = set()
+    stack = [start]
+    while stack:
+        node = stack.pop()
+        if node in reachable:
+            continue
+        reachable.add(node)
+        stack.extend(dst for dst, _ in graph.get(node, []) if dst not in reachable)
+
+    order: list[tuple[str, int]] = []
+    seen: set[tuple[str, int]] = set()
+
+    def dfs(node: tuple[str, int]) -> None:
+        seen.add(node)
+        for dst, _ in graph.get(node, []):
+            if dst in reachable and dst not in seen:
+                dfs(dst)
+        order.append(node)
+
+    for node in reachable:
+        if node not in seen:
+            dfs(node)
+
+    reverse: dict[tuple[str, int], list[tuple[str, int]]] = {node: [] for node in graph}
+    for src, edges in graph.items():
+        for dst, _ in edges:
+            reverse.setdefault(dst, []).append(src)
+
+    assigned: set[tuple[str, int]] = set()
+    for node in reversed(order):
+        if node in assigned:
+            continue
+        component: set[tuple[str, int]] = set()
+        stack = [node]
+        while stack:
+            cur = stack.pop()
+            if cur in assigned:
+                continue
+            assigned.add(cur)
+            component.add(cur)
+            stack.extend(pred for pred in reverse.get(cur, []) if pred in reachable and pred not in assigned)
+
+        if any(
+            accepting and dst in component
+            for src in component
+            for dst, accepting in graph.get(src, [])
+        ):
+            return True
+
+    return False
+
+
+def trace_semantic_checks(row: dict) -> tuple[int, int]:
+    family = row["family"]
+    n = int(row["n"])
+
+    if family == "TDR":
+        positive = [set() for _ in range(n + 1)]
+        positive[0].add("a")
+        positive[n].add("b")
+        negative = [set() for _ in range(n + 1)]
+        negative[0].add("a")
+        if n > 0:
+            negative[n - 1].add("b")
+    elif family == "LIB":
+        positive = [{"a1"}, set()]
+        negative = [{f"a{i}" for i in range(1, n + 1)}]
+    elif family == "NCS":
+        positive = [{chr(ord("a") + i)} for i in range(n)]
+        negative = [{chr(ord("a") + i)} for i in range(max(n - 1, 1))]
+    else:
+        raise ValueError(f"unknown family: {family}")
+
+    passed = int(accepts_periodic_word(row, positive))
+    passed += int(not accepts_periodic_word(row, negative))
+    return passed, 2
+
+
 def semantic_checks(row: dict) -> tuple[int, int]:
     """Return passed and total lightweight checks for the family semantics."""
     family = row["family"]
@@ -93,15 +205,13 @@ def aggregate(rows: list[dict], names: list[str]) -> dict:
     checks = [semantic_checks(row) for row in selected]
     check_passed = sum(p for p, _ in checks)
     check_total = sum(t for _, t in checks)
-    paper_targets = {
-        row["name"]: row["paper"]["gfm_gf_states"]
-        for row in load_json("data/gf_benchmarks.json")["benchmarks"]
-    }
-    target_matches = sum(row["state_count"] == paper_targets[row["name"]] for row in selected)
+    trace_checks = [trace_semantic_checks(row) for row in selected]
+    trace_passed = sum(p for p, _ in trace_checks)
+    trace_total = sum(t for _, t in trace_checks)
     return {
         "state_count_sum": sum(row["state_count"] for row in selected),
         "semantic_check_pass_rate": check_passed / check_total,
-        "state_count_target_match_rate": target_matches / len(selected),
+        "trace_semantics_pass_rate": trace_passed / trace_total,
     }
 
 

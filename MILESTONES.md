@@ -4,5 +4,10 @@
 
 ## Progress Log
 
+### [2026-05-31 20:47] - core_claim
+- Implemented and validated the paper's Section 6 direct GFM construction for `GF phi` co-safety formulas on TDR, LIB, and NCS benchmark families.
+- Reproduced the proposed GFM-GF state counts for Table 2 TDR/LIB and Appendix N NCS, with structural and ultimately-periodic trace semantic checks passing.
+- Scope note: this environment reproduces the direct `GF phi` construction claim, not the full Section 5 Redux pipeline over arbitrary GFM automata.
+
 ## Stop Justification
-- Completed at milestone `core_claim`.
+- Completed at milestone `core_claim` for the direct GFM-GF construction claim. Higher milestones require implementing the full general Redux pipeline and external automata-tool baselines.

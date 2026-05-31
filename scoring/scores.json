@@ -5,7 +5,7 @@
         "gfm_gf": {
           "state_count_sum": 45,
           "semantic_check_pass_rate": 1.0,
-          "state_count_target_match_rate": 1.0
+          "trace_semantics_pass_rate": 1.0
         }
       }
     },
@@ -14,7 +14,7 @@
         "gfm_gf": {
           "state_count_sum": 64,
           "semantic_check_pass_rate": 1.0,
-          "state_count_target_match_rate": 1.0
+          "trace_semantics_pass_rate": 1.0
         }
       }
     },
@@ -23,7 +23,7 @@
         "gfm_gf": {
           "state_count_sum": 60,
           "semantic_check_pass_rate": 1.0,
-          "state_count_target_match_rate": 1.0
+          "trace_semantics_pass_rate": 1.0
         }
       }
     }
