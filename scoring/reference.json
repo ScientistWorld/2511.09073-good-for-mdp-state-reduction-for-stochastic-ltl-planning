@@ -3,11 +3,21 @@
     "tdr_direct_gf": {
       "description": "Table 2 direct construction on Trigger with Delayed Response GF co-safety formulas TDR[6] through TDR[10].",
       "weight": 0.45,
-      "primary_metric": "state_count_sum",
+      "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
-        "state_count_sum": {
+        "state_count_size_weighted_mean": {
           "higher_is_better": false,
           "coefficient": -1.0,
+          "description": "Formula-size-weighted mean number of states per generated GF automaton, preserving compactness while differentiating held-out formula-size slices."
+        },
+        "state_count_per_formula": {
+          "higher_is_better": false,
+          "coefficient": -0.5,
+          "description": "Mean number of states per generated GF automaton, making compactness comparable across train/test formula-count splits."
+        },
+        "state_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.25,
           "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
         },
         "transition_count_sum": {
@@ -34,14 +44,18 @@
       "results": {
         "owl_red": {
           "type": "baseline",
+          "state_count_per_formula": 396.8,
           "state_count_sum": 1984
         },
         "slim_red": {
           "type": "baseline",
+          "state_count_per_formula": 200.4,
           "state_count_sum": 1002
         },
         "gfm_gf": {
           "type": "proposed",
+          "state_count_size_weighted_mean": 9.25,
+          "state_count_per_formula": 9.0,
           "state_count_sum": 45
         }
       }
@@ -49,11 +63,21 @@
     "lib_direct_gf": {
       "description": "Table 2 direct construction on Liberouter repeated-reachability formulas LIB[6] through LIB[9].",
       "weight": 0.3,
-      "primary_metric": "state_count_sum",
+      "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
-        "state_count_sum": {
+        "state_count_size_weighted_mean": {
           "higher_is_better": false,
           "coefficient": -1.0,
+          "description": "Formula-size-weighted mean number of states per generated GF automaton, preserving compactness while differentiating held-out formula-size slices."
+        },
+        "state_count_per_formula": {
+          "higher_is_better": false,
+          "coefficient": -0.5,
+          "description": "Mean number of states per generated GF automaton, making compactness comparable across train/test formula-count splits."
+        },
+        "state_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.25,
           "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
         },
         "transition_count_sum": {
@@ -80,10 +104,13 @@
       "results": {
         "owl_red": {
           "type": "baseline",
+          "state_count_per_formula": 17.0,
           "state_count_sum": 68
         },
         "gfm_gf": {
           "type": "proposed",
+          "state_count_size_weighted_mean": 16.333333333333332,
+          "state_count_per_formula": 16.0,
           "state_count_sum": 64
         }
       }
@@ -91,11 +118,21 @@
     "ncs_direct_gf": {
       "description": "Appendix N/Table 5 direct construction on Nested Conjunction Sequence repeated-reachability formulas NCS[4] through NCS[11].",
       "weight": 0.25,
-      "primary_metric": "state_count_sum",
+      "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
-        "state_count_sum": {
+        "state_count_size_weighted_mean": {
           "higher_is_better": false,
           "coefficient": -1.0,
+          "description": "Formula-size-weighted mean number of states per generated GF automaton, preserving compactness while differentiating held-out formula-size slices."
+        },
+        "state_count_per_formula": {
+          "higher_is_better": false,
+          "coefficient": -0.5,
+          "description": "Mean number of states per generated GF automaton, making compactness comparable across train/test formula-count splits."
+        },
+        "state_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.25,
           "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
         },
         "transition_count_sum": {
@@ -122,14 +159,18 @@
       "results": {
         "owl_red": {
           "type": "baseline",
+          "state_count_per_formula": 129.5,
           "state_count_sum": 1036
         },
         "slim_red": {
           "type": "baseline",
+          "state_count_per_formula": 128.75,
           "state_count_sum": 1030
         },
         "gfm_gf": {
           "type": "proposed",
+          "state_count_size_weighted_mean": 8.2,
+          "state_count_per_formula": 7.5,
           "state_count_sum": 60
         }
       }

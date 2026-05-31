@@ -366,9 +366,19 @@ def aggregate(rows: list[dict], names: list[str]) -> dict:
     generated_passed = sum(passed for passed, _ in generated_counts)
     generated_total = sum(total for _, total in generated_counts)
 
+    state_count_sum = sum(int(row.get("state_count", len(row["gfm"]["states"]))) for row in selected)
+    transition_count_sum = sum(int(row.get("transition_count", len(row["gfm"]["transitions"]))) for row in selected)
+    size_weighted_denominator = sum(int(row["n"]) for row in selected)
+    size_weighted_state_sum = sum(
+        int(row.get("state_count", len(row["gfm"]["states"]))) * int(row["n"])
+        for row in selected
+    )
+
     return {
-        "state_count_sum": sum(int(row.get("state_count", len(row["gfm"]["states"]))) for row in selected),
-        "transition_count_sum": sum(int(row.get("transition_count", len(row["gfm"]["transitions"]))) for row in selected),
+        "state_count_size_weighted_mean": size_weighted_state_sum / size_weighted_denominator,
+        "state_count_per_formula": state_count_sum / len(selected),
+        "state_count_sum": state_count_sum,
+        "transition_count_sum": transition_count_sum,
         "semantic_check_pass_rate": semantic_passed / semantic_total,
         "trace_semantics_pass_rate": trace_passed / trace_total,
         "generated_trace_pass_rate": generated_passed / generated_total,

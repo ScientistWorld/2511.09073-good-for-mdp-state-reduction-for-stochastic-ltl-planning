@@ -3,6 +3,8 @@
     "tdr_direct_gf": {
       "results": {
         "gfm_gf": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
           "state_count_sum": 18,
           "transition_count_sum": 36,
           "semantic_check_pass_rate": 1.0,
@@ -14,6 +16,8 @@
     "lib_direct_gf": {
       "results": {
         "gfm_gf": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
           "state_count_sum": 34,
           "transition_count_sum": 98,
           "semantic_check_pass_rate": 1.0,
@@ -25,6 +29,8 @@
     "ncs_direct_gf": {
       "results": {
         "gfm_gf": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
           "state_count_sum": 32,
           "transition_count_sum": 64,
           "semantic_check_pass_rate": 1.0,
