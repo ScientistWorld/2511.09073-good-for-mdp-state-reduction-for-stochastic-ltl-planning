@@ -1,8 +1,8 @@
 # IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends. Sleeping blocks the entire pipeline.
-action: submit
+action: done
 gpus: 0
-test: true
+test: false
 milestone: core_claim
-notes: "CPU container smoke test for the strengthened direct GFM-GF construction and evaluator; runs scripts/reproduce.sh."
+notes: "Continuation audit completed. Direct GFM-GF reproduction verified with independent artifact evaluation; full Redux pipeline remains out of scope, so final milestone is core_claim."

@@ -17,6 +17,7 @@
 - NCS[4-11] from Appendix N/Table 5 reproduced proposed state counts exactly: aggregate `state_count_sum = 60`.
 - Semantic check pass rate is `1.0` for all three experiments.
 - Trace semantic pass rate is `1.0` for all three experiments.
+- Continuation audit on 2026-05-31 reran `scripts/reproduce.sh`, `python validate.py --compare`, shell syntax checks, and Python compilation successfully.
 - Container job `1707ed70-62d` completed successfully with exit code 0 and reran `scripts/reproduce.sh` plus `python validate.py --compare`.
 - Container job `d5313962-fe4` completed successfully with exit code 0 and validated the extended TDR, LIB, and NCS scoring suite inside the packaged environment.
 
@@ -37,3 +38,4 @@
 
 - The login environment does not provide the Spot Python bindings, so the core reproduction avoids external automata dependencies and focuses on the explicit construction that can be implemented directly from the paper.
 - A documentation sentence still mentioned runtime scoring after the evaluator had already removed it; corrected `briefing/evaluation.md` so the docs match the scoring contract.
+- `reference.json` originally listed evaluator-only semantic pass targets as if they were paper-reported values; removed those result values while keeping the metrics as reproduced correctness constraints.

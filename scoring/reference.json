@@ -12,21 +12,15 @@
       "results": {
         "owl_red": {
           "type": "baseline",
-          "state_count_sum": 1984,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 1984
         },
         "slim_red": {
           "type": "baseline",
-          "state_count_sum": 1002,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 1002
         },
         "gfm_gf": {
           "type": "proposed",
-          "state_count_sum": 45,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 45
         }
       }
     },
@@ -42,15 +36,11 @@
       "results": {
         "owl_red": {
           "type": "baseline",
-          "state_count_sum": 68,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 68
         },
         "gfm_gf": {
           "type": "proposed",
-          "state_count_sum": 64,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 64
         }
       }
     },
@@ -66,21 +56,15 @@
       "results": {
         "owl_red": {
           "type": "baseline",
-          "state_count_sum": 1036,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 1036
         },
         "slim_red": {
           "type": "baseline",
-          "state_count_sum": 1030,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 1030
         },
         "gfm_gf": {
           "type": "proposed",
-          "state_count_sum": 60,
-          "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "state_count_sum": 60
         }
       }
     }
