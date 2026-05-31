@@ -22,6 +22,8 @@
 - Container job `d5313962-fe4` completed successfully with exit code 0 and validated the extended TDR, LIB, and NCS scoring suite inside the packaged environment.
 - Updated `scripts/run.sh` so submitted jobs regenerate `outputs/results.json` before full/train/test evaluation instead of relying on existing local artifacts.
 - Local 2026-05-31 rerun of `scripts/run.sh`, `python validate.py --compare`, and Python bytecode compilation passed after the run-script change.
+- CPU test job `dc7532ce-d83` completed successfully with exit code 0 and verified the same self-contained `scripts/run.sh` path in the packaged scheduler environment.
+- Final verification confirmed that `eval/` reads method artifacts rather than importing method code, that method-agnostic documentation does not expose the construction details, and that train/test score artifacts are synchronized.
 
 ## Deviations From Paper
 
@@ -41,3 +43,4 @@
 - The login environment does not provide the Spot Python bindings, so the core reproduction avoids external automata dependencies and focuses on the explicit construction that can be implemented directly from the paper.
 - A documentation sentence still mentioned runtime scoring after the evaluator had already removed it; corrected `briefing/evaluation.md` so the docs match the scoring contract.
 - `reference.json` originally listed evaluator-only semantic pass targets as if they were paper-reported values; removed those result values while keeping the metrics as reproduced correctness constraints.
+- The live sandbox bind-mounts tracked `README.md` and `manifest.json` paths to `/dev/null`, so they appear as modified character devices locally and cannot be restored in-place; the committed repository content for those files remains unchanged, and they are not part of the gym interface.

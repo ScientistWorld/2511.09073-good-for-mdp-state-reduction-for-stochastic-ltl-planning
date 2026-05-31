@@ -24,5 +24,10 @@
 - Re-ran the full lightweight flow locally: method generation, full/train/test evaluation, `python validate.py --compare`, and Python bytecode compilation.
 - Submitting a CPU test job to verify the same end-to-end path in the packaged scheduler environment.
 
+### [2026-05-31 21:22] - core_claim
+- CPU test job `dc7532ce-d83` completed successfully with exit code 0, regenerating method artifacts, running full/train/test evaluation, and validating the packaged scores.
+- Final verification confirmed that scoring, method/problem separation, train/test artifacts, and documentation are consistent for the packaged recurring co-safety benchmark gym.
+- Kept the milestone at `core_claim`; the documented limitation remains that this is the direct `GF phi` construction reproduction rather than the full general Redux pipeline.
+
 ## Stop Justification
 - Completed at milestone `core_claim`.
