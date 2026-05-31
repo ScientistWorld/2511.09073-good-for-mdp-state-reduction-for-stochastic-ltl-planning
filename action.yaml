@@ -1,7 +1,7 @@
 # The system reads this file after every turn.
 # Do NOT sleep, poll, or wait. Submit work here and stop.
-action: submit
+action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Re-run split scoring after balancing generated positive/negative semantic traces; populate scores_train/test from fixed evaluator."
+notes: "Held-out formula-size split; 15 train metrics, 15 test metrics; semantic constraints pass at 1.0 on both slices, compactness differs by slice (TDR 27/54 vs 18/36, LIB 30/86 vs 34/98, NCS 28/56 vs 32/64); balanced generated traces avoid always-accept/reject shortcut saturation."
