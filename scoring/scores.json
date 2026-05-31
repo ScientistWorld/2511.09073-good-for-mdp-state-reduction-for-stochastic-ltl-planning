@@ -1,0 +1,22 @@
+{
+  "experiments": {
+    "tdr_direct_gf": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": 45,
+          "semantic_check_pass_rate": 1.0,
+          "state_count_target_match_rate": 1.0
+        }
+      }
+    },
+    "lib_direct_gf": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "state_count_target_match_rate": 1.0
+        }
+      }
+    }
+  }
+}

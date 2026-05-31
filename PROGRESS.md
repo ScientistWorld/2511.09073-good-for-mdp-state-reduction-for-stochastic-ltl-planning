@@ -2,36 +2,28 @@
 
 ## What Works
 
-<!-- What has been successfully reproduced so far. -->
+- Implemented the paper's Section 6 direct GFM construction for formulas `GF phi` where `phi` is a co-safety finite-trace property.
+- Added concrete NFA builders for the Table 2 TDR and LIB benchmark families.
+- Added a method script that writes generated automata to `outputs/gfm_gf_results.json`.
+- Added an independent evaluator that reads the method artifact and writes `scoring/scores.json`.
 
-## Results
+## Results Achieved
 
-<!-- Reproduced numbers compared to the paper's reported numbers. -->
+- TDR[6-10] reproduced proposed state counts exactly: aggregate `state_count_sum = 45`.
+- LIB[6-9] reproduced proposed state counts exactly: aggregate `state_count_sum = 64`.
+- Semantic check pass rate is `1.0` for both experiments.
 
-## Remaining
+## Deviations From Paper
 
-<!-- What still needs to be done to reach higher milestones. -->
+- This reproduction targets the paper's direct `GF phi` construction rather than the full general Redux pipeline with Spot-based GFG minimisation.
+- Runtime numbers are not expected to match the paper because this implementation uses a lightweight pure-Python construction for the selected benchmark families.
 
-## Issues
+## What Remains
 
-<!-- Blockers, bugs, or difficulties encountered. -->
+- Implement the full general state-reduction pipeline over arbitrary GFM automata.
+- Add Owl/Slim generation and reduction baselines if Spot/Owl are packaged in a future iteration.
+- Extend evaluation to BRP, EHP, NU, and LFR from Table 1.
 
-## Deviations from Paper
+## Issues Encountered
 
-<!-- Do not edit this section unless you deviated from the paper's original setup.
-     For each deviation, document: what the paper used, what you substituted, and why.
-
-     ACCEPTABLE deviations (data/resource/scale substitutions — milestones still valid):
-       - Replaced a proprietary dataset with a public one
-       - Used a smaller model of the same architecture
-       - Scaled down training (fewer epochs, smaller batch)
-       - Used a different library for the same algorithm
-
-     UNACCEPTABLE deviations (algorithm substitutions — milestones above 'none' are void):
-       - Replaced the paper's algorithm with a fundamentally different one
-       - Wrote a generic model trained to approximate the method's outputs
-         instead of implementing the method's computational steps
-
-     The test: could someone reading your code identify which algorithm from
-     the paper you implemented? If not, you replaced the method. -->
-
+- The login environment does not provide the Spot Python bindings, so the core reproduction avoids external automata dependencies and focuses on the explicit construction that can be implemented directly from the paper.

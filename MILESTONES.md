@@ -1,21 +1,18 @@
 # Reproduction Milestones
 
-**Current: none**
-
-<!-- Milestone levels (update "Current" above as you progress):
-  none             — just started, no meaningful progress yet
-  method_runs      — the paper's method executes end-to-end without errors
-  core_claim       — minimum experiment supports the paper's central claim
-  core_claim_plus  — core claim reproduced on additional settings
-  secondary_claims — secondary results or contributions reproduced
-  majority         — more than half of reported results reproduced
-  near_complete    — most results reproduced, only minor gaps remain
-  full             — all reported results reproduced
--->
+**Current: core_claim**
 
 ## Progress Log
 
-<!-- Write your progress here -->
+### [2026-05-31 20:25] - none
+- Started reproduction work and read the paper markdown.
+- Identified the main automata-reduction contribution and the direct `GF phi` construction.
+
+### [2026-05-31 20:31] - core_claim
+- Implemented the paper's Section 6 direct GFM construction for Table 2 TDR and LIB repeated-reachability formulas.
+- Reproduced the proposed state counts exactly for TDR[6-10] and LIB[6-9] in a local smoke run.
+- Added scoring, semantic checks, scripts, and documentation for the reusable benchmark environment.
 
 ## Stop Justification
-- Completed at milestone `none`.
+
+Not stopped.

@@ -16,4 +16,5 @@
 
 set -e
 
-# uv pip install --system <packages>
+# No Python packages beyond the standard library are needed for the packaged
+# direct-construction reproduction.

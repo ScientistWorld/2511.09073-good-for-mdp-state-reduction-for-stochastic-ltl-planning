@@ -10,5 +10,8 @@ set -e
 
 cd /home/user
 
-# TODO: run the paper's method
-# TODO: call scripts/evaluate.sh to score
+python method/direct_gfm.py \
+  --benchmarks data/gf_benchmarks.json \
+  --output outputs/gfm_gf_results.json
+
+bash scripts/evaluate.sh outputs/gfm_gf_results.json

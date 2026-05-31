@@ -26,5 +26,7 @@ cd /home/user
 
 mkdir -p scoring
 
-# TODO: implement evaluation using code in eval/
-# Must write scoring/scores.json at the end
+INPUT="${1:-outputs/gfm_gf_results.json}"
+OUTPUT="${2:-scoring/scores.json}"
+
+python eval/evaluate_gf.py --input "$INPUT" --output "$OUTPUT"

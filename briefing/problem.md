@@ -1,17 +1,13 @@
 # Problem Definition
 
-What problem does this paper address? Write this so that someone with no knowledge of the paper can understand what needs to be solved and how success is measured.
-
-Do NOT describe the paper's method or solution here — only the problem itself. Think about if a future scientist agent try to solve this problem from scratch without knowing what approach the paper took. If you leak the solution, you compromise the benchmark.
-
 ## Research Question
 
-<!-- What problem or challenge does this paper tackle? What gap in existing work does it address? -->
+How can one construct small automata for Linear Temporal Logic objectives used in stochastic planning, especially objectives that require finite patterns to recur infinitely often?
 
 ## Why It Matters
 
-<!-- Why is this problem important? What would a good solution enable? Make it short -->
+MDP planning with temporal goals builds a product between the planning model and an automaton for the goal. Smaller automata reduce the size of this product and make strategy synthesis more scalable.
 
 ## Success Criteria
 
-<!-- What would a successful solution look like? What properties should it have? This is about the goal, not the paper's specific approach. Make it short -->
+A successful solution produces automata with fewer states on the benchmark LTL families while preserving the intended acceptance behavior needed for planning.

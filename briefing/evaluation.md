@@ -1,15 +1,13 @@
 # Evaluation
 
-How success is measured. Describe only the metrics, targets, and evaluation procedure — do NOT describe the paper's method or how they achieved these results. Think of this as a general evaluation protocal for other scientists trying to solve the same problem, where they should not see this paper's solution.
-
 ## Metrics
 
-<!-- What metrics are used? How are they computed? What does higher/lower mean? -->
+The primary metric is automaton state count; lower is better. The packaged evaluator reports aggregate state counts over benchmark families and semantic check pass rate to ensure smaller automata still include required accepting behavior. Runtime is included for comparison but is a weak secondary metric because hardware varies.
 
 ## Baselines and Targets
 
-<!-- What performance levels exist as reference points? Include the paper's reported numbers as targets, and any standard baselines. A scientist agent should know what "good" looks like. -->
+Reference targets are taken from the paper's Table 2 for delayed-response (`TDR`) and Liberouter (`LIB`) repeated-reachability formula families. The target method should match the proposed construction's state counts and improve over the reported reduced Owl/Slim automata where applicable.
 
 ## Evaluation Protocol
 
-<!-- How should evaluation be run? What data split, what conditions? Any important details about how to compare fairly (e.g., fixed seeds, specific test sets, averaging over runs). -->
+Run `bash scripts/method.sh` to generate automata for all benchmark formulas in `data/gf_benchmarks.json` and evaluate them. `scripts/evaluate.sh` reads `outputs/gfm_gf_results.json` and writes `scoring/scores.json`.
