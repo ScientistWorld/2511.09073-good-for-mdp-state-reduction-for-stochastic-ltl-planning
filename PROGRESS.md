@@ -13,6 +13,7 @@
 - TDR[6-10] reproduced proposed state counts exactly: aggregate `state_count_sum = 45`.
 - LIB[6-9] reproduced proposed state counts exactly: aggregate `state_count_sum = 64`.
 - Semantic check pass rate is `1.0` for both experiments.
+- Container job `1707ed70-62d` completed successfully with exit code 0 and reran `scripts/reproduce.sh` plus `python validate.py --compare`.
 
 ## Deviations From Paper
 
@@ -24,6 +25,7 @@
 - Implement the full general state-reduction pipeline over arbitrary GFM automata.
 - Add Owl/Slim generation and reduction baselines if Spot/Owl are packaged in a future iteration.
 - Extend evaluation to BRP, EHP, NU, and LFR from Table 1.
+- Higher milestones would require the full Redux pipeline or additional appendix experiments; this environment now satisfies the core direct-construction claim.
 
 ## Issues Encountered
 

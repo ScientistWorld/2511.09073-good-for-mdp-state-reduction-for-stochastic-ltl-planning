@@ -14,6 +14,7 @@
 - [x] `scoring/CONSTRAINTS.md`
 - [x] `scoring/DIRECTION.md`
 - [x] Workspace validated via `python validate.py --compare`
+- [x] Container job validated via `scripts/reproduce.sh`
 
 ## Code
 - [x] Evaluation code in `eval/`

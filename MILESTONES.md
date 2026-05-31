@@ -18,6 +18,11 @@
 - Verified that evaluation reads generated method artifacts, remains independent from `method/`, and scores the reproduced Table 2 state counts plus semantic constraints.
 - Corrected documentation drift around runtime scoring and prepared another CPU container smoke test.
 
+### [2026-05-31 20:37] - core_claim
+- Job `1707ed70-62d` completed successfully in the compute container with exit code 0.
+- The job reproduced TDR aggregate state count `45` and LIB aggregate state count `64`, both matching the paper's GFM-GF Table 2 values.
+- `python validate.py --compare` passed in the container, including scoring structure, import separation, method-output evaluation, and shared-path checks.
+
 ## Stop Justification
 
-Not stopped.
+Completed the packaged core-claim reproduction for the paper's direct `GF phi` construction. Higher milestones remain possible only with additional implementation of the paper's broader Redux pipeline or more appendix experiments.
