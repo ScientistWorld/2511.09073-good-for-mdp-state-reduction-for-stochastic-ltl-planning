@@ -24,5 +24,4 @@
 - `python validate.py --compare` passed in the container, including scoring structure, import separation, method-output evaluation, and shared-path checks.
 
 ## Stop Justification
-
-Completed the packaged core-claim reproduction for the paper's direct `GF phi` construction. Higher milestones remain possible only with additional implementation of the paper's broader Redux pipeline or more appendix experiments.
+- Completed at milestone `core_claim`.
