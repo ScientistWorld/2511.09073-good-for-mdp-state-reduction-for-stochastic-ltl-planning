@@ -6,6 +6,7 @@
 - Added concrete NFA builders for the Table 2 TDR and LIB benchmark families.
 - Added a method script that writes generated automata to `outputs/gfm_gf_results.json`.
 - Added an independent evaluator that reads the method artifact and writes `scoring/scores.json`.
+- Audited the reproduction and confirmed that the method code follows the paper's reset construction rather than a learned or hardcoded surrogate.
 
 ## Results Achieved
 
@@ -27,3 +28,4 @@
 ## Issues Encountered
 
 - The login environment does not provide the Spot Python bindings, so the core reproduction avoids external automata dependencies and focuses on the explicit construction that can be implemented directly from the paper.
+- A documentation sentence still mentioned runtime scoring after the evaluator had already removed it; corrected `briefing/evaluation.md` so the docs match the scoring contract.

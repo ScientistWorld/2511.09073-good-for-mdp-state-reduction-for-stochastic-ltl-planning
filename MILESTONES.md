@@ -13,6 +13,11 @@
 - Reproduced the proposed state counts exactly for TDR[6-10] and LIB[6-9] in a local smoke run.
 - Added scoring, semantic checks, scripts, and documentation for the reusable benchmark environment.
 
+### [2026-05-31 20:35] - core_claim
+- Audited the inherited implementation against the paper and confirmed it implements the Section 6 direct `GF phi` automaton construction.
+- Verified that evaluation reads generated method artifacts, remains independent from `method/`, and scores the reproduced Table 2 state counts plus semantic constraints.
+- Corrected documentation drift around runtime scoring and prepared another CPU container smoke test.
+
 ## Stop Justification
 
 Not stopped.

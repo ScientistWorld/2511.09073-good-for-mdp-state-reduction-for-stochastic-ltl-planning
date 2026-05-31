@@ -2,7 +2,7 @@
 
 ## Metrics
 
-The primary metric is automaton state count; lower is better. The packaged evaluator reports aggregate state counts over benchmark families and semantic check pass rate to ensure smaller automata still include required accepting behavior. Runtime is included for comparison but is a weak secondary metric because hardware varies.
+The primary metric is automaton state count; lower is better. The packaged evaluator reports aggregate state counts over benchmark families and semantic check pass rate to ensure smaller automata still include required accepting behavior. Runtime is intentionally not scored because wall-clock measurements vary by hardware and scheduler conditions.
 
 ## Baselines and Targets
 
