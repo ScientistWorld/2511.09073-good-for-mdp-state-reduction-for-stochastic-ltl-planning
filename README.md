@@ -56,7 +56,7 @@ The primary claim is that the proposed reductions substantially reduce automata 
 
 ## Metrics
 
-The primary metric is automaton state count; lower is better. The packaged evaluator reports aggregate state counts over benchmark families and semantic check pass rate to ensure smaller automata still include required accepting behavior. Runtime is intentionally not scored because wall-clock measurements vary by hardware and scheduler conditions.
+The primary metric is automaton state count; lower is better. The packaged evaluator reports aggregate state counts over benchmark families, structural semantic check pass rate, and ultimately-periodic trace semantic pass rate to ensure smaller automata still include required accepting behavior. Runtime is intentionally not scored because wall-clock measurements vary by hardware and scheduler conditions.
 
 ## Baselines and Targets
 
@@ -144,6 +144,26 @@ Run `bash scripts/method.sh` to generate automata for all benchmark formulas in 
 - CPU container job `d5313962-fe4` completed successfully with exit code 0.
 - The packaged workflow reproduced TDR[6-10], LIB[6-9], and NCS[4-11] aggregate `GFM-GF` state counts exactly, with semantic checks and target-match checks at `1.0`.
 - Raised the milestone to `core_claim_plus` because the reproduction now covers the core direct-construction claim plus an additional appendix benchmark family.
+
+</details>
+
+### Iteration 3: gpt-5.5
+- **Milestone**: `core_claim` | **Status**: done
+- **Working time**: 9m | **GPU**: 0.0h
+- **Jobs**: 2 total (2 completed, 0 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-31 20:47] - core_claim
+- Implemented and validated the paper's Section 6 direct GFM construction for `GF phi` co-safety formulas on TDR, LIB, and NCS benchmark families.
+- Reproduced the proposed GFM-GF state counts for Table 2 TDR/LIB and Appendix N NCS, with structural and ultimately-periodic trace semantic checks passing.
+- Scope note: this environment reproduces the direct `GF phi` construction claim, not the full Section 5 Redux pipeline over arbitrary GFM automata.
+
+### [2026-05-31 20:51] - core_claim
+- Audited the continued workspace and found no surrogate implementation or evaluator leakage: `method/` generates automata artifacts and `eval/` scores those artifacts independently.
+- Re-ran `scripts/reproduce.sh`, `python validate.py --compare`, shell syntax checks, and Python bytecode compilation successfully.
+- Kept the milestone at `core_claim`; restoring `core_claim_plus` would overstate the current scope because the full Redux pipeline and external automata baselines are still not implemented.
 
 </details>
 

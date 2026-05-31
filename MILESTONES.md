@@ -15,4 +15,4 @@
 - Kept the milestone at `core_claim`; restoring `core_claim_plus` would overstate the current scope because the full Redux pipeline and external automata baselines are still not implemented.
 
 ## Stop Justification
-- Completed at milestone `core_claim` for the direct GFM-GF construction claim. Higher milestones require implementing the full general Redux pipeline and external automata-tool baselines.
+- Completed at milestone `core_claim`.
