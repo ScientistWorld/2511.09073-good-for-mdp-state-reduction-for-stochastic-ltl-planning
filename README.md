@@ -13,6 +13,7 @@ Stochastic planning with LTL goals often composes an MDP with an automaton, so a
 
 - Reproduced the proposed direct-construction state counts for TDR[6-10]: aggregate 45 states.
 - Reproduced the proposed direct-construction state counts for LIB[6-9]: aggregate 64 states.
+- Reproduced Appendix N direct-construction state counts for NCS[4-11]: aggregate 60 states.
 - Semantic structure checks pass for all generated automata.
 
 ---
@@ -59,7 +60,7 @@ The primary metric is automaton state count; lower is better. The packaged evalu
 
 ## Baselines and Targets
 
-Reference targets are taken from the paper's Table 2 for delayed-response (`TDR`) and Liberouter (`LIB`) repeated-reachability formula families. The target method should match the proposed construction's state counts and improve over the reported reduced Owl/Slim automata where applicable.
+Reference targets are taken from the paper's Table 2 for delayed-response (`TDR`) and Liberouter (`LIB`) repeated-reachability formula families, plus Appendix N/Table 5 for Nested Conjunction Sequence (`NCS`) formulas. The target method should match the proposed construction's state counts and improve over the reported reduced Owl/Slim automata where applicable.
 
 ## Evaluation Protocol
 
@@ -121,12 +122,37 @@ Run `bash scripts/method.sh` to generate automata for all benchmark formulas in 
 
 </details>
 
+### Iteration 2: gpt-5.5
+- **Milestone**: `core_claim_plus` | **Status**: done
+- **Working time**: 4m | **GPU**: 0.0h
+- **Jobs**: 2 total (2 completed, 0 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-31 20:39] - core_claim
+- Implemented the paper's Section 6 direct GFM construction for `GF phi` formulas using NFA states, unconditional reset transitions, and accepting resets when the NFA can reach a final state.
+- Reproduced the Table 2 direct-construction state counts for TDR[6-10] and LIB[6-9] with semantic structure checks passing.
+- Verified the packaged workflow with `python validate.py --compare`; an earlier container job also completed `scripts/reproduce.sh` successfully.
+
+### [2026-05-31 20:41] - core_claim
+- Audited the inherited workspace and confirmed the method and evaluation are real, separated, and validated.
+- Added Appendix N/Table 5 NCS[4-11] direct-construction benchmarks and reproduced the paper's aggregate `GFM-GF` state count locally.
+- Submitted a CPU container validation job before raising the milestone beyond `core_claim`.
+
+### [2026-05-31 20:43] - core_claim_plus
+- CPU container job `d5313962-fe4` completed successfully with exit code 0.
+- The packaged workflow reproduced TDR[6-10], LIB[6-9], and NCS[4-11] aggregate `GFM-GF` state counts exactly, with semantic checks and target-match checks at `1.0`.
+- Raised the milestone to `core_claim_plus` because the reproduction now covers the core direct-construction claim plus an additional appendix benchmark family.
+
+</details>
+
 
 ---
 
 # Reproduction Milestones
 
-**Current: method_runs**
+**Current: core_claim_plus**
 
 ## Stop Justification
-- Completed at milestone `method_runs`.
+- Completed at milestone `core_claim_plus`.
