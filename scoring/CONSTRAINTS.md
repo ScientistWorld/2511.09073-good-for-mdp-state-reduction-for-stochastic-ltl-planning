@@ -4,7 +4,7 @@
 Use only the benchmark specifications in `data/gf_benchmarks.json` for reported scores. Adding easier formulas or removing harder rows would change the benchmark rather than improve the construction.
 
 ## Output Contract
-Method code must write `outputs/gfm_gf_results.json` with one entry per benchmark and must report actual generated automata, not only aggregate counts. The evaluator intentionally checks transition structure so that state counts cannot be reduced by omitting acceptance behavior.
+Method code must write an artifact such as `outputs/results.json` with one entry per benchmark and must report actual generated automata, not only aggregate counts. The evaluator intentionally checks transition structure so that state counts cannot be reduced by omitting acceptance behavior.
 
 ## Semantics
 Generated automata must accept representative ultimately periodic traces that satisfy each benchmark family and reject matched traces that violate the recurring finite pattern. This is a bounded regression check, not a complete language-equivalence proof.

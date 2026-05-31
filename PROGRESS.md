@@ -4,7 +4,7 @@
 
 - Implemented the paper's Section 6 direct GFM construction for formulas `GF phi` where `phi` is a co-safety finite-trace property.
 - Added concrete NFA builders for the Table 2 TDR and LIB benchmark families.
-- Added a method script that writes generated automata to `outputs/gfm_gf_results.json`.
+- Added a method script that writes generated automata to `outputs/results.json`.
 - Added an independent evaluator that reads the method artifact and writes `scoring/scores.json`.
 - Audited the reproduction and confirmed that the method code follows the paper's reset construction rather than a learned or hardcoded surrogate.
 - Tightened the generated reset transitions so final-reaching letters have the accepting reset transition prescribed by the paper instead of a parallel non-accepting duplicate reset.

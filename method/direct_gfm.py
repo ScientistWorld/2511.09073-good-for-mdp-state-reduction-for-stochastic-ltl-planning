@@ -203,7 +203,7 @@ def build_benchmark(spec: dict) -> dict:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--benchmarks", default="data/gf_benchmarks.json")
-    parser.add_argument("--output", default="outputs/gfm_gf_results.json")
+    parser.add_argument("--output", default="outputs/results.json")
     args = parser.parse_args()
 
     specs = json.loads(Path(args.benchmarks).read_text())["benchmarks"]

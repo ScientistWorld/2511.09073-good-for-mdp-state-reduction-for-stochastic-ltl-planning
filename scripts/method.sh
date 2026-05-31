@@ -12,6 +12,6 @@ cd /home/user
 
 python method/direct_gfm.py \
   --benchmarks data/gf_benchmarks.json \
-  --output outputs/gfm_gf_results.json
+  --output outputs/results.json
 
-bash scripts/evaluate.sh outputs/gfm_gf_results.json
+bash scripts/evaluate.sh outputs/results.json

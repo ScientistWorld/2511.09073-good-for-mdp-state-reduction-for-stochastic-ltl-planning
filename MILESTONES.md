@@ -14,5 +14,10 @@
 - Re-ran `scripts/reproduce.sh`, `python validate.py --compare`, shell syntax checks, and Python bytecode compilation successfully.
 - Kept the milestone at `core_claim`; restoring `core_claim_plus` would overstate the current scope because the full Redux pipeline and external automata baselines are still not implemented.
 
+### [2026-05-31 21:16] - core_claim
+- Final verification cleaned method-agnostic scoring names, the reusable artifact path, and benchmark data separation.
+- Re-ran `scripts/method.sh`, train/test evaluators, `python validate.py --compare`, Python compilation, and JSON validation successfully.
+- Kept the milestone at `core_claim`; the environment is usable as a gym for the packaged recurring co-safety benchmark claim.
+
 ## Stop Justification
 - Completed at milestone `core_claim`.

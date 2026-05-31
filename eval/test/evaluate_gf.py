@@ -14,9 +14,9 @@ GENERATED_TRACE_SEED = 8675309
 GENERATED_TRACE_COUNT = 8
 
 EXPERIMENTS = {
-    "tdr_direct_gf": ["tdr_7", "tdr_9"],
-    "lib_direct_gf": ["lib_7", "lib_9"],
-    "ncs_direct_gf": ["ncs_5", "ncs_7", "ncs_9", "ncs_11"],
+    "tdr_delayed_response": ["tdr_7", "tdr_9"],
+    "lib_signal_change": ["lib_7", "lib_9"],
+    "ncs_ordered_sequence": ["ncs_5", "ncs_7", "ncs_9", "ncs_11"],
 }
 
 

@@ -4,120 +4,103 @@
       "name": "tdr_6",
       "family": "TDR",
       "n": 6,
-      "formula": "GF(a & X(X(X(X(X(X(b)))))))",
-      "paper": {"owl_red_states": 64, "slim_red_states": 34, "gfm_gf_states": 7}
+      "formula": "GF(a & X(X(X(X(X(X(b)))))))"
     },
     {
       "name": "tdr_7",
       "family": "TDR",
       "n": 7,
-      "formula": "GF(a & X(X(X(X(X(X(X(b))))))))",
-      "paper": {"owl_red_states": 128, "slim_red_states": 66, "gfm_gf_states": 8}
+      "formula": "GF(a & X(X(X(X(X(X(X(b))))))))"
     },
     {
       "name": "tdr_8",
       "family": "TDR",
       "n": 8,
-      "formula": "GF(a & X(X(X(X(X(X(X(X(b)))))))))",
-      "paper": {"owl_red_states": 256, "slim_red_states": 130, "gfm_gf_states": 9}
+      "formula": "GF(a & X(X(X(X(X(X(X(X(b)))))))))"
     },
     {
       "name": "tdr_9",
       "family": "TDR",
       "n": 9,
-      "formula": "GF(a & X(X(X(X(X(X(X(X(X(b))))))))))",
-      "paper": {"owl_red_states": 512, "slim_red_states": 258, "gfm_gf_states": 10}
+      "formula": "GF(a & X(X(X(X(X(X(X(X(X(b))))))))))"
     },
     {
       "name": "tdr_10",
       "family": "TDR",
       "n": 10,
-      "formula": "GF(a & X(X(X(X(X(X(X(X(X(X(b)))))))))))",
-      "paper": {"owl_red_states": 1024, "slim_red_states": 514, "gfm_gf_states": 11}
+      "formula": "GF(a & X(X(X(X(X(X(X(X(X(X(b)))))))))))"
     },
     {
       "name": "lib_6",
       "family": "LIB",
       "n": 6,
-      "formula": "GF(some signal changes value in the next step, 6 signals)",
-      "paper": {"owl_red_states": 14, "slim_red_states": 66, "gfm_gf_states": 13}
+      "formula": "GF(some signal changes value in the next step, 6 signals)"
     },
     {
       "name": "lib_7",
       "family": "LIB",
       "n": 7,
-      "formula": "GF(some signal changes value in the next step, 7 signals)",
-      "paper": {"owl_red_states": 16, "slim_red_states": null, "gfm_gf_states": 15}
+      "formula": "GF(some signal changes value in the next step, 7 signals)"
     },
     {
       "name": "lib_8",
       "family": "LIB",
       "n": 8,
-      "formula": "GF(some signal changes value in the next step, 8 signals)",
-      "paper": {"owl_red_states": 18, "slim_red_states": null, "gfm_gf_states": 17}
+      "formula": "GF(some signal changes value in the next step, 8 signals)"
     },
     {
       "name": "lib_9",
       "family": "LIB",
       "n": 9,
-      "formula": "GF(some signal changes value in the next step, 9 signals)",
-      "paper": {"owl_red_states": 20, "slim_red_states": null, "gfm_gf_states": 19}
+      "formula": "GF(some signal changes value in the next step, 9 signals)"
     },
     {
       "name": "ncs_4",
       "family": "NCS",
       "n": 4,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))))",
-      "paper": {"owl_red_states": 6, "slim_red_states": 10, "gfm_gf_states": 4}
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))))"
     },
     {
       "name": "ncs_5",
       "family": "NCS",
       "n": 5,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))))",
-      "paper": {"owl_red_states": 10, "slim_red_states": 18, "gfm_gf_states": 5}
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))))"
     },
     {
       "name": "ncs_6",
       "family": "NCS",
       "n": 6,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))))",
-      "paper": {"owl_red_states": 18, "slim_red_states": 34, "gfm_gf_states": 6}
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))))"
     },
     {
       "name": "ncs_7",
       "family": "NCS",
       "n": 7,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))) & X(X(X(X(X(X(g)))))))",
-      "paper": {"owl_red_states": 34, "slim_red_states": 66, "gfm_gf_states": 7}
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))) & X(X(X(X(X(X(g)))))))"
     },
     {
       "name": "ncs_8",
       "family": "NCS",
       "n": 8,
-      "formula": "GF(nested conjunction sequence over 8 offsets)",
-      "paper": {"owl_red_states": 66, "slim_red_states": 130, "gfm_gf_states": 8}
+      "formula": "GF(nested conjunction sequence over 8 offsets)"
     },
     {
       "name": "ncs_9",
       "family": "NCS",
       "n": 9,
-      "formula": "GF(nested conjunction sequence over 9 offsets)",
-      "paper": {"owl_red_states": 130, "slim_red_states": 258, "gfm_gf_states": 9}
+      "formula": "GF(nested conjunction sequence over 9 offsets)"
     },
     {
       "name": "ncs_10",
       "family": "NCS",
       "n": 10,
-      "formula": "GF(nested conjunction sequence over 10 offsets)",
-      "paper": {"owl_red_states": 258, "slim_red_states": 514, "gfm_gf_states": 10}
+      "formula": "GF(nested conjunction sequence over 10 offsets)"
     },
     {
       "name": "ncs_11",
       "family": "NCS",
       "n": 11,
-      "formula": "GF(nested conjunction sequence over 11 offsets)",
-      "paper": {"owl_red_states": 514, "slim_red_states": null, "gfm_gf_states": 11}
+      "formula": "GF(nested conjunction sequence over 11 offsets)"
     }
   ]
 }

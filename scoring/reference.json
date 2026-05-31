@@ -1,7 +1,7 @@
 {
   "experiments": {
-    "tdr_direct_gf": {
-      "description": "Table 2 direct construction on Trigger with Delayed Response GF co-safety formulas TDR[6] through TDR[10].",
+    "tdr_delayed_response": {
+      "description": "Table 2 Trigger with Delayed Response GF co-safety formulas TDR[6] through TDR[10].",
       "weight": 0.45,
       "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
@@ -60,8 +60,8 @@
         }
       }
     },
-    "lib_direct_gf": {
-      "description": "Table 2 direct construction on Liberouter repeated-reachability formulas LIB[6] through LIB[9].",
+    "lib_signal_change": {
+      "description": "Table 2 Liberouter repeated-reachability formulas LIB[6] through LIB[9].",
       "weight": 0.3,
       "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
@@ -115,8 +115,8 @@
         }
       }
     },
-    "ncs_direct_gf": {
-      "description": "Appendix N/Table 5 direct construction on Nested Conjunction Sequence repeated-reachability formulas NCS[4] through NCS[11].",
+    "ncs_ordered_sequence": {
+      "description": "Appendix N/Table 5 Nested Conjunction Sequence repeated-reachability formulas NCS[4] through NCS[11].",
       "weight": 0.25,
       "primary_metric": "state_count_size_weighted_mean",
       "metrics": {

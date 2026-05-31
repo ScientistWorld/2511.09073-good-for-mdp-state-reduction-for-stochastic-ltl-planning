@@ -4,4 +4,4 @@ action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: "Core claim is complete: the packaged direct GF co-safety construction reproduces TDR, LIB, and NCS state counts with semantic checks, and prior CPU container jobs plus validate.py --compare passed."
+notes: "Final verification passed; scoring, docs, and reusable evaluation contract are clean for core_claim gym use."

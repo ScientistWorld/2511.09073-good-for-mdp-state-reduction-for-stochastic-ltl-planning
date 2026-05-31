@@ -1,29 +1,41 @@
 {
   "experiments": {
-    "tdr_direct_gf": {
+    "tdr_delayed_response": {
       "results": {
         "gfm_gf": {
+          "state_count_size_weighted_mean": 9.25,
+          "state_count_per_formula": 9.0,
           "state_count_sum": 45,
+          "transition_count_sum": 90,
           "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
         }
       }
     },
-    "lib_direct_gf": {
+    "lib_signal_change": {
       "results": {
         "gfm_gf": {
+          "state_count_size_weighted_mean": 16.333333333333332,
+          "state_count_per_formula": 16.0,
           "state_count_sum": 64,
+          "transition_count_sum": 184,
           "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
         }
       }
     },
-    "ncs_direct_gf": {
+    "ncs_ordered_sequence": {
       "results": {
         "gfm_gf": {
+          "state_count_size_weighted_mean": 8.2,
+          "state_count_per_formula": 7.5,
           "state_count_sum": 60,
+          "transition_count_sum": 120,
           "semantic_check_pass_rate": 1.0,
-          "trace_semantics_pass_rate": 1.0
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
         }
       }
     }

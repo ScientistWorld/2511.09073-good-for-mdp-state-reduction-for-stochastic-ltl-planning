@@ -1,6 +1,6 @@
 {
   "experiments": {
-    "tdr_direct_gf": {
+    "tdr_delayed_response": {
       "results": {
         "gfm_gf": {
           "state_count_size_weighted_mean": 9.125,
@@ -13,7 +13,7 @@
         }
       }
     },
-    "lib_direct_gf": {
+    "lib_signal_change": {
       "results": {
         "gfm_gf": {
           "state_count_size_weighted_mean": 17.25,
@@ -26,7 +26,7 @@
         }
       }
     },
-    "ncs_direct_gf": {
+    "ncs_ordered_sequence": {
       "results": {
         "gfm_gf": {
           "state_count_size_weighted_mean": 8.625,
