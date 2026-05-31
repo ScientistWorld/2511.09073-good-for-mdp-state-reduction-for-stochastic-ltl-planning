@@ -6,7 +6,7 @@ The primary metric is automaton state count; lower is better. The packaged evalu
 
 ## Baselines and Targets
 
-Reference targets are taken from the paper's Table 2 for delayed-response (`TDR`) and Liberouter (`LIB`) repeated-reachability formula families. The target method should match the proposed construction's state counts and improve over the reported reduced Owl/Slim automata where applicable.
+Reference targets are taken from the paper's Table 2 for delayed-response (`TDR`) and Liberouter (`LIB`) repeated-reachability formula families, plus Appendix N/Table 5 for Nested Conjunction Sequence (`NCS`) formulas. The target method should match the proposed construction's state counts and improve over the reported reduced Owl/Slim automata where applicable.
 
 ## Evaluation Protocol
 

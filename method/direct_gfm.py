@@ -64,6 +64,16 @@ def lib_formula(n: int) -> str:
     return "GF(" + " | ".join(terms) + ")"
 
 
+def ncs_formula(n: int) -> str:
+    terms = []
+    for i in range(n):
+        atom = chr(ord("a") + i)
+        for _ in range(i):
+            atom = f"X({atom})"
+        terms.append(atom)
+    return "GF(" + " & ".join(terms) + ")"
+
+
 def build_tdr_nfa(n: int) -> NFA:
     """NFA for the finite pattern a & X^n b."""
     states = [f"q{i}" for i in range(n + 2)]
@@ -89,6 +99,17 @@ def build_lib_nfa(n: int) -> NFA:
         transitions.append(NfaTransition(true_state, final, f"!a{i}"))
         transitions.append(NfaTransition(false_state, final, f"a{i}"))
     states.append(final)
+    return NFA(states=states, initial="q0", finals=[final], transitions=transitions)
+
+
+def build_ncs_nfa(n: int) -> NFA:
+    """NFA for a nested conjunction sequence over n consecutive offsets."""
+    states = [f"q{i}" for i in range(n + 1)]
+    final = states[-1]
+    transitions: list[NfaTransition] = []
+    for i in range(n):
+        atom = chr(ord("a") + i)
+        transitions.append(NfaTransition(f"q{i}", f"q{i + 1}", atom))
     return NFA(states=states, initial="q0", finals=[final], transitions=transitions)
 
 
@@ -128,6 +149,9 @@ def build_benchmark(spec: dict) -> dict:
     elif family == "LIB":
         nfa = build_lib_nfa(n)
         formula = lib_formula(n)
+    elif family == "NCS":
+        nfa = build_ncs_nfa(n)
+        formula = ncs_formula(n)
     else:
         raise ValueError(f"Unsupported benchmark family: {family}")
 

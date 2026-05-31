@@ -9,5 +9,10 @@
 - Reproduced the Table 2 direct-construction state counts for TDR[6-10] and LIB[6-9] with semantic structure checks passing.
 - Verified the packaged workflow with `python validate.py --compare`; an earlier container job also completed `scripts/reproduce.sh` successfully.
 
+### [2026-05-31 20:41] - core_claim
+- Audited the inherited workspace and confirmed the method and evaluation are real, separated, and validated.
+- Added Appendix N/Table 5 NCS[4-11] direct-construction benchmarks and reproduced the paper's aggregate `GFM-GF` state count locally.
+- Submitted a CPU container validation job before raising the milestone beyond `core_claim`.
+
 ## Stop Justification
 - Completed at milestone `core_claim`.

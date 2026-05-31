@@ -1,8 +1,8 @@
 # IMPORTANT: Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends. Sleeping blocks the entire pipeline.
-action: done
+action: submit
 gpus: 0
-test: false
+test: true
 milestone: core_claim
-notes: "Reproduced the core direct-construction claim for the paper's GF co-safety benchmarks. Method, evaluation, scoring, docs, and container workflow have been validated."
+notes: "CPU container validation for the added Appendix N NCS direct-construction benchmarks; local validation already reproduces TDR, LIB, and NCS state counts."

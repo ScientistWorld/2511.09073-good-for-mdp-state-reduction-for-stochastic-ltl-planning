@@ -56,6 +56,28 @@ def semantic_checks(row: dict) -> tuple[int, int]:
             )
             for i in range(1, n + 1)
         )
+    elif family == "NCS":
+        total += 1
+        passed += row["state_count"] == n
+        total += 1
+        passed += all(
+            any(
+                t["src"] == f"q{i}"
+                and t["dst"] == f"q{i + 1}"
+                and t["condition"] == chr(ord("a") + i)
+                and not t["accepting"]
+                for t in transitions
+            )
+            for i in range(n - 1)
+        )
+        total += 1
+        passed += any(
+            t["src"] == f"q{n - 1}"
+            and t["dst"] == "q0"
+            and t["condition"] == chr(ord("a") + n - 1)
+            and t["accepting"]
+            for t in transitions
+        )
     else:
         raise ValueError(f"unknown family: {family}")
 
@@ -105,6 +127,23 @@ def main() -> None:
             "lib_direct_gf": {
                 "results": {
                     "gfm_gf": aggregate(rows, ["lib_6", "lib_7", "lib_8", "lib_9"])
+                }
+            },
+            "ncs_direct_gf": {
+                "results": {
+                    "gfm_gf": aggregate(
+                        rows,
+                        [
+                            "ncs_4",
+                            "ncs_5",
+                            "ncs_6",
+                            "ncs_7",
+                            "ncs_8",
+                            "ncs_9",
+                            "ncs_10",
+                            "ncs_11",
+                        ],
+                    )
                 }
             },
         }

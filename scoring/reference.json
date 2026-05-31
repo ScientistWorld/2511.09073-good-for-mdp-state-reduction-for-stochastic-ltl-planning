@@ -2,7 +2,7 @@
   "experiments": {
     "tdr_direct_gf": {
       "description": "Table 2 direct construction on Trigger with Delayed Response GF co-safety formulas TDR[6] through TDR[10].",
-      "weight": 0.6,
+      "weight": 0.45,
       "primary_metric": "state_count_sum",
       "metrics": {
         "state_count_sum": {"higher_is_better": false, "coefficient": -1.0},
@@ -32,7 +32,7 @@
     },
     "lib_direct_gf": {
       "description": "Table 2 direct construction on Liberouter repeated-reachability formulas LIB[6] through LIB[9].",
-      "weight": 0.4,
+      "weight": 0.3,
       "primary_metric": "state_count_sum",
       "metrics": {
         "state_count_sum": {"higher_is_better": false, "coefficient": -1.0},
@@ -49,6 +49,36 @@
         "gfm_gf": {
           "type": "proposed",
           "state_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "state_count_target_match_rate": 1.0
+        }
+      }
+    },
+    "ncs_direct_gf": {
+      "description": "Appendix N/Table 5 direct construction on Nested Conjunction Sequence repeated-reachability formulas NCS[4] through NCS[11].",
+      "weight": 0.25,
+      "primary_metric": "state_count_sum",
+      "metrics": {
+        "state_count_sum": {"higher_is_better": false, "coefficient": -1.0},
+        "semantic_check_pass_rate": {"higher_is_better": true, "coefficient": 1.0},
+        "state_count_target_match_rate": {"higher_is_better": true, "coefficient": 0.5}
+      },
+      "results": {
+        "owl_red": {
+          "type": "baseline",
+          "state_count_sum": 1036,
+          "semantic_check_pass_rate": 1.0,
+          "state_count_target_match_rate": 1.0
+        },
+        "slim_red": {
+          "type": "baseline",
+          "state_count_sum": 1030,
+          "semantic_check_pass_rate": 1.0,
+          "state_count_target_match_rate": 1.0
+        },
+        "gfm_gf": {
+          "type": "proposed",
+          "state_count_sum": 60,
           "semantic_check_pass_rate": 1.0,
           "state_count_target_match_rate": 1.0
         }

@@ -13,4 +13,5 @@ Stochastic planning with LTL goals often composes an MDP with an automaton, so a
 
 - Reproduced the proposed direct-construction state counts for TDR[6-10]: aggregate 45 states.
 - Reproduced the proposed direct-construction state counts for LIB[6-9]: aggregate 64 states.
+- Reproduced Appendix N direct-construction state counts for NCS[4-11]: aggregate 60 states.
 - Semantic structure checks pass for all generated automata.

@@ -17,6 +17,15 @@
           "state_count_target_match_rate": 1.0
         }
       }
+    },
+    "ncs_direct_gf": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "state_count_target_match_rate": 1.0
+        }
+      }
     }
   }
 }
