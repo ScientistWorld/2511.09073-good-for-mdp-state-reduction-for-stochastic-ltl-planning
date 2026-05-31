@@ -2,8 +2,8 @@
 # Once you set action to 'done', STOP immediately.
 # Do NOT sleep, poll, or wait. The system reads this file
 # only after your turn ends.
-action: pending
+action: done
 gpus: 0
 test: false
 milestone: core_claim
-notes: ""
+notes: "Balanced odd/even GF benchmark split with black-box periodic-trace semantic scoring; 3 train metrics, 3 test metrics; scripts written, scores produced later."
