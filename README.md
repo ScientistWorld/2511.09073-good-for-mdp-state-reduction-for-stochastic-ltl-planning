@@ -207,6 +207,26 @@ Run `bash scripts/method.sh` to generate automata for all benchmark formulas in 
 
 </details>
 
+### Iteration 6: gpt-5.5 (designer_stage_3)
+- **Milestone**: `core_claim` | **Status**: done
+- **Working time**: 3m | **GPU**: 0.0h
+- **Jobs**: 4 total (4 completed, 0 failed)
+
+<details>
+<summary>Progress Log</summary>
+
+### [2026-05-31 20:47] - core_claim
+- Implemented and validated the paper's Section 6 direct GFM construction for `GF phi` co-safety formulas on TDR, LIB, and NCS benchmark families.
+- Reproduced the proposed GFM-GF state counts for Table 2 TDR/LIB and Appendix N NCS, with structural and ultimately-periodic trace semantic checks passing.
+- Scope note: this environment reproduces the direct `GF phi` construction claim, not the full Section 5 Redux pipeline over arbitrary GFM automata.
+
+### [2026-05-31 20:51] - core_claim
+- Audited the continued workspace and found no surrogate implementation or evaluator leakage: `method/` generates automata artifacts and `eval/` scores those artifacts independently.
+- Re-ran `scripts/reproduce.sh`, `python validate.py --compare`, shell syntax checks, and Python bytecode compilation successfully.
+- Kept the milestone at `core_claim`; restoring `core_claim_plus` would overstate the current scope because the full Redux pipeline and external automata baselines are still not implemented.
+
+</details>
+
 
 ---
 
