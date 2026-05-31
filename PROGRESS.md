@@ -15,6 +15,7 @@
 - NCS[4-11] from Appendix N/Table 5 reproduced proposed state counts exactly: aggregate `state_count_sum = 60`.
 - Semantic check pass rate is `1.0` for all three experiments.
 - Container job `1707ed70-62d` completed successfully with exit code 0 and reran `scripts/reproduce.sh` plus `python validate.py --compare`.
+- Container job `d5313962-fe4` completed successfully with exit code 0 and validated the extended TDR, LIB, and NCS scoring suite inside the packaged environment.
 
 ## Deviations From Paper
 
@@ -25,7 +26,6 @@
 
 - Implement the full general state-reduction pipeline over arbitrary GFM automata.
 - Add Owl/Slim generation and reduction baselines if Spot/Owl are packaged in a future iteration.
-- Run a container validation job for the newly added NCS extension.
 - Extend evaluation to BRP, EHP, NU, and LFR from Table 1.
 - Higher milestones would require the full Redux pipeline or additional appendix experiments; this environment now satisfies the core direct-construction claim.
 
