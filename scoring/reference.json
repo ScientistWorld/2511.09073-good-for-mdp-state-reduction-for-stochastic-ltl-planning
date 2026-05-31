@@ -5,9 +5,31 @@
       "weight": 0.45,
       "primary_metric": "state_count_sum",
       "metrics": {
-        "state_count_sum": {"higher_is_better": false, "coefficient": -1.0},
-        "semantic_check_pass_rate": {"higher_is_better": true, "coefficient": 1.0},
-        "trace_semantics_pass_rate": {"higher_is_better": true, "coefficient": 1.0}
+        "state_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -1.0,
+          "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
+        },
+        "transition_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.2,
+          "description": "Total number of transitions, penalizing oversized automata that pass traces by enumeration."
+        },
+        "semantic_check_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Agreement with the family semantics on curated periodic words."
+        },
+        "trace_semantics_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 0.8,
+          "description": "Agreement on canonical positive and negative periodic words for each formula."
+        },
+        "generated_trace_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.2,
+          "description": "Agreement on deterministic generated periodic words that broaden the semantic probe."
+        }
       },
       "results": {
         "owl_red": {
@@ -29,9 +51,31 @@
       "weight": 0.3,
       "primary_metric": "state_count_sum",
       "metrics": {
-        "state_count_sum": {"higher_is_better": false, "coefficient": -1.0},
-        "semantic_check_pass_rate": {"higher_is_better": true, "coefficient": 1.0},
-        "trace_semantics_pass_rate": {"higher_is_better": true, "coefficient": 1.0}
+        "state_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -1.0,
+          "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
+        },
+        "transition_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.2,
+          "description": "Total number of transitions, penalizing oversized automata that pass traces by enumeration."
+        },
+        "semantic_check_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Agreement with the family semantics on curated periodic words."
+        },
+        "trace_semantics_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 0.8,
+          "description": "Agreement on canonical positive and negative periodic words for each formula."
+        },
+        "generated_trace_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.2,
+          "description": "Agreement on deterministic generated periodic words that broaden the semantic probe."
+        }
       },
       "results": {
         "owl_red": {
@@ -49,9 +93,31 @@
       "weight": 0.25,
       "primary_metric": "state_count_sum",
       "metrics": {
-        "state_count_sum": {"higher_is_better": false, "coefficient": -1.0},
-        "semantic_check_pass_rate": {"higher_is_better": true, "coefficient": 1.0},
-        "trace_semantics_pass_rate": {"higher_is_better": true, "coefficient": 1.0}
+        "state_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -1.0,
+          "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
+        },
+        "transition_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.2,
+          "description": "Total number of transitions, penalizing oversized automata that pass traces by enumeration."
+        },
+        "semantic_check_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Agreement with the family semantics on curated periodic words."
+        },
+        "trace_semantics_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 0.8,
+          "description": "Agreement on canonical positive and negative periodic words for each formula."
+        },
+        "generated_trace_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.2,
+          "description": "Agreement on deterministic generated periodic words that broaden the semantic probe."
+        }
       },
       "results": {
         "owl_red": {

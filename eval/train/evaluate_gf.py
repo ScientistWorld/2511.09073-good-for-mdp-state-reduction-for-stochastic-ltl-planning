@@ -10,6 +10,8 @@ from typing import Iterable
 
 
 SLICE = "train"
+GENERATED_TRACE_SEED = 1729
+GENERATED_TRACE_COUNT = 8
 
 EXPERIMENTS = {
     "tdr_direct_gf": ["tdr_6", "tdr_8", "tdr_10"],
@@ -279,6 +281,34 @@ def semantic_traces(family: str, n: int) -> list[list[set[str]]]:
     return traces
 
 
+def atoms_for_family(family: str, n: int) -> list[str]:
+    if family == "TDR":
+        return ["a", "b"]
+    if family == "LIB":
+        return [f"a{i}" for i in range(1, n + 1)]
+    if family == "NCS":
+        return [chr(ord("a") + i) for i in range(n)]
+    raise ValueError(f"unknown family: {family}")
+
+
+def generated_traces(family: str, n: int) -> list[list[set[str]]]:
+    atoms = atoms_for_family(family, n)
+    state = (GENERATED_TRACE_SEED + 97 * n + 17 * len(atoms)) & 0x7FFFFFFF
+    traces: list[list[set[str]]] = []
+    for trace_index in range(GENERATED_TRACE_COUNT):
+        period_len = 2 + ((state + trace_index) % (n + 3))
+        period: list[set[str]] = []
+        for phase in range(period_len):
+            valuation: set[str] = set()
+            for atom_index, atom in enumerate(atoms):
+                state = (1103515245 * state + 12345 + atom_index + phase) & 0x7FFFFFFF
+                if ((state >> 8) ^ trace_index ^ phase ^ atom_index) & 1:
+                    valuation.add(atom)
+            period.append(valuation)
+        traces.append(period)
+    return traces
+
+
 def count_trace_agreements(row: dict, traces: Iterable[list[set[str]]]) -> tuple[int, int]:
     family = row["family"]
     n = int(row["n"])
@@ -307,10 +337,16 @@ def aggregate(rows: list[dict], names: list[str]) -> dict:
     trace_passed = sum(passed for passed, _ in trace_counts)
     trace_total = sum(total for _, total in trace_counts)
 
+    generated_counts = [count_trace_agreements(row, generated_traces(row["family"], int(row["n"]))) for row in selected]
+    generated_passed = sum(passed for passed, _ in generated_counts)
+    generated_total = sum(total for _, total in generated_counts)
+
     return {
         "state_count_sum": sum(int(row.get("state_count", len(row["gfm"]["states"]))) for row in selected),
+        "transition_count_sum": sum(int(row.get("transition_count", len(row["gfm"]["transitions"]))) for row in selected),
         "semantic_check_pass_rate": semantic_passed / semantic_total,
         "trace_semantics_pass_rate": trace_passed / trace_total,
+        "generated_trace_pass_rate": generated_passed / generated_total,
     }
 
 
