@@ -1,0 +1,37 @@
+{
+  "experiments": {
+    "tdr_direct_gf": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      }
+    },
+    "lib_direct_gf": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      }
+    },
+    "ncs_direct_gf": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      }
+    }
+  }
+}
