@@ -19,5 +19,10 @@
 - Re-ran `scripts/method.sh`, train/test evaluators, `python validate.py --compare`, Python compilation, and JSON validation successfully.
 - Kept the milestone at `core_claim`; the environment is usable as a gym for the packaged recurring co-safety benchmark claim.
 
+### [2026-05-31 21:19] - core_claim
+- Made the submitted `scripts/run.sh` path self-contained by regenerating method artifacts before evaluation.
+- Re-ran the full lightweight flow locally: method generation, full/train/test evaluation, `python validate.py --compare`, and Python bytecode compilation.
+- Submitting a CPU test job to verify the same end-to-end path in the packaged scheduler environment.
+
 ## Stop Justification
 - Completed at milestone `core_claim`.

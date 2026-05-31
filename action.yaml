@@ -1,7 +1,7 @@
 # The system reads this file after every turn.
 # Do NOT sleep, poll, or wait. Submit work here and stop.
-action: done
+action: submit
 gpus: 0
-test: false
+test: true
 milestone: core_claim
-notes: "Final verification passed; scoring, docs, and reusable evaluation contract are clean for core_claim gym use."
+notes: "CPU test job for the self-contained run.sh path: regenerate method outputs, run full/train/test evaluation, and validate scores in the packaged environment."

@@ -20,6 +20,8 @@
 - Continuation audit on 2026-05-31 reran `scripts/reproduce.sh`, `python validate.py --compare`, shell syntax checks, and Python compilation successfully.
 - Container job `1707ed70-62d` completed successfully with exit code 0 and reran `scripts/reproduce.sh` plus `python validate.py --compare`.
 - Container job `d5313962-fe4` completed successfully with exit code 0 and validated the extended TDR, LIB, and NCS scoring suite inside the packaged environment.
+- Updated `scripts/run.sh` so submitted jobs regenerate `outputs/results.json` before full/train/test evaluation instead of relying on existing local artifacts.
+- Local 2026-05-31 rerun of `scripts/run.sh`, `python validate.py --compare`, and Python bytecode compilation passed after the run-script change.
 
 ## Deviations From Paper
 
