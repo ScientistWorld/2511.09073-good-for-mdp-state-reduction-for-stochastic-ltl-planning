@@ -1,0 +1,261 @@
+{
+  "better_lib_dense_random_checks": [
+    {
+      "name": "lib_6",
+      "count": 98,
+      "reference_correct": 98,
+      "better_correct": 98
+    },
+    {
+      "name": "lib_7",
+      "count": 98,
+      "reference_correct": 98,
+      "better_correct": 98
+    },
+    {
+      "name": "lib_8",
+      "count": 98,
+      "reference_correct": 98,
+      "better_correct": 98
+    },
+    {
+      "name": "lib_9",
+      "count": 98,
+      "reference_correct": 98,
+      "better_correct": 98
+    }
+  ],
+  "shortcut_sparse_guard_counterexamples": [
+    {
+      "name": "tdr_6",
+      "period": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "tdr_7",
+      "period": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "tdr_8",
+      "period": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "tdr_9",
+      "period": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "tdr_10",
+      "period": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_4",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_5",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_6",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_7",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_8",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_9",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_10",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    },
+    {
+      "name": "ncs_11",
+      "period": [
+        [
+          "a",
+          "b",
+          "c",
+          "d",
+          "e",
+          "f",
+          "g",
+          "h",
+          "i",
+          "j",
+          "k"
+        ]
+      ],
+      "true_answer": true,
+      "reference_answer": true,
+      "shortcut_answer": false
+    }
+  ],
+  "iid_mdp_tdr_7": {
+    "letters": [
+      [],
+      [
+        "a"
+      ],
+      [
+        "b"
+      ],
+      [
+        "a",
+        "b"
+      ]
+    ],
+    "probability_per_letter": 0.25,
+    "specification_satisfaction_probability": 1.0,
+    "reference": {
+      "maximal_end_component_count": 2,
+      "accepting_end_component_count": 1,
+      "accepting_component_sizes": [
+        32
+      ],
+      "optimal_buchi_probability": 1.0
+    },
+    "shortcut_non_gfm": {
+      "maximal_end_component_count": 2,
+      "accepting_end_component_count": 0,
+      "accepting_component_sizes": [],
+      "optimal_buchi_probability": 0.0
+    }
+  }
+}

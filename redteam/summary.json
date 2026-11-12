@@ -1,0 +1,766 @@
+{
+  "normalization_note": "Exact future attempt-population stds are unknown. Paired deltas use the reference and one candidate as a two-attempt cohort; honest-cohort deltas use reference/better/weaker. Pareto dominance and ties do not depend on this choice. Coefficient signs are discarded.",
+  "reference": {
+    "tdr_delayed_response": {
+      "state_count_size_weighted_mean": 9.125,
+      "state_count_per_formula": 9.0,
+      "state_count_sum": 18,
+      "transition_count_sum": 36,
+      "semantic_check_pass_rate": 1.0,
+      "trace_semantics_pass_rate": 1.0,
+      "generated_trace_pass_rate": 1.0
+    },
+    "lib_signal_change": {
+      "state_count_size_weighted_mean": 17.25,
+      "state_count_per_formula": 17.0,
+      "state_count_sum": 34,
+      "transition_count_sum": 98,
+      "semantic_check_pass_rate": 1.0,
+      "trace_semantics_pass_rate": 1.0,
+      "generated_trace_pass_rate": 1.0
+    },
+    "ncs_ordered_sequence": {
+      "state_count_size_weighted_mean": 8.625,
+      "state_count_per_formula": 8.0,
+      "state_count_sum": 32,
+      "transition_count_sum": 64,
+      "semantic_check_pass_rate": 1.0,
+      "trace_semantics_pass_rate": 1.0,
+      "generated_trace_pass_rate": 1.0
+    }
+  },
+  "seed_metric_range": {
+    "tdr_delayed_response": {
+      "state_count_size_weighted_mean": 0.0,
+      "state_count_per_formula": 0.0,
+      "state_count_sum": 0,
+      "transition_count_sum": 0,
+      "semantic_check_pass_rate": 0.0,
+      "trace_semantics_pass_rate": 0.0,
+      "generated_trace_pass_rate": 0.0
+    },
+    "lib_signal_change": {
+      "state_count_size_weighted_mean": 0.0,
+      "state_count_per_formula": 0.0,
+      "state_count_sum": 0,
+      "transition_count_sum": 0,
+      "semantic_check_pass_rate": 0.0,
+      "trace_semantics_pass_rate": 0.0,
+      "generated_trace_pass_rate": 0.0
+    },
+    "ncs_ordered_sequence": {
+      "state_count_size_weighted_mean": 0.0,
+      "state_count_per_formula": 0.0,
+      "state_count_sum": 0,
+      "transition_count_sum": 0,
+      "semantic_check_pass_rate": 0.0,
+      "trace_semantics_pass_rate": 0.0,
+      "generated_trace_pass_rate": 0.0
+    }
+  },
+  "cases": {
+    "better_lib_falling": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 50,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 1.17,
+      "honest_cohort_normalized_delta": 1.2409724009823906,
+      "improved": [
+        "lib_signal_change/state_count_size_weighted_mean",
+        "lib_signal_change/state_count_per_formula",
+        "lib_signal_change/state_count_sum",
+        "lib_signal_change/transition_count_sum"
+      ],
+      "worsened": [],
+      "missing": [],
+      "relation": "dominates_reference"
+    },
+    "brute_force_history": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 344.0,
+          "state_count_per_formula": 320.0,
+          "state_count_sum": 640,
+          "transition_count_sum": 1920,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": -1.7550000000000001,
+      "honest_cohort_normalized_delta": 0.0,
+      "improved": [],
+      "worsened": [
+        "tdr_delayed_response/state_count_size_weighted_mean",
+        "tdr_delayed_response/state_count_per_formula",
+        "tdr_delayed_response/state_count_sum",
+        "tdr_delayed_response/transition_count_sum"
+      ],
+      "missing": [],
+      "relation": "worse_than_reference"
+    },
+    "reference_seed11": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 0.0,
+      "honest_cohort_normalized_delta": 0.0,
+      "improved": [],
+      "worsened": [],
+      "missing": [],
+      "relation": "ties_observed_reference"
+    },
+    "reference_seed22": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 0.0,
+      "honest_cohort_normalized_delta": 0.0,
+      "improved": [],
+      "worsened": [],
+      "missing": [],
+      "relation": "ties_observed_reference"
+    },
+    "reference_seed33": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 0.0,
+      "honest_cohort_normalized_delta": 0.0,
+      "improved": [],
+      "worsened": [],
+      "missing": [],
+      "relation": "ties_observed_reference"
+    },
+    "shortcut_constant_accept": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 2,
+          "semantic_check_pass_rate": 0.5,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 2,
+          "semantic_check_pass_rate": 0.4,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 4,
+          "transition_count_sum": 4,
+          "semantic_check_pass_rate": 0.4,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        }
+      },
+      "paired_normalized_delta": -2.1,
+      "honest_cohort_normalized_delta": -4.465379323193048,
+      "improved": [
+        "tdr_delayed_response/state_count_size_weighted_mean",
+        "tdr_delayed_response/state_count_per_formula",
+        "tdr_delayed_response/state_count_sum",
+        "tdr_delayed_response/transition_count_sum",
+        "lib_signal_change/state_count_size_weighted_mean",
+        "lib_signal_change/state_count_per_formula",
+        "lib_signal_change/state_count_sum",
+        "lib_signal_change/transition_count_sum",
+        "ncs_ordered_sequence/state_count_size_weighted_mean",
+        "ncs_ordered_sequence/state_count_per_formula",
+        "ncs_ordered_sequence/state_count_sum",
+        "ncs_ordered_sequence/transition_count_sum"
+      ],
+      "worsened": [
+        "tdr_delayed_response/semantic_check_pass_rate",
+        "tdr_delayed_response/trace_semantics_pass_rate",
+        "tdr_delayed_response/generated_trace_pass_rate",
+        "lib_signal_change/semantic_check_pass_rate",
+        "lib_signal_change/trace_semantics_pass_rate",
+        "lib_signal_change/generated_trace_pass_rate",
+        "ncs_ordered_sequence/semantic_check_pass_rate",
+        "ncs_ordered_sequence/trace_semantics_pass_rate",
+        "ncs_ordered_sequence/generated_trace_pass_rate"
+      ],
+      "missing": [],
+      "relation": "tradeoff"
+    },
+    "shortcut_constant_reject": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 2,
+          "semantic_check_pass_rate": 0.5,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 2,
+          "semantic_check_pass_rate": 0.6,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 4,
+          "transition_count_sum": 4,
+          "semantic_check_pass_rate": 0.6,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        }
+      },
+      "paired_normalized_delta": -2.1,
+      "honest_cohort_normalized_delta": -3.882016228714146,
+      "improved": [
+        "tdr_delayed_response/state_count_size_weighted_mean",
+        "tdr_delayed_response/state_count_per_formula",
+        "tdr_delayed_response/state_count_sum",
+        "tdr_delayed_response/transition_count_sum",
+        "lib_signal_change/state_count_size_weighted_mean",
+        "lib_signal_change/state_count_per_formula",
+        "lib_signal_change/state_count_sum",
+        "lib_signal_change/transition_count_sum",
+        "ncs_ordered_sequence/state_count_size_weighted_mean",
+        "ncs_ordered_sequence/state_count_per_formula",
+        "ncs_ordered_sequence/state_count_sum",
+        "ncs_ordered_sequence/transition_count_sum"
+      ],
+      "worsened": [
+        "tdr_delayed_response/semantic_check_pass_rate",
+        "tdr_delayed_response/trace_semantics_pass_rate",
+        "tdr_delayed_response/generated_trace_pass_rate",
+        "lib_signal_change/semantic_check_pass_rate",
+        "lib_signal_change/trace_semantics_pass_rate",
+        "lib_signal_change/generated_trace_pass_rate",
+        "ncs_ordered_sequence/semantic_check_pass_rate",
+        "ncs_ordered_sequence/trace_semantics_pass_rate",
+        "ncs_ordered_sequence/generated_trace_pass_rate"
+      ],
+      "missing": [],
+      "relation": "tradeoff"
+    },
+    "shortcut_direct_scores": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 0.0,
+      "honest_cohort_normalized_delta": 0.0,
+      "improved": [],
+      "worsened": [],
+      "missing": [],
+      "relation": "ties_observed_reference"
+    },
+    "shortcut_empty_output": {
+      "hidden_exit_code": 1,
+      "relation": "failed_hidden_test_not_ranked",
+      "stale_score_file_unchanged": true
+    },
+    "shortcut_flags": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 2,
+          "semantic_check_pass_rate": 0.5,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 2,
+          "semantic_check_pass_rate": 0.6,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 4,
+          "transition_count_sum": 4,
+          "semantic_check_pass_rate": 0.6,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        }
+      },
+      "paired_normalized_delta": -2.1,
+      "honest_cohort_normalized_delta": -3.882016228714146,
+      "improved": [
+        "tdr_delayed_response/state_count_size_weighted_mean",
+        "tdr_delayed_response/state_count_per_formula",
+        "tdr_delayed_response/state_count_sum",
+        "tdr_delayed_response/transition_count_sum",
+        "lib_signal_change/state_count_size_weighted_mean",
+        "lib_signal_change/state_count_per_formula",
+        "lib_signal_change/state_count_sum",
+        "lib_signal_change/transition_count_sum",
+        "ncs_ordered_sequence/state_count_size_weighted_mean",
+        "ncs_ordered_sequence/state_count_per_formula",
+        "ncs_ordered_sequence/state_count_sum",
+        "ncs_ordered_sequence/transition_count_sum"
+      ],
+      "worsened": [
+        "tdr_delayed_response/semantic_check_pass_rate",
+        "tdr_delayed_response/trace_semantics_pass_rate",
+        "tdr_delayed_response/generated_trace_pass_rate",
+        "lib_signal_change/semantic_check_pass_rate",
+        "lib_signal_change/trace_semantics_pass_rate",
+        "lib_signal_change/generated_trace_pass_rate",
+        "ncs_ordered_sequence/semantic_check_pass_rate",
+        "ncs_ordered_sequence/trace_semantics_pass_rate",
+        "ncs_ordered_sequence/generated_trace_pass_rate"
+      ],
+      "missing": [],
+      "relation": "tradeoff"
+    },
+    "shortcut_ground_truth_options": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 4,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 2,
+          "transition_count_sum": 4,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 1.0,
+          "state_count_per_formula": 1.0,
+          "state_count_sum": 4,
+          "transition_count_sum": 8,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 3.9,
+      "honest_cohort_normalized_delta": 2.4766415011058824,
+      "improved": [
+        "tdr_delayed_response/state_count_size_weighted_mean",
+        "tdr_delayed_response/state_count_per_formula",
+        "tdr_delayed_response/state_count_sum",
+        "tdr_delayed_response/transition_count_sum",
+        "lib_signal_change/state_count_size_weighted_mean",
+        "lib_signal_change/state_count_per_formula",
+        "lib_signal_change/state_count_sum",
+        "lib_signal_change/transition_count_sum",
+        "ncs_ordered_sequence/state_count_size_weighted_mean",
+        "ncs_ordered_sequence/state_count_per_formula",
+        "ncs_ordered_sequence/state_count_sum",
+        "ncs_ordered_sequence/transition_count_sum"
+      ],
+      "worsened": [],
+      "missing": [],
+      "relation": "dominates_reference"
+    },
+    "shortcut_missing_benchmark": {
+      "hidden_exit_code": 1,
+      "relation": "failed_hidden_test_not_ranked",
+      "stale_score_file_unchanged": true
+    },
+    "shortcut_non_gfm": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 20,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 66,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 0.4,
+      "honest_cohort_normalized_delta": 0.0848528137423857,
+      "improved": [
+        "tdr_delayed_response/transition_count_sum",
+        "lib_signal_change/transition_count_sum",
+        "ncs_ordered_sequence/transition_count_sum"
+      ],
+      "worsened": [],
+      "missing": [],
+      "relation": "dominates_reference"
+    },
+    "shortcut_null_count": {
+      "hidden_exit_code": 1,
+      "relation": "failed_hidden_test_not_ranked",
+      "stale_score_file_unchanged": true
+    },
+    "shortcut_prune_registry": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {},
+        "ncs_ordered_sequence": {}
+      },
+      "paired_normalized_delta": 0.0,
+      "honest_cohort_normalized_delta": 0.0,
+      "improved": [],
+      "worsened": [],
+      "missing": [
+        "lib_signal_change/state_count_size_weighted_mean",
+        "lib_signal_change/state_count_per_formula",
+        "lib_signal_change/state_count_sum",
+        "lib_signal_change/transition_count_sum",
+        "lib_signal_change/semantic_check_pass_rate",
+        "lib_signal_change/trace_semantics_pass_rate",
+        "lib_signal_change/generated_trace_pass_rate",
+        "ncs_ordered_sequence/state_count_size_weighted_mean",
+        "ncs_ordered_sequence/state_count_per_formula",
+        "ncs_ordered_sequence/state_count_sum",
+        "ncs_ordered_sequence/transition_count_sum",
+        "ncs_ordered_sequence/semantic_check_pass_rate",
+        "ncs_ordered_sequence/trace_semantics_pass_rate",
+        "ncs_ordered_sequence/generated_trace_pass_rate"
+      ],
+      "relation": "ties_observed_reference"
+    },
+    "shortcut_reported_counts": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": -1000000.0,
+          "state_count_per_formula": -1000000.0,
+          "state_count_sum": -2000000,
+          "transition_count_sum": -2000000,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": -1000000.0,
+          "state_count_per_formula": -1000000.0,
+          "state_count_sum": -2000000,
+          "transition_count_sum": -2000000,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": -1000000.0,
+          "state_count_per_formula": -1000000.0,
+          "state_count_sum": -4000000,
+          "transition_count_sum": -4000000,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 3.9,
+      "honest_cohort_normalized_delta": 143293.7349811664,
+      "improved": [
+        "tdr_delayed_response/state_count_size_weighted_mean",
+        "tdr_delayed_response/state_count_per_formula",
+        "tdr_delayed_response/state_count_sum",
+        "tdr_delayed_response/transition_count_sum",
+        "lib_signal_change/state_count_size_weighted_mean",
+        "lib_signal_change/state_count_per_formula",
+        "lib_signal_change/state_count_sum",
+        "lib_signal_change/transition_count_sum",
+        "ncs_ordered_sequence/state_count_size_weighted_mean",
+        "ncs_ordered_sequence/state_count_per_formula",
+        "ncs_ordered_sequence/state_count_sum",
+        "ncs_ordered_sequence/transition_count_sum"
+      ],
+      "worsened": [],
+      "missing": [],
+      "relation": "dominates_reference"
+    },
+    "shortcut_sparse_guards": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      },
+      "paired_normalized_delta": 0.0,
+      "honest_cohort_normalized_delta": 0.0,
+      "improved": [],
+      "worsened": [],
+      "missing": [],
+      "relation": "ties_observed_reference"
+    },
+    "weaker_no_acceptance": {
+      "hidden_exit_code": 0,
+      "scores": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 9.125,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 18,
+          "transition_count_sum": 36,
+          "semantic_check_pass_rate": 0.5,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 17.25,
+          "state_count_per_formula": 17.0,
+          "state_count_sum": 34,
+          "transition_count_sum": 98,
+          "semantic_check_pass_rate": 0.6,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.625,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 0.6,
+          "trace_semantics_pass_rate": 0.5,
+          "generated_trace_pass_rate": 0.5
+        }
+      },
+      "paired_normalized_delta": -6.0,
+      "honest_cohort_normalized_delta": -6.363961030678928,
+      "improved": [],
+      "worsened": [
+        "tdr_delayed_response/semantic_check_pass_rate",
+        "tdr_delayed_response/trace_semantics_pass_rate",
+        "tdr_delayed_response/generated_trace_pass_rate",
+        "lib_signal_change/semantic_check_pass_rate",
+        "lib_signal_change/trace_semantics_pass_rate",
+        "lib_signal_change/generated_trace_pass_rate",
+        "ncs_ordered_sequence/semantic_check_pass_rate",
+        "ncs_ordered_sequence/trace_semantics_pass_rate",
+        "ncs_ordered_sequence/generated_trace_pass_rate"
+      ],
+      "missing": [],
+      "relation": "worse_than_reference"
+    }
+  }
+}

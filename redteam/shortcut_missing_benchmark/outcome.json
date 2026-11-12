@@ -1,0 +1,28 @@
+{
+  "case": "shortcut_missing_benchmark",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 16,
+    "actual_states": 161,
+    "actual_transitions": 378
+  },
+  "train": {
+    "returncode": 0,
+    "seconds": 0.21528230200055987
+  },
+  "methods_on_disk": [
+    "gfm_gf"
+  ],
+  "test": {
+    "returncode": 1,
+    "seconds": 0.16477524800575338,
+    "error_excerpt": "Traceback (most recent call last):\n  File \"/home/user/eval/test/evaluate_gf.py\", line 435, in <module>\n    main()\n  File \"/home/user/eval/test/evaluate_gf.py\", line 427, in main\n    scores = build_scores(load_rows_by_method(args.input), expected)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 411, in build_scores\n    \"results\": {\n               ^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 412, in <dictcomp>\n    method: aggregate(rows_by_method[method], names)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 368, in aggregate\n    raise ValueError(f\"missing benchmark outputs for {SLICE} slice: {missing}\")\nValueError: missing benchmark outputs for test slice: ['tdr_7']\n"
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": false,
+  "stale_score_file_unchanged": true
+}

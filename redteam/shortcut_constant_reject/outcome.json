@@ -1,0 +1,26 @@
+{
+  "case": "shortcut_constant_reject",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 17,
+    "actual_states": 17,
+    "actual_transitions": 17
+  },
+  "train": {
+    "returncode": 0,
+    "seconds": 0.16608491601073183
+  },
+  "methods_on_disk": [
+    "gfm_gf"
+  ],
+  "test": {
+    "returncode": 0,
+    "seconds": 0.16478710799128748
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": true
+}

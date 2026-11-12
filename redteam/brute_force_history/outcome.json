@@ -1,0 +1,26 @@
+{
+  "case": "brute_force_history",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 17,
+    "actual_states": 2108,
+    "actual_transitions": 6256
+  },
+  "train": {
+    "returncode": 0,
+    "seconds": 18.448456109006656
+  },
+  "methods_on_disk": [
+    "gfm_gf"
+  ],
+  "test": {
+    "returncode": 0,
+    "seconds": 4.574887980998028
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": true
+}

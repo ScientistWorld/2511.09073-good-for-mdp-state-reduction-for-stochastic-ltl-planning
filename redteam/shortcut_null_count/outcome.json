@@ -1,0 +1,28 @@
+{
+  "case": "shortcut_null_count",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 17,
+    "actual_states": 169,
+    "actual_transitions": 394
+  },
+  "train": {
+    "returncode": 1,
+    "seconds": 0.16442999598803
+  },
+  "methods_on_disk": [
+    "gfm_gf"
+  ],
+  "test": {
+    "returncode": 1,
+    "seconds": 0.16431357502005994,
+    "error_excerpt": "Traceback (most recent call last):\n  File \"/home/user/eval/test/evaluate_gf.py\", line 435, in <module>\n    main()\n  File \"/home/user/eval/test/evaluate_gf.py\", line 427, in main\n    scores = build_scores(load_rows_by_method(args.input), expected)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 411, in build_scores\n    \"results\": {\n               ^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 412, in <dictcomp>\n    method: aggregate(rows_by_method[method], names)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 383, in aggregate\n    state_count_sum = sum(int(row.get(\"state_count\", len(row[\"gfm\"][\"states\"]))) for row in selected)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 383, in <genexpr>\n    state_count_sum = sum(int(row.get(\"state_count\", len(row[\"gfm\"][\"states\"]))) for row in selected)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'\n"
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": false,
+  "stale_score_file_unchanged": true
+}

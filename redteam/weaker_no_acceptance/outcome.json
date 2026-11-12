@@ -1,0 +1,26 @@
+{
+  "case": "weaker_no_acceptance",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 17,
+    "actual_states": 169,
+    "actual_transitions": 394
+  },
+  "train": {
+    "returncode": 0,
+    "seconds": 0.21522147199721076
+  },
+  "methods_on_disk": [
+    "gfm_gf"
+  ],
+  "test": {
+    "returncode": 0,
+    "seconds": 0.21497982100117952
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": true
+}

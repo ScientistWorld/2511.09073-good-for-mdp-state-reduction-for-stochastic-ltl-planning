@@ -1,0 +1,26 @@
+{
+  "case": "better_lib_falling",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 17,
+    "actual_states": 139,
+    "actual_transitions": 304
+  },
+  "train": {
+    "returncode": 0,
+    "seconds": 0.21505614099442028
+  },
+  "methods_on_disk": [
+    "gfm_gf"
+  ],
+  "test": {
+    "returncode": 0,
+    "seconds": 0.21482308898703195
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": true
+}

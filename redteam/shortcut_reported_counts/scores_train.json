@@ -1,0 +1,43 @@
+{
+  "experiments": {
+    "tdr_delayed_response": {
+      "results": {
+        "gfm_gf": {
+          "state_count_size_weighted_mean": -1000000.0,
+          "state_count_per_formula": -1000000.0,
+          "state_count_sum": -3000000,
+          "transition_count_sum": -3000000,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      }
+    },
+    "lib_signal_change": {
+      "results": {
+        "gfm_gf": {
+          "state_count_size_weighted_mean": -1000000.0,
+          "state_count_per_formula": -1000000.0,
+          "state_count_sum": -2000000,
+          "transition_count_sum": -2000000,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      }
+    },
+    "ncs_ordered_sequence": {
+      "results": {
+        "gfm_gf": {
+          "state_count_size_weighted_mean": -1000000.0,
+          "state_count_per_formula": -1000000.0,
+          "state_count_sum": -4000000,
+          "transition_count_sum": -4000000,
+          "semantic_check_pass_rate": 1.0,
+          "trace_semantics_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0
+        }
+      }
+    }
+  }
+}

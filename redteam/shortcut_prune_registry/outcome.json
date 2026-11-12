@@ -1,0 +1,27 @@
+{
+  "case": "shortcut_prune_registry",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 17,
+    "actual_states": 57,
+    "actual_transitions": 102
+  },
+  "train": {
+    "returncode": 0,
+    "seconds": 0.2148298700049054
+  },
+  "methods_on_disk": [
+    "gfm_gf",
+    "shortcut_unregistered_method"
+  ],
+  "test": {
+    "returncode": 0,
+    "seconds": 0.16474494797876105
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": true
+}

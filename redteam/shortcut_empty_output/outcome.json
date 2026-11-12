@@ -1,0 +1,26 @@
+{
+  "case": "shortcut_empty_output",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 0,
+    "actual_states": 0,
+    "actual_transitions": 0
+  },
+  "train": {
+    "returncode": 1,
+    "seconds": 0.16431889499654062
+  },
+  "methods_on_disk": [],
+  "test": {
+    "returncode": 1,
+    "seconds": 0.16466959699755535,
+    "error_excerpt": "Traceback (most recent call last):\n  File \"/home/user/eval/test/evaluate_gf.py\", line 435, in <module>\n    main()\n  File \"/home/user/eval/test/evaluate_gf.py\", line 427, in main\n    scores = build_scores(load_rows_by_method(args.input), expected)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 73, in load_rows_by_method\n    raise ValueError(\"no method rows found\")\nValueError: no method rows found\n"
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": false,
+  "stale_score_file_unchanged": true
+}

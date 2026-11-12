@@ -1,0 +1,28 @@
+{
+  "experiments": {
+    "tdr_delayed_response": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": -1000000,
+          "semantic_check_pass_rate": 1.0
+        }
+      }
+    },
+    "lib_signal_change": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": -1000000,
+          "semantic_check_pass_rate": 1.0
+        }
+      }
+    },
+    "ncs_ordered_sequence": {
+      "results": {
+        "gfm_gf": {
+          "state_count_sum": -1000000,
+          "semantic_check_pass_rate": 1.0
+        }
+      }
+    }
+  }
+}

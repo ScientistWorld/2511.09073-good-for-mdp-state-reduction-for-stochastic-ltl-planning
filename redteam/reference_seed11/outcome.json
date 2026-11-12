@@ -1,0 +1,26 @@
+{
+  "case": "reference_seed11",
+  "hidden_command": [
+    "bash",
+    "scripts/evaluate_test.sh"
+  ],
+  "modified_evaluator": false,
+  "construction": {
+    "formulas": 17,
+    "actual_states": 169,
+    "actual_transitions": 394
+  },
+  "train": {
+    "returncode": 0,
+    "seconds": 0.21480088899261318
+  },
+  "methods_on_disk": [
+    "gfm_gf"
+  ],
+  "test": {
+    "returncode": 0,
+    "seconds": 0.21505045000230893
+  },
+  "test_score_file_exists": true,
+  "test_wrote_score_file": true
+}
