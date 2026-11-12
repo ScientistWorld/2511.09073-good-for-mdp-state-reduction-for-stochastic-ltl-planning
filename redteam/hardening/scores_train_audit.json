@@ -11,6 +11,24 @@
           "generated_trace_pass_rate": 1.0,
           "planning_value_agreement_rate": 1.0
         },
+        "brute_force_dba": {
+          "state_count_size_weighted_mean": 528.0,
+          "state_count_per_formula": 448.0,
+          "state_count_sum": 1344,
+          "transition_count_sum": 3360,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "brute_force_tdr_dba": {
+          "state_count_size_weighted_mean": 528.0,
+          "state_count_per_formula": 448.0,
+          "state_count_sum": 1344,
+          "transition_count_sum": 3360,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
         "gfm_gf_reference": {
           "state_count_size_weighted_mean": 9.333333333333334,
           "state_count_per_formula": 9.0,
@@ -182,6 +200,24 @@
           "state_count_per_formula": 7.333333333333333,
           "state_count_sum": 22,
           "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "brute_force_dba": {
+          "state_count_size_weighted_mean": 36.36842105263158,
+          "state_count_per_formula": 38.333333333333336,
+          "state_count_sum": 115,
+          "transition_count_sum": 337,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "brute_force_tdr_dba": {
+          "state_count_size_weighted_mean": 14.157894736842104,
+          "state_count_per_formula": 13.666666666666666,
+          "state_count_sum": 41,
+          "transition_count_sum": 117,
           "semantic_check_pass_rate": 1.0,
           "generated_trace_pass_rate": 1.0,
           "planning_value_agreement_rate": 1.0
@@ -361,6 +397,24 @@
           "generated_trace_pass_rate": 1.0,
           "planning_value_agreement_rate": 1.0
         },
+        "brute_force_dba": {
+          "state_count_size_weighted_mean": 237.0,
+          "state_count_per_formula": 170.0,
+          "state_count_sum": 680,
+          "transition_count_sum": 4828,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "brute_force_tdr_dba": {
+          "state_count_size_weighted_mean": 7.833333333333333,
+          "state_count_per_formula": 7.0,
+          "state_count_sum": 28,
+          "transition_count_sum": 56,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
         "gfm_gf_reference": {
           "state_count_size_weighted_mean": 7.833333333333333,
           "state_count_per_formula": 7.0,
@@ -532,6 +586,24 @@
           "state_count_per_formula": 3.375,
           "state_count_sum": 54,
           "transition_count_sum": 148,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "brute_force_dba": {
+          "state_count_size_weighted_mean": 6.851063829787234,
+          "state_count_per_formula": 6.5,
+          "state_count_sum": 104,
+          "transition_count_sum": 316,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "brute_force_tdr_dba": {
+          "state_count_size_weighted_mean": 4.782978723404256,
+          "state_count_per_formula": 4.625,
+          "state_count_sum": 74,
+          "transition_count_sum": 206,
           "semantic_check_pass_rate": 1.0,
           "generated_trace_pass_rate": 1.0,
           "planning_value_agreement_rate": 1.0

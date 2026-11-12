@@ -42,8 +42,98 @@
       "failed": false,
       "errors": [],
       "delta_pair": 1.9500000000000002,
-      "rank_all_cases": 0.004658259818915194,
-      "rank_honest_cohort": 0.004997297626178213
+      "rank_all_cases": 0.00445957360507086,
+      "rank_honest_cohort": 0.00580939022033809
+    },
+    "brute_force_dba": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 1038.2222222222222,
+          "state_count_per_formula": 896.0,
+          "state_count_sum": 2688,
+          "transition_count_sum": 6720,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 454.85714285714283,
+          "state_count_per_formula": 340.0,
+          "state_count_sum": 1360,
+          "transition_count_sum": 9680,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 5.2,
+          "state_count_per_formula": 5.1875,
+          "state_count_sum": 83,
+          "transition_count_sum": 275,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": -2.925,
+      "rank_all_cases": -0.7887879737993406,
+      "rank_honest_cohort": -0.9657563315657369
+    },
+    "brute_force_tdr_dba": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 1038.2222222222222,
+          "state_count_per_formula": 896.0,
+          "state_count_sum": 2688,
+          "transition_count_sum": 6720,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": -1.3649999999999998,
+      "rank_all_cases": -0.671331160992703,
+      "rank_honest_cohort": -0.8128706332250054
     },
     "gfm_gf_reference": {
       "metrics": {
@@ -136,7 +226,7 @@
         "tdr_11: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_constant_reject": {
@@ -185,7 +275,7 @@
         "tdr_11: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_crash": {
@@ -232,7 +322,7 @@
         "constructor: constructor exited with 3: "
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_direct_scores": {
@@ -322,7 +412,7 @@
       "failed": true,
       "errors": [],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_flags": {
@@ -371,7 +461,7 @@
         "tdr_11: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_ground_truth_options": {
@@ -420,7 +510,7 @@
         "tdr_11: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_missing_benchmark": {
@@ -467,7 +557,7 @@
         "tdr_7: missing output"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_non_gfm": {
@@ -516,7 +606,7 @@
         "tdr_11: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_null_count": {
@@ -610,7 +700,7 @@
         "lib_10: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_reported_counts": {
@@ -704,7 +794,7 @@
         "tdr_11: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_string_accepting": {
@@ -753,7 +843,7 @@
         "tdr_11: RowError: 'accepting' must be a JSON boolean"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "shortcut_undeclared_states": {
@@ -802,7 +892,7 @@
         "tdr_11: RowError: transition references an undeclared state"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
+      "rank_all_cases": -10.732148066063512,
       "rank_honest_cohort": null
     },
     "weaker_dfa": {
@@ -847,8 +937,8 @@
       "failed": false,
       "errors": [],
       "delta_pair": -0.975,
-      "rank_all_cases": -7.273374146928798e-05,
-      "rank_honest_cohort": -7.807367938605052e-05
+      "rank_all_cases": -6.962659100725866e-05,
+      "rank_honest_cohort": -9.072976179271724e-05
     },
     "weaker_no_acceptance": {
       "metrics": {
@@ -896,8 +986,8 @@
         "tdr_11: semantic or planning disagreement"
       ],
       "delta_pair": -10.299999999999997,
-      "rank_all_cases": -11.07856469614364,
-      "rank_honest_cohort": -11.891767211949615
+      "rank_all_cases": -10.732148066063512,
+      "rank_honest_cohort": -13.856454994252648
     }
   },
   "reference": {
@@ -952,24 +1042,26 @@
     "22": 0.0
   },
   "train_vs_test_rank_all_cases": {
-    "better_gf_rewrite": 0.0037211979316900835,
+    "better_gf_rewrite": 0.0035651111291292144,
+    "brute_force_dba": -0.3956558034366288,
+    "brute_force_tdr_dba": -0.32557780822116955,
     "gfm_gf_reference": 0.0,
-    "shortcut_constant_accept": -11.080588638949985,
-    "shortcut_constant_reject": -11.080588638949985,
-    "shortcut_crash": -11.080588638949985,
+    "shortcut_constant_accept": -10.683295822767102,
+    "shortcut_constant_reject": -10.683295822767102,
+    "shortcut_crash": -10.683295822767102,
     "shortcut_direct_scores": 0.0,
-    "shortcut_empty_output": -11.080588638949985,
-    "shortcut_flags": -11.080588638949985,
-    "shortcut_ground_truth_options": -11.080588638949985,
-    "shortcut_missing_benchmark": -11.080588638949985,
-    "shortcut_non_gfm": -11.080588638949985,
+    "shortcut_empty_output": -10.683295822767102,
+    "shortcut_flags": -10.683295822767102,
+    "shortcut_ground_truth_options": -10.683295822767102,
+    "shortcut_missing_benchmark": -10.683295822767102,
+    "shortcut_non_gfm": -10.683295822767102,
     "shortcut_null_count": 0.0,
-    "shortcut_prune_registry": -11.080588638949985,
+    "shortcut_prune_registry": -10.683295822767102,
     "shortcut_reported_counts": 0.0,
-    "shortcut_sparse_guards": -11.080588638949985,
-    "shortcut_string_accepting": -11.080588638949985,
-    "shortcut_undeclared_states": -11.080588638949985,
-    "weaker_dfa": -0.011359726434369995,
-    "weaker_no_acceptance": -11.080588638949985
+    "shortcut_sparse_guards": -10.683295822767102,
+    "shortcut_string_accepting": -10.683295822767102,
+    "shortcut_undeclared_states": -10.683295822767102,
+    "weaker_dfa": -0.010884762554208267,
+    "weaker_no_acceptance": -10.683295822767102
   }
 }

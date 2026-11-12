@@ -2,19 +2,55 @@
   "experiments": {
     "tdr_delayed_response": {
       "results": {
-        "shortcut_direct_scores": {
-          "state_count_sum": -1000000
+        "gfm_gf": {
+          "state_count_size_weighted_mean": 9.333333333333334,
+          "state_count_per_formula": 9.0,
+          "state_count_sum": 27,
+          "transition_count_sum": 54,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
         }
       }
     },
     "lib_signal_change": {
-      "results": {}
+      "results": {
+        "gfm_gf": {
+          "state_count_size_weighted_mean": 14.157894736842104,
+          "state_count_per_formula": 13.666666666666666,
+          "state_count_sum": 41,
+          "transition_count_sum": 117,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      }
     },
     "ncs_ordered_sequence": {
-      "results": {}
+      "results": {
+        "gfm_gf": {
+          "state_count_size_weighted_mean": 7.833333333333333,
+          "state_count_per_formula": 7.0,
+          "state_count_sum": 28,
+          "transition_count_sum": 56,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      }
     },
     "random_cosafety_gf": {
-      "results": {}
+      "results": {
+        "gfm_gf": {
+          "state_count_size_weighted_mean": 4.782978723404256,
+          "state_count_per_formula": 4.625,
+          "state_count_sum": 74,
+          "transition_count_sum": 206,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      }
     }
   }
 }

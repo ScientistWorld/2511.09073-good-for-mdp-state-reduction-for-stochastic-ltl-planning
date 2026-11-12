@@ -1,0 +1,557 @@
+{
+  "slice": "train",
+  "methods": {
+    "gfm_gf": {
+      "failed": false,
+      "errors": [],
+      "rows": {
+        "tdr_6": {
+          "states": 7,
+          "transitions": 14,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            25,
+            25
+          ],
+          "salted": [
+            24,
+            24
+          ],
+          "correct": true
+        },
+        "tdr_8": {
+          "states": 9,
+          "transitions": 18,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            27,
+            27
+          ],
+          "salted": [
+            25,
+            25
+          ],
+          "correct": true
+        },
+        "tdr_10": {
+          "states": 11,
+          "transitions": 22,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            25,
+            25
+          ],
+          "salted": [
+            24,
+            24
+          ],
+          "correct": true
+        },
+        "lib_5": {
+          "states": 11,
+          "transitions": 31,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            24,
+            24
+          ],
+          "salted": [
+            24,
+            24
+          ],
+          "correct": true
+        },
+        "lib_6": {
+          "states": 13,
+          "transitions": 37,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            22,
+            22
+          ],
+          "salted": [
+            25,
+            25
+          ],
+          "correct": true
+        },
+        "lib_8": {
+          "states": 17,
+          "transitions": 49,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            23,
+            23
+          ],
+          "salted": [
+            22,
+            22
+          ],
+          "correct": true
+        },
+        "ncs_1": {
+          "states": 4,
+          "transitions": 8,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            21,
+            21
+          ],
+          "salted": [
+            24,
+            24
+          ],
+          "correct": true
+        },
+        "ncs_3": {
+          "states": 6,
+          "transitions": 12,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            25,
+            25
+          ],
+          "salted": [
+            25,
+            25
+          ],
+          "correct": true
+        },
+        "ncs_5": {
+          "states": 8,
+          "transitions": 16,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            19,
+            19
+          ],
+          "salted": [
+            27,
+            27
+          ],
+          "correct": true
+        },
+        "ncs_7": {
+          "states": 10,
+          "transitions": 20,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            25,
+            25
+          ],
+          "salted": [
+            23,
+            23
+          ],
+          "correct": true
+        },
+        "rnd_00": {
+          "states": 3,
+          "transitions": 6,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            27,
+            27
+          ],
+          "salted": [
+            25,
+            25
+          ],
+          "correct": true
+        },
+        "rnd_01": {
+          "states": 8,
+          "transitions": 26,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            23,
+            23
+          ],
+          "salted": [
+            27,
+            27
+          ],
+          "correct": true
+        },
+        "rnd_02": {
+          "states": 3,
+          "transitions": 6,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            30,
+            30
+          ],
+          "salted": [
+            24,
+            24
+          ],
+          "correct": true
+        },
+        "rnd_03": {
+          "states": 3,
+          "transitions": 8,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            26,
+            26
+          ],
+          "salted": [
+            22,
+            22
+          ],
+          "correct": true
+        },
+        "rnd_04": {
+          "states": 5,
+          "transitions": 16,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            26,
+            26
+          ],
+          "salted": [
+            22,
+            22
+          ],
+          "correct": true
+        },
+        "rnd_05": {
+          "states": 6,
+          "transitions": 18,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            23,
+            23
+          ],
+          "salted": [
+            26,
+            26
+          ],
+          "correct": true
+        },
+        "rnd_06": {
+          "states": 6,
+          "transitions": 13,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            25,
+            25
+          ],
+          "salted": [
+            23,
+            23
+          ],
+          "correct": true
+        },
+        "rnd_07": {
+          "states": 3,
+          "transitions": 10,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            21,
+            21
+          ],
+          "salted": [
+            23,
+            23
+          ],
+          "correct": true
+        },
+        "rnd_08": {
+          "states": 5,
+          "transitions": 16,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            26,
+            26
+          ],
+          "salted": [
+            24,
+            24
+          ],
+          "correct": true
+        },
+        "rnd_09": {
+          "states": 6,
+          "transitions": 18,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            22,
+            22
+          ],
+          "salted": [
+            24,
+            24
+          ],
+          "correct": true
+        },
+        "rnd_10": {
+          "states": 3,
+          "transitions": 6,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            21,
+            21
+          ],
+          "salted": [
+            26,
+            26
+          ],
+          "correct": true
+        },
+        "rnd_11": {
+          "states": 1,
+          "transitions": 2,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            23,
+            23
+          ],
+          "salted": [
+            26,
+            26
+          ],
+          "correct": true
+        },
+        "rnd_12": {
+          "states": 3,
+          "transitions": 8,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            25,
+            25
+          ],
+          "salted": [
+            22,
+            22
+          ],
+          "correct": true
+        },
+        "rnd_13": {
+          "states": 7,
+          "transitions": 20,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            28,
+            28
+          ],
+          "salted": [
+            23,
+            23
+          ],
+          "correct": true
+        },
+        "rnd_14": {
+          "states": 5,
+          "transitions": 14,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            24,
+            24
+          ],
+          "salted": [
+            26,
+            26
+          ],
+          "correct": true
+        },
+        "rnd_15": {
+          "states": 7,
+          "transitions": 19,
+          "balanced": [
+            32,
+            32
+          ],
+          "generated": [
+            16,
+            16
+          ],
+          "planning": [
+            29,
+            29
+          ],
+          "salted": [
+            22,
+            22
+          ],
+          "correct": true
+        }
+      }
+    }
+  }
+}
