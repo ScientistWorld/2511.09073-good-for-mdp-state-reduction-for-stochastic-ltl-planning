@@ -1,7 +1,6 @@
 # Once you set action to 'submit' or 'done', STOP immediately.
 # Do NOT sleep, poll, or wait for jobs. The system reads this file
 # only after your turn ends.
-action: submit
-gpus: 0
+action: done
 milestone: core_claim
-notes: "CPU job: run the hardening audit (reference, better/weaker variants, brute force, shortcuts) through the hidden evaluator, then regenerate the real scores (method.sh, evaluate_train.sh, evaluate_test.sh) and check them with validate.py --compare."
+notes: "Hardening verified by CPU job 273cd0cc-ead (exit 0). No red-team shortcut beats the reference: counts are recomputed, the evaluator owns the specs, planning-value and dense-probe gates are in place, and any failure gets worst values. A better variant shows real headroom (+1.95 Δpair); brute-force and weaker baselines score below the reference. validate.py --compare passes. Results are documented in HARDENING.md. The milestone stays core_claim because the scope is the Section 6 direct construction, not the full Redux pipeline."
