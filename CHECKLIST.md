@@ -19,7 +19,7 @@
 ## Code
 - [x] Evaluation code in `eval/`
 - [x] Method implementation in `method/`
-- [ ] Baseline implementation in `baseline/` (not needed for current core claim)
+- [x] Baseline implementation in `baseline/` (`brute_force_dba`, `weaker_dfa`; Owl/Slim are paper-reported only)
 
 ## Scripts
 - [x] `scripts/evaluate.sh`

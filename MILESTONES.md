@@ -29,5 +29,15 @@
 - Final verification confirmed that scoring, method/problem separation, train/test artifacts, and documentation are consistent for the packaged recurring co-safety benchmark gym.
 - Kept the milestone at `core_claim`; the documented limitation remains that this is the direct `GF phi` construction reproduction rather than the full general Redux pipeline.
 
+### [2026-11-12] - core_claim
+- Hardening iteration 11 answered the red-team audit:
+  - methods are now constructor commands, and the evaluator owns the specs (hidden test with unseen sizes, renamed atoms and random formulas);
+  - counts are recomputed from the automata;
+  - planning-value agreement on generated MDPs closes the non-GFM shortcut;
+  - dense lasso probes close the sparse-guard shortcut;
+  - any failure gets worst values.
+- CPU job `273cd0cc-ead` (exit 0): no shortcut beats the reference, a better variant shows real headroom (+1.95 Δpair), brute-force and weaker baselines score below the reference, and `python validate.py --compare` passes. Details in `HARDENING.md`.
+- The milestone stays at `core_claim`: the scope is still the Section 6 direct construction, not the general Redux pipeline.
+
 ## Stop Justification
 - Completed at milestone `core_claim`.
