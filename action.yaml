@@ -1,2 +1,8 @@
-action: done
-notes: "Audit complete: honest quality ordering passes; 3 winning shortcuts and 2 shortcut ties; gym files restored; report committed as 3bacc3a."
+# Once you set action to 'submit' or 'done', STOP immediately.
+# Do NOT sleep, poll, or wait for jobs. The system reads this file
+# only after your turn ends.
+action: pending
+gpus: 0
+test: false
+milestone: core_claim
+notes: ""
