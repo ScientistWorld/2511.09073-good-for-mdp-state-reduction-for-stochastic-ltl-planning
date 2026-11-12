@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "start_commit": "d68c040497349a56931929bd39badbbdf57dd51b",
+  "case_count": 18,
+  "successful_hidden_invocations": 15,
+  "intentionally_failed_hidden_invocations": 3,
+  "strictly_paying_shortcuts": [
+    "shortcut_reported_counts",
+    "shortcut_ground_truth_options",
+    "shortcut_non_gfm"
+  ],
+  "paying_shortcut_ties": [
+    "shortcut_sparse_guards",
+    "shortcut_prune_registry"
+  ],
+  "protected_gym_paths_unchanged": [
+    "baseline",
+    "briefing",
+    "data",
+    "environment",
+    "eval",
+    "method",
+    "paper",
+    "scoring",
+    "scripts",
+    ".gitignore",
+    "MILESTONES.md",
+    "PROGRESS.md"
+  ],
+  "temporary_launcher_restored": true,
+  "seed_metric_and_rank_spread": 0,
+  "note": "Checks recorded evidence only; no model construction or inference is run."
+}

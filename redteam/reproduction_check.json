@@ -1,0 +1,159 @@
+{
+  "source": "Packaged paper/2511.09073.md Table 5; extracted text may contain OCR errors.",
+  "paper_ncs_rows": [
+    [
+      "GF(a&X(b)&X(X(X(c))))",
+      "8 (0.47)",
+      "6 (0.10)",
+      "4 (0.09)"
+    ],
+    [
+      "GF(a&X(b)&X(X(X(c)))&X(X(X(d))))",
+      "16 (0.47)",
+      "10 (0.10)",
+      "5 (0.08)"
+    ],
+    [
+      "GF(a&X(b)&X(X(X(c)))&X(X(X(X(d))))",
+      "32 (0.49)",
+      "18 (0.10)",
+      "6 (0.08)"
+    ],
+    [
+      "GF(a&X(b)&X(X(X(c)))&X(X(X(X(X(d))))))",
+      "64 (0.58)",
+      "34 (0.11)",
+      "7 (0.08)"
+    ],
+    [
+      "GF(a&X(b)&X(X(X(c)))&X(X(X(X(X(d))))&X(X(X(X(X(X(e))))))",
+      "128 (2.00)",
+      "66 (0.19)",
+      "8 (0.09)"
+    ],
+    [
+      "GF(a&X(b)&X(X(X(c)))&X(X(X(X(X(d))))&X(X(X(X(X(X(e))))))",
+      "256 (11.58)",
+      "130 (0.37)",
+      "9 (0.08)"
+    ],
+    [
+      "GF(a&X(b)&X(X(X(c)))&X(X(X(X(X(d))))&X(X(X(X(X(X(X(e))))))",
+      "512 (84.52)",
+      "258 (0.97)",
+      "10 (0.08)"
+    ],
+    [
+      "GF(a&X(b)&X(X(X(c)))&X(X(X(X(X(X(d))))&X(X(X(X(X(X(X(e))))))",
+      "timeout",
+      "514 (2.85)",
+      "11 (0.09)"
+    ]
+  ],
+  "paper_ncs_owl_counts": [
+    8,
+    16,
+    32,
+    64,
+    128,
+    256,
+    512,
+    null
+  ],
+  "paper_ncs_owl_finite_subtotal_not_total": 1016,
+  "paper_ncs_slim_counts": [
+    6,
+    10,
+    18,
+    34,
+    66,
+    130,
+    258,
+    514
+  ],
+  "paper_ncs_slim_total": 1036,
+  "paper_ncs_gfm_counts": [
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11
+  ],
+  "gym_ncs_specs": [
+    {
+      "name": "ncs_4",
+      "family": "NCS",
+      "n": 4,
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))))"
+    },
+    {
+      "name": "ncs_5",
+      "family": "NCS",
+      "n": 5,
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))))"
+    },
+    {
+      "name": "ncs_6",
+      "family": "NCS",
+      "n": 6,
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))))"
+    },
+    {
+      "name": "ncs_7",
+      "family": "NCS",
+      "n": 7,
+      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))) & X(X(X(X(X(X(g)))))))"
+    },
+    {
+      "name": "ncs_8",
+      "family": "NCS",
+      "n": 8,
+      "formula": "GF(nested conjunction sequence over 8 offsets)"
+    },
+    {
+      "name": "ncs_9",
+      "family": "NCS",
+      "n": 9,
+      "formula": "GF(nested conjunction sequence over 9 offsets)"
+    },
+    {
+      "name": "ncs_10",
+      "family": "NCS",
+      "n": 10,
+      "formula": "GF(nested conjunction sequence over 10 offsets)"
+    },
+    {
+      "name": "ncs_11",
+      "family": "NCS",
+      "n": 11,
+      "formula": "GF(nested conjunction sequence over 11 offsets)"
+    }
+  ],
+  "gym_reference_ncs": {
+    "owl_red": {
+      "type": "baseline",
+      "state_count_per_formula": 129.5,
+      "state_count_sum": 1036
+    },
+    "slim_red": {
+      "type": "baseline",
+      "state_count_per_formula": 128.75,
+      "state_count_sum": 1030
+    },
+    "gfm_gf": {
+      "type": "proposed",
+      "state_count_size_weighted_mean": 8.2,
+      "state_count_per_formula": 7.5,
+      "state_count_sum": 60
+    }
+  },
+  "baseline_shell": {
+    "returncode": 2,
+    "stdout": "",
+    "stderr": "No runnable Owl/Slim baseline is packaged; baselines in scoring/reference.json are paper-reported comparison points.\nUse bash scripts/method.sh to reproduce the implemented direct GFM-GF construction.\n"
+  },
+  "interpretation": "Gym consecutive offsets differ from the nonuniform offsets in the paper. Equal GFM state-count sequences do not establish identical problems. Owl times out in the last paper row; a total needs a failure policy."
+}

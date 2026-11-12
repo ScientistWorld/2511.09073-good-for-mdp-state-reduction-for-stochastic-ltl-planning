@@ -1,0 +1,79 @@
+[hive] This stdout log is managed by Hive.
+[hive] job_id: 2bfd7103
+[hive] host: node
+[hive] node_id: 33fab6f2fa52b9b1754553799a6bbecc9eb1dc34ec0b247f92cd31a6
+[hive] user: nexus/user (remote)
+[hive] resource: gpu-cpu-test
+[hive] gpus: 0
+[hive] cpus: 1
+[hive] workdir: /home/user
+[hive] timeout_sec: 21600
+[hive] started_at: 2026-11-12 12:16:06 EST
+[hive] command: apptainer exec --containall --cleanenv --env HF_HOME=/home/user/shared/hf_cache --env TRANSFORMERS_CACHE=/home/user/shared/hf_cache --env HF_DATASETS_CACHE=/home/user/shared/hf_cache/datasets --env TORCH_HOME=/home/user/shared/hf_cache/torch --bind /home/user/scratch/AgentWorkspaces/workspaces/2511.09073:/home/user --overlay /home/user/scratch/AgentWorkspaces/workspaces/2511.09073/environment/overlay.img:ro --bind /home/user/scratch/AgentWorkspaces/shared/datasets:/home/user/shared/datasets:ro --bind /home/user/scratch/AgentWorkspaces/shared/models:/home/user/shared/models:ro --bind /home/user/scratch/AgentWorkspaces/shared/hf_cache:/home/user/shared/hf_cache /home/user/scratch/AgentWorkspaces/workspaces/2511.09073/environment/container.sif bash -c 'cd /home/user && bash /home/user/scripts/run.sh'
+{"case": "reference_seed11", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.21505045000230893}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.21480088899261318}}
+{"case": "reference_seed22", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.21485439900425263}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.21446456699050032}}
+{"case": "reference_seed33", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.2662826600135304}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.21506145101739094}}
+{"case": "better_lib_falling", "construction": {"actual_states": 139, "actual_transitions": 304, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.21482308898703195}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.21505614099442028}}
+{"case": "weaker_no_acceptance", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.21497982100117952}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.21522147199721076}}
+{"case": "shortcut_reported_counts", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.21483158000046387}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.2649691720143892}}
+{"case": "shortcut_ground_truth_options", "construction": {"actual_states": 17, "actual_transitions": 34, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.1644737060123589}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.16497463901760057}}
+{"case": "shortcut_non_gfm", "construction": {"actual_states": 169, "actual_transitions": 242, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.1646724680031184}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.1644862659741193}}
+{"case": "shortcut_sparse_guards", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 1.4670668809849303}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 1.1175139019906055}}
+{"case": "shortcut_prune_registry", "construction": {"actual_states": 57, "actual_transitions": 102, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf", "shortcut_unregistered_method"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.16474494797876105}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.2148298700049054}}
+{"case": "shortcut_direct_scores", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "forgery_overwritten": true, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.21597219599061646}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.21488319901982322}}
+{"case": "shortcut_flags", "construction": {"actual_states": 17, "actual_transitions": 17, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.16487279799184762}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.16480271800537594}}
+{"case": "shortcut_constant_accept", "construction": {"actual_states": 17, "actual_transitions": 17, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.21466696899733506}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.1643590060120914}}
+{"case": "shortcut_constant_reject", "construction": {"actual_states": 17, "actual_transitions": 17, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 0.16478710799128748}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 0.16608491601073183}}
+{"case": "shortcut_missing_benchmark", "construction": {"actual_states": 161, "actual_transitions": 378, "formulas": 16}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "stale_score_file_unchanged": true, "test": {"error_excerpt": "Traceback (most recent call last):\n  File \"/home/user/eval/test/evaluate_gf.py\", line 435, in <module>\n    main()\n  File \"/home/user/eval/test/evaluate_gf.py\", line 427, in main\n    scores = build_scores(load_rows_by_method(args.input), expected)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 411, in build_scores\n    \"results\": {\n               ^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 412, in <dictcomp>\n    method: aggregate(rows_by_method[method], names)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 368, in aggregate\n    raise ValueError(f\"missing benchmark outputs for {SLICE} slice: {missing}\")\nValueError: missing benchmark outputs for test slice: ['tdr_7']\n", "returncode": 1, "seconds": 0.16477524800575338}, "test_score_file_exists": true, "test_wrote_score_file": false, "train": {"returncode": 0, "seconds": 0.21528230200055987}}
+{"case": "shortcut_null_count", "construction": {"actual_states": 169, "actual_transitions": 394, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "stale_score_file_unchanged": true, "test": {"error_excerpt": "Traceback (most recent call last):\n  File \"/home/user/eval/test/evaluate_gf.py\", line 435, in <module>\n    main()\n  File \"/home/user/eval/test/evaluate_gf.py\", line 427, in main\n    scores = build_scores(load_rows_by_method(args.input), expected)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 411, in build_scores\n    \"results\": {\n               ^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 412, in <dictcomp>\n    method: aggregate(rows_by_method[method], names)\n            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 383, in aggregate\n    state_count_sum = sum(int(row.get(\"state_count\", len(row[\"gfm\"][\"states\"]))) for row in selected)\n                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 383, in <genexpr>\n    state_count_sum = sum(int(row.get(\"state_count\", len(row[\"gfm\"][\"states\"]))) for row in selected)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nTypeError: int() argument must be a string, a bytes-like object or a real number, not 'NoneType'\n", "returncode": 1, "seconds": 0.16431357502005994}, "test_score_file_exists": true, "test_wrote_score_file": false, "train": {"returncode": 1, "seconds": 0.16442999598803}}
+{"case": "shortcut_empty_output", "construction": {"actual_states": 0, "actual_transitions": 0, "formulas": 0}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": [], "modified_evaluator": false, "stale_score_file_unchanged": true, "test": {"error_excerpt": "Traceback (most recent call last):\n  File \"/home/user/eval/test/evaluate_gf.py\", line 435, in <module>\n    main()\n  File \"/home/user/eval/test/evaluate_gf.py\", line 427, in main\n    scores = build_scores(load_rows_by_method(args.input), expected)\n                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/eval/test/evaluate_gf.py\", line 73, in load_rows_by_method\n    raise ValueError(\"no method rows found\")\nValueError: no method rows found\n", "returncode": 1, "seconds": 0.16466959699755535}, "test_score_file_exists": true, "test_wrote_score_file": false, "train": {"returncode": 1, "seconds": 0.16431889499654062}}
+{"case": "brute_force_history", "construction": {"actual_states": 2108, "actual_transitions": 6256, "formulas": 17}, "hidden_command": ["bash", "scripts/evaluate_test.sh"], "methods_on_disk": ["gfm_gf"], "modified_evaluator": false, "test": {"returncode": 0, "seconds": 4.574887980998028}, "test_score_file_exists": true, "test_wrote_score_file": true, "train": {"returncode": 0, "seconds": 18.448456109006656}}
+{
+  "letters": [
+    [],
+    [
+      "a"
+    ],
+    [
+      "b"
+    ],
+    [
+      "a",
+      "b"
+    ]
+  ],
+  "probability_per_letter": 0.25,
+  "specification_satisfaction_probability": 1.0,
+  "reference": {
+    "maximal_end_component_count": 2,
+    "accepting_end_component_count": 1,
+    "accepting_component_sizes": [
+      32
+    ],
+    "optimal_buchi_probability": 1.0
+  },
+  "shortcut_non_gfm": {
+    "maximal_end_component_count": 2,
+    "accepting_end_component_count": 0,
+    "accepting_component_sizes": [],
+    "optimal_buchi_probability": 0.0
+  }
+}
+better_lib_falling dominates_reference 1.17 1.2409724009823906
+brute_force_history worse_than_reference -1.7550000000000001 0.0
+reference_seed11 ties_observed_reference 0.0 0.0
+reference_seed22 ties_observed_reference 0.0 0.0
+reference_seed33 ties_observed_reference 0.0 0.0
+shortcut_constant_accept tradeoff -2.1 -4.465379323193048
+shortcut_constant_reject tradeoff -2.1 -3.882016228714146
+shortcut_direct_scores ties_observed_reference 0.0 0.0
+shortcut_empty_output failed_hidden_test_not_ranked None None
+shortcut_flags tradeoff -2.1 -3.882016228714146
+shortcut_ground_truth_options dominates_reference 3.9 2.4766415011058824
+shortcut_missing_benchmark failed_hidden_test_not_ranked None None
+shortcut_non_gfm dominates_reference 0.4 0.0848528137423857
+shortcut_null_count failed_hidden_test_not_ranked None None
+shortcut_prune_registry ties_observed_reference 0.0 0.0
+shortcut_reported_counts dominates_reference 3.9 143293.7349811664
+shortcut_sparse_guards ties_observed_reference 0.0 0.0
+weaker_no_acceptance worse_than_reference -6.0 -6.363961030678928

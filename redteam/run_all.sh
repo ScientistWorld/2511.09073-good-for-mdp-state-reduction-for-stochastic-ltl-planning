@@ -6,3 +6,4 @@ for name in reference_seed11 reference_seed22 reference_seed33 better_lib_fallin
 done
 python redteam/extra_checks.py
 python redteam/analyze.py
+python redteam/reproduction_check.py

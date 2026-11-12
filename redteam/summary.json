@@ -1,5 +1,27 @@
 {
-  "normalization_note": "Exact future attempt-population stds are unknown. Paired deltas use the reference and one candidate as a two-attempt cohort; honest-cohort deltas use reference/better/weaker. Pareto dominance and ties do not depend on this choice. Coefficient signs are discarded.",
+  "normalization_note": "Exact future attempt-population stds are unknown. Paired deltas use the reference and one candidate as a two-attempt cohort. Audit-cohort deltas use all 15 successful runs, including duplicate references and the negative-count outlier. Honest-cohort deltas are reported only for reference/better/weaker, using those three attempts. Population standard deviations are used; constant metrics contribute zero. Pareto dominance and exact ties do not depend on the positive normalizers. Missing values are skipped as specified. Coefficient signs are discarded.",
+  "audit_cohort": [
+    "better_lib_falling",
+    "brute_force_history",
+    "reference_seed11",
+    "reference_seed22",
+    "reference_seed33",
+    "shortcut_constant_accept",
+    "shortcut_constant_reject",
+    "shortcut_direct_scores",
+    "shortcut_flags",
+    "shortcut_ground_truth_options",
+    "shortcut_non_gfm",
+    "shortcut_prune_registry",
+    "shortcut_reported_counts",
+    "shortcut_sparse_guards",
+    "weaker_no_acceptance"
+  ],
+  "honest_cohort": [
+    "reference_seed11",
+    "better_lib_falling",
+    "weaker_no_acceptance"
+  ],
   "reference": {
     "tdr_delayed_response": {
       "state_count_size_weighted_mean": 9.125,
@@ -91,6 +113,7 @@
         }
       },
       "paired_normalized_delta": 1.17,
+      "audit_cohort_normalized_delta": 2.2044807776380742e-05,
       "honest_cohort_normalized_delta": 1.2409724009823906,
       "improved": [
         "lib_signal_change/state_count_size_weighted_mean",
@@ -134,7 +157,7 @@
         }
       },
       "paired_normalized_delta": -1.7550000000000001,
-      "honest_cohort_normalized_delta": 0.0,
+      "audit_cohort_normalized_delta": -0.0013647231217287573,
       "improved": [],
       "worsened": [
         "tdr_delayed_response/state_count_size_weighted_mean",
@@ -177,6 +200,7 @@
         }
       },
       "paired_normalized_delta": 0.0,
+      "audit_cohort_normalized_delta": 0.0,
       "honest_cohort_normalized_delta": 0.0,
       "improved": [],
       "worsened": [],
@@ -215,7 +239,7 @@
         }
       },
       "paired_normalized_delta": 0.0,
-      "honest_cohort_normalized_delta": 0.0,
+      "audit_cohort_normalized_delta": 0.0,
       "improved": [],
       "worsened": [],
       "missing": [],
@@ -253,7 +277,7 @@
         }
       },
       "paired_normalized_delta": 0.0,
-      "honest_cohort_normalized_delta": 0.0,
+      "audit_cohort_normalized_delta": 0.0,
       "improved": [],
       "worsened": [],
       "missing": [],
@@ -291,7 +315,7 @@
         }
       },
       "paired_normalized_delta": -2.1,
-      "honest_cohort_normalized_delta": -4.465379323193048,
+      "audit_cohort_normalized_delta": -7.070450968032021,
       "improved": [
         "tdr_delayed_response/state_count_size_weighted_mean",
         "tdr_delayed_response/state_count_per_formula",
@@ -352,7 +376,7 @@
         }
       },
       "paired_normalized_delta": -2.1,
-      "honest_cohort_normalized_delta": -3.882016228714146,
+      "audit_cohort_normalized_delta": -6.542855661464823,
       "improved": [
         "tdr_delayed_response/state_count_size_weighted_mean",
         "tdr_delayed_response/state_count_per_formula",
@@ -413,7 +437,7 @@
         }
       },
       "paired_normalized_delta": 0.0,
-      "honest_cohort_normalized_delta": 0.0,
+      "audit_cohort_normalized_delta": 0.0,
       "improved": [],
       "worsened": [],
       "missing": [],
@@ -456,7 +480,7 @@
         }
       },
       "paired_normalized_delta": -2.1,
-      "honest_cohort_normalized_delta": -3.882016228714146,
+      "audit_cohort_normalized_delta": -6.542855661464823,
       "improved": [
         "tdr_delayed_response/state_count_size_weighted_mean",
         "tdr_delayed_response/state_count_per_formula",
@@ -517,7 +541,7 @@
         }
       },
       "paired_normalized_delta": 3.9,
-      "honest_cohort_normalized_delta": 2.4766415011058824,
+      "audit_cohort_normalized_delta": 9.032596565269814e-05,
       "improved": [
         "tdr_delayed_response/state_count_size_weighted_mean",
         "tdr_delayed_response/state_count_per_formula",
@@ -573,7 +597,7 @@
         }
       },
       "paired_normalized_delta": 0.4,
-      "honest_cohort_normalized_delta": 0.0848528137423857,
+      "audit_cohort_normalized_delta": 7.972658963953332e-06,
       "improved": [
         "tdr_delayed_response/transition_count_sum",
         "lib_signal_change/transition_count_sum",
@@ -604,7 +628,7 @@
         "ncs_ordered_sequence": {}
       },
       "paired_normalized_delta": 0.0,
-      "honest_cohort_normalized_delta": 0.0,
+      "audit_cohort_normalized_delta": 0.0,
       "improved": [],
       "worsened": [],
       "missing": [
@@ -657,7 +681,7 @@
         }
       },
       "paired_normalized_delta": 3.9,
-      "honest_cohort_normalized_delta": 143293.7349811664,
+      "audit_cohort_normalized_delta": 7.6821695827632785,
       "improved": [
         "tdr_delayed_response/state_count_size_weighted_mean",
         "tdr_delayed_response/state_count_per_formula",
@@ -708,7 +732,7 @@
         }
       },
       "paired_normalized_delta": 0.0,
-      "honest_cohort_normalized_delta": 0.0,
+      "audit_cohort_normalized_delta": 0.0,
       "improved": [],
       "worsened": [],
       "missing": [],
@@ -746,6 +770,7 @@
         }
       },
       "paired_normalized_delta": -6.0,
+      "audit_cohort_normalized_delta": -6.542946775313907,
       "honest_cohort_normalized_delta": -6.363961030678928,
       "improved": [],
       "worsened": [

@@ -45,13 +45,16 @@ def main():
     ref = successful['reference_seed11']
     honest_names = ['reference_seed11', 'better_lib_falling', 'weaker_no_acceptance']
     honest_cohort = [successful[c] for c in honest_names]
+    audit_cohort = list(successful.values())
     results = {}
     for case, outcome in sorted(outcomes.items()):
         entry = {'hidden_exit_code': outcome.get('test', {}).get('returncode')}
         if case in successful:
             scores = successful[case]
             entry.update(scores=scores, paired_normalized_delta=delta(scores, ref, [ref, scores])['delta'],
-                         honest_cohort_normalized_delta=delta(scores, ref, honest_cohort)['delta'])
+                         audit_cohort_normalized_delta=delta(scores, ref, audit_cohort)['delta'])
+            if case in honest_names:
+                entry['honest_cohort_normalized_delta'] = delta(scores, ref, honest_cohort)['delta']
             improvements, losses, missing = [], [], []
             for exp, cfg in config.items():
                 for metric, spec in cfg['metrics'].items():
@@ -74,11 +77,12 @@ def main():
     seed_scores = [successful[f'reference_seed{s}'] for s in [11, 22, 33]]
     spread = {exp: {metric: max(s[exp][metric] for s in seed_scores) - min(s[exp][metric] for s in seed_scores)
                     for metric in cfg['metrics']} for exp, cfg in config.items()}
-    summary = {'normalization_note': 'Exact future attempt-population stds are unknown. Paired deltas use the reference and one candidate as a two-attempt cohort; honest-cohort deltas use reference/better/weaker. Pareto dominance and ties do not depend on this choice. Coefficient signs are discarded.',
+    summary = {'normalization_note': 'Exact future attempt-population stds are unknown. Paired deltas use the reference and one candidate as a two-attempt cohort. Audit-cohort deltas use all 15 successful runs, including duplicate references and the negative-count outlier. Honest-cohort deltas are reported only for reference/better/weaker, using those three attempts. Population standard deviations are used; constant metrics contribute zero. Pareto dominance and exact ties do not depend on the positive normalizers. Missing values are skipped as specified. Coefficient signs are discarded.',
+               'audit_cohort': sorted(successful), 'honest_cohort': honest_names,
                'reference': ref, 'seed_metric_range': spread, 'cases': results}
     (AUDIT / 'summary.json').write_text(json.dumps(summary, indent=2) + '\n')
     for case, entry in results.items():
-        print(case, entry['relation'], entry.get('paired_normalized_delta'), entry.get('honest_cohort_normalized_delta'))
+        print(case, entry['relation'], entry.get('paired_normalized_delta'), entry.get('audit_cohort_normalized_delta'))
 
 
 if __name__ == '__main__':
