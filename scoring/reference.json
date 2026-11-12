@@ -1,44 +1,44 @@
 {
   "experiments": {
     "tdr_delayed_response": {
-      "description": "Table 2 Trigger with Delayed Response GF co-safety formulas TDR[6] through TDR[10].",
-      "weight": 0.45,
+      "description": "Trigger with Delayed Response GF(a & X^n b) (paper Table 2). Paper results are for TDR[6..10]; the hidden test uses unseen delays with renamed atoms, so its absolute numbers differ.",
+      "weight": 0.35,
       "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
         "state_count_size_weighted_mean": {
           "higher_is_better": false,
           "coefficient": -1.0,
-          "description": "Formula-size-weighted mean number of states per generated GF automaton, preserving compactness while differentiating held-out formula-size slices."
+          "description": "Mean automaton state count per formula, weighted by the formula's size parameter (delay, number of signals, pattern span, or formula length). Computed from the returned automaton."
         },
         "state_count_per_formula": {
           "higher_is_better": false,
           "coefficient": -0.5,
-          "description": "Mean number of states per generated GF automaton, making compactness comparable across train/test formula-count splits."
+          "description": "Mean number of automaton states per formula, counted from the returned automaton."
         },
         "state_count_sum": {
           "higher_is_better": false,
           "coefficient": -0.25,
-          "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
+          "description": "Total number of automaton states over the experiment's formulas (the quantity the paper's tables report)."
         },
         "transition_count_sum": {
           "higher_is_better": false,
           "coefficient": -0.2,
-          "description": "Total number of transitions, penalizing oversized automata that pass traces by enumeration."
+          "description": "Total number of distinct (source, target, accepting) transitions with a satisfiable guard; independent of how guards are split or merged."
         },
         "semantic_check_pass_rate": {
           "higher_is_better": true,
           "coefficient": 1.0,
-          "description": "Agreement with the family semantics on curated periodic words."
-        },
-        "trace_semantics_pass_rate": {
-          "higher_is_better": true,
-          "coefficient": 0.8,
-          "description": "Agreement on canonical positive and negative periodic words for each formula."
+          "description": "Agreement of the automaton with the formula's semantics on evaluator-generated, label-balanced ultimately periodic words (including near-miss mutations). Any disagreement fails the run."
         },
         "generated_trace_pass_rate": {
           "higher_is_better": true,
           "coefficient": 1.2,
-          "description": "Agreement on deterministic generated periodic words that broaden the semantic probe."
+          "description": "Agreement on unconstrained dense random ultimately periodic words. Any disagreement fails the run."
+        },
+        "planning_value_agreement_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Fraction of (MDP, start state) pairs on evaluator-generated MDPs where the optimal probability obtained through the MDP x automaton product (agent resolves the automaton's choices online) equals the true optimal satisfaction probability; this is the good-for-MDP requirement. Any disagreement fails the run."
         }
       },
       "results": {
@@ -61,44 +61,44 @@
       }
     },
     "lib_signal_change": {
-      "description": "Table 2 Liberouter repeated-reachability formulas LIB[6] through LIB[9].",
-      "weight": 0.3,
+      "description": "Liberouter signal-change formulas GF(OR_i (a_i & X !a_i) | (!a_i & X a_i)) (paper Table 2). Paper results are for LIB[6..9]; Slim-Red timed out on LIB[7..9] and is omitted. The hidden test uses other signal counts with renamed atoms.",
+      "weight": 0.25,
       "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
         "state_count_size_weighted_mean": {
           "higher_is_better": false,
           "coefficient": -1.0,
-          "description": "Formula-size-weighted mean number of states per generated GF automaton, preserving compactness while differentiating held-out formula-size slices."
+          "description": "Mean automaton state count per formula, weighted by the formula's size parameter (delay, number of signals, pattern span, or formula length). Computed from the returned automaton."
         },
         "state_count_per_formula": {
           "higher_is_better": false,
           "coefficient": -0.5,
-          "description": "Mean number of states per generated GF automaton, making compactness comparable across train/test formula-count splits."
+          "description": "Mean number of automaton states per formula, counted from the returned automaton."
         },
         "state_count_sum": {
           "higher_is_better": false,
           "coefficient": -0.25,
-          "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
+          "description": "Total number of automaton states over the experiment's formulas (the quantity the paper's tables report)."
         },
         "transition_count_sum": {
           "higher_is_better": false,
           "coefficient": -0.2,
-          "description": "Total number of transitions, penalizing oversized automata that pass traces by enumeration."
+          "description": "Total number of distinct (source, target, accepting) transitions with a satisfiable guard; independent of how guards are split or merged."
         },
         "semantic_check_pass_rate": {
           "higher_is_better": true,
           "coefficient": 1.0,
-          "description": "Agreement with the family semantics on curated periodic words."
-        },
-        "trace_semantics_pass_rate": {
-          "higher_is_better": true,
-          "coefficient": 0.8,
-          "description": "Agreement on canonical positive and negative periodic words for each formula."
+          "description": "Agreement of the automaton with the formula's semantics on evaluator-generated, label-balanced ultimately periodic words (including near-miss mutations). Any disagreement fails the run."
         },
         "generated_trace_pass_rate": {
           "higher_is_better": true,
           "coefficient": 1.2,
-          "description": "Agreement on deterministic generated periodic words that broaden the semantic probe."
+          "description": "Agreement on unconstrained dense random ultimately periodic words. Any disagreement fails the run."
+        },
+        "planning_value_agreement_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Fraction of (MDP, start state) pairs on evaluator-generated MDPs where the optimal probability obtained through the MDP x automaton product (agent resolves the automaton's choices online) equals the true optimal satisfaction probability; this is the good-for-MDP requirement. Any disagreement fails the run."
         }
       },
       "results": {
@@ -116,62 +116,107 @@
       }
     },
     "ncs_ordered_sequence": {
-      "description": "Appendix N/Table 5 Nested Conjunction Sequence repeated-reachability formulas NCS[4] through NCS[11].",
+      "description": "Nested Conjunction Sequence NCS[k1..kn] = GF(a & X^{k1} b & X^{k1+k2} c ...) (paper Appendix N, Table 5, eight rows with GFM-GF sizes 4..11). The extracted Table 5 formulas are garbled; offsets were reconstructed from the visible prefixes (a, X b, X^3 c, ...) and the reported sizes (span + 1). Size weight = span. Slim-Red values are the Table 5 column (sum 1036). Owl-Red is omitted because its last row timed out (finite rows: 8, 16, ..., 512; subtotal 1016 over seven rows).",
+      "weight": 0.15,
+      "primary_metric": "state_count_size_weighted_mean",
+      "metrics": {
+        "state_count_size_weighted_mean": {
+          "higher_is_better": false,
+          "coefficient": -1.0,
+          "description": "Mean automaton state count per formula, weighted by the formula's size parameter (delay, number of signals, pattern span, or formula length). Computed from the returned automaton."
+        },
+        "state_count_per_formula": {
+          "higher_is_better": false,
+          "coefficient": -0.5,
+          "description": "Mean number of automaton states per formula, counted from the returned automaton."
+        },
+        "state_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.25,
+          "description": "Total number of automaton states over the experiment's formulas (the quantity the paper's tables report)."
+        },
+        "transition_count_sum": {
+          "higher_is_better": false,
+          "coefficient": -0.2,
+          "description": "Total number of distinct (source, target, accepting) transitions with a satisfiable guard; independent of how guards are split or merged."
+        },
+        "semantic_check_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Agreement of the automaton with the formula's semantics on evaluator-generated, label-balanced ultimately periodic words (including near-miss mutations). Any disagreement fails the run."
+        },
+        "generated_trace_pass_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.2,
+          "description": "Agreement on unconstrained dense random ultimately periodic words. Any disagreement fails the run."
+        },
+        "planning_value_agreement_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Fraction of (MDP, start state) pairs on evaluator-generated MDPs where the optimal probability obtained through the MDP x automaton product (agent resolves the automaton's choices online) equals the true optimal satisfaction probability; this is the good-for-MDP requirement. Any disagreement fails the run."
+        }
+      },
+      "results": {
+        "slim_red": {
+          "type": "baseline",
+          "state_count_per_formula": 129.5,
+          "state_count_sum": 1036
+        },
+        "gfm_gf": {
+          "type": "proposed",
+          "state_count_size_weighted_mean": 8.307692307692308,
+          "state_count_per_formula": 7.5,
+          "state_count_sum": 60
+        }
+      }
+    },
+    "random_cosafety_gf": {
+      "description": "Headroom experiment (not in the paper): GF(phi) for random co-safety phi over three atoms (operators &, |, X, F, U, negated atoms), generated by the evaluator; the hidden test draws fresh formulas at test time. Size weight = formula length. The paper reports no numbers here; the gfm_gf entry is this reproduction's value on the 16 public formulas of the visible set.",
       "weight": 0.25,
       "primary_metric": "state_count_size_weighted_mean",
       "metrics": {
         "state_count_size_weighted_mean": {
           "higher_is_better": false,
           "coefficient": -1.0,
-          "description": "Formula-size-weighted mean number of states per generated GF automaton, preserving compactness while differentiating held-out formula-size slices."
+          "description": "Mean automaton state count per formula, weighted by the formula's size parameter (delay, number of signals, pattern span, or formula length). Computed from the returned automaton."
         },
         "state_count_per_formula": {
           "higher_is_better": false,
           "coefficient": -0.5,
-          "description": "Mean number of states per generated GF automaton, making compactness comparable across train/test formula-count splits."
+          "description": "Mean number of automaton states per formula, counted from the returned automaton."
         },
         "state_count_sum": {
           "higher_is_better": false,
           "coefficient": -0.25,
-          "description": "Total number of states in the generated GF automata; compactness is the headline benefit."
+          "description": "Total number of automaton states over the experiment's formulas (the quantity the paper's tables report)."
         },
         "transition_count_sum": {
           "higher_is_better": false,
           "coefficient": -0.2,
-          "description": "Total number of transitions, penalizing oversized automata that pass traces by enumeration."
+          "description": "Total number of distinct (source, target, accepting) transitions with a satisfiable guard; independent of how guards are split or merged."
         },
         "semantic_check_pass_rate": {
           "higher_is_better": true,
           "coefficient": 1.0,
-          "description": "Agreement with the family semantics on curated periodic words."
-        },
-        "trace_semantics_pass_rate": {
-          "higher_is_better": true,
-          "coefficient": 0.8,
-          "description": "Agreement on canonical positive and negative periodic words for each formula."
+          "description": "Agreement of the automaton with the formula's semantics on evaluator-generated, label-balanced ultimately periodic words (including near-miss mutations). Any disagreement fails the run."
         },
         "generated_trace_pass_rate": {
           "higher_is_better": true,
           "coefficient": 1.2,
-          "description": "Agreement on deterministic generated periodic words that broaden the semantic probe."
+          "description": "Agreement on unconstrained dense random ultimately periodic words. Any disagreement fails the run."
+        },
+        "planning_value_agreement_rate": {
+          "higher_is_better": true,
+          "coefficient": 1.0,
+          "description": "Fraction of (MDP, start state) pairs on evaluator-generated MDPs where the optimal probability obtained through the MDP x automaton product (agent resolves the automaton's choices online) equals the true optimal satisfaction probability; this is the good-for-MDP requirement. Any disagreement fails the run."
         }
       },
       "results": {
-        "owl_red": {
-          "type": "baseline",
-          "state_count_per_formula": 129.5,
-          "state_count_sum": 1036
-        },
-        "slim_red": {
-          "type": "baseline",
-          "state_count_per_formula": 128.75,
-          "state_count_sum": 1030
-        },
         "gfm_gf": {
           "type": "proposed",
-          "state_count_size_weighted_mean": 8.2,
-          "state_count_per_formula": 7.5,
-          "state_count_sum": 60
+          "state_count_size_weighted_mean": 4.782978723404256,
+          "state_count_per_formula": 4.625,
+          "state_count_sum": 74
         }
       }
     }

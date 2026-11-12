@@ -231,3 +231,6 @@ tmp/
 protocol.md
 *.egg-info
 core.[0-9]*
+
+# Local agent client state
+.claude.json

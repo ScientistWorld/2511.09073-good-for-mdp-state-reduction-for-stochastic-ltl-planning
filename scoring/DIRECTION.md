@@ -1,13 +1,13 @@
 # Research Direction
 
 ## Research Problem
-The benchmark studies construction of small good-for-MDP automata for stochastic planning with temporal objectives. Improvements should address automata-state growth for repeated-reachability Linear Temporal Logic specifications.
+Construct small good-for-MDP automata for recurring co-safety LTL goals `GF phi`, so that MDP × automaton products used for stochastic planning stay small without losing optimality.
 
 ## Core Contribution
-Work should remain in the automata-construction and automata-reduction space: given the same temporal specifications, produce smaller automata that preserve the intended acceptance behavior and remain usable for MDP planning.
+Work should stay in automata construction and reduction. Given the same formulas, produce automata with fewer states (and transitions) that recognise the same language and remain good-for-MDPs. Gains should come from a construction that generalises to unseen formulas.
 
 ## Approach Scope
-Acceptable approaches include improved co-safety finite-automaton construction, better state sharing, symbolic transition simplification, post-construction automata minimisation, or extensions of the paper's GFM/0-1 probabilistic automata pipeline.
+In scope: better finite-pattern automata (smaller nondeterministic automata, simulation- or language-based state merging), semantics-preserving formula rewriting at the level of the recurring goal, minimisation of the produced automata that preserves good-for-MDPness (for example the good-for-games co-Büchi minimisation route the paper also proposes), symbolic transition simplification, and portfolios that keep the smallest correct automaton.
 
 ## Out of Bounds
-Do not replace the task with simulation, trace sampling, model checking over a fixed MDP, or learned predictors of automata size. Do not report a smaller number unless an automaton with the required acceptance structure is actually generated.
+Do not replace the task with simulation, sampling, learned predictors or tables keyed on benchmark names. Do not output automata that are only correct on likely probes. Do not use nondeterminism that needs knowledge of future letters, which breaks the planning guarantee. Do not fit outputs to the evaluator's probes.

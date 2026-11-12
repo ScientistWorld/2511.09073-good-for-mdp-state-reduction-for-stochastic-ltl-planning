@@ -1,0 +1,975 @@
+{
+  "cases": {
+    "better_gf_rewrite": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 9.846153846153847,
+          "state_count_per_formula": 9.666666666666666,
+          "state_count_sum": 29,
+          "transition_count_sum": 81,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2.9304347826086956,
+          "state_count_per_formula": 2.8125,
+          "state_count_sum": 45,
+          "transition_count_sum": 126,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": 1.9500000000000002,
+      "rank_all_cases": 0.004658259818915194,
+      "rank_honest_cohort": 0.004997297626178213
+    },
+    "gfm_gf_reference": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": 0.0,
+      "rank_all_cases": 0.0,
+      "rank_honest_cohort": 0.0
+    },
+    "shortcut_constant_accept": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: semantic or planning disagreement",
+        "tdr_9: semantic or planning disagreement",
+        "tdr_11: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_constant_reject": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: semantic or planning disagreement",
+        "tdr_9: semantic or planning disagreement",
+        "tdr_11: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_crash": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "constructor: constructor exited with 3: "
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_direct_scores": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": 0.0,
+      "rank_all_cases": 0.0,
+      "rank_honest_cohort": null
+    },
+    "shortcut_empty_output": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_flags": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: semantic or planning disagreement",
+        "tdr_9: semantic or planning disagreement",
+        "tdr_11: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_ground_truth_options": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: semantic or planning disagreement",
+        "tdr_9: semantic or planning disagreement",
+        "tdr_11: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_missing_benchmark": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: missing output"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_non_gfm": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: semantic or planning disagreement",
+        "tdr_9: semantic or planning disagreement",
+        "tdr_11: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_null_count": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": 0.0,
+      "rank_all_cases": 0.0,
+      "rank_honest_cohort": null
+    },
+    "shortcut_prune_registry": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "lib_7: semantic or planning disagreement",
+        "lib_9: semantic or planning disagreement",
+        "lib_10: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_reported_counts": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": 0.0,
+      "rank_all_cases": 0.0,
+      "rank_honest_cohort": null
+    },
+    "shortcut_sparse_guards": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: semantic or planning disagreement",
+        "tdr_9: semantic or planning disagreement",
+        "tdr_11: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_string_accepting": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: RowError: 'accepting' must be a JSON boolean",
+        "tdr_9: RowError: 'accepting' must be a JSON boolean",
+        "tdr_11: RowError: 'accepting' must be a JSON boolean"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "shortcut_undeclared_states": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: RowError: transition references an undeclared state",
+        "tdr_9: RowError: transition references an undeclared state",
+        "tdr_11: RowError: transition references an undeclared state"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": null
+    },
+    "weaker_dfa": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 3.9260869565217393,
+          "state_count_per_formula": 3.875,
+          "state_count_sum": 62,
+          "transition_count_sum": 185,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        }
+      },
+      "failed": false,
+      "errors": [],
+      "delta_pair": -0.975,
+      "rank_all_cases": -7.273374146928798e-05,
+      "rank_honest_cohort": -7.807367938605052e-05
+    },
+    "weaker_no_acceptance": {
+      "metrics": {
+        "tdr_delayed_response": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "lib_signal_change": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "ncs_ordered_sequence": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "random_cosafety_gf": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      },
+      "failed": true,
+      "errors": [
+        "tdr_7: semantic or planning disagreement",
+        "tdr_9: semantic or planning disagreement",
+        "tdr_11: semantic or planning disagreement"
+      ],
+      "delta_pair": -10.299999999999997,
+      "rank_all_cases": -11.07856469614364,
+      "rank_honest_cohort": -11.891767211949615
+    }
+  },
+  "reference": {
+    "tdr_delayed_response": {
+      "state_count_size_weighted_mean": 10.296296296296296,
+      "state_count_per_formula": 10.0,
+      "state_count_sum": 30,
+      "transition_count_sum": 60,
+      "semantic_check_pass_rate": 1.0,
+      "generated_trace_pass_rate": 1.0,
+      "planning_value_agreement_rate": 1.0
+    },
+    "lib_signal_change": {
+      "state_count_size_weighted_mean": 18.692307692307693,
+      "state_count_per_formula": 18.333333333333332,
+      "state_count_sum": 55,
+      "transition_count_sum": 159,
+      "semantic_check_pass_rate": 1.0,
+      "generated_trace_pass_rate": 1.0,
+      "planning_value_agreement_rate": 1.0
+    },
+    "ncs_ordered_sequence": {
+      "state_count_size_weighted_mean": 8.714285714285714,
+      "state_count_per_formula": 8.0,
+      "state_count_sum": 32,
+      "transition_count_sum": 64,
+      "semantic_check_pass_rate": 1.0,
+      "generated_trace_pass_rate": 1.0,
+      "planning_value_agreement_rate": 1.0
+    },
+    "random_cosafety_gf": {
+      "state_count_size_weighted_mean": 3.765217391304348,
+      "state_count_per_formula": 3.75,
+      "state_count_sum": 60,
+      "transition_count_sum": 171,
+      "semantic_check_pass_rate": 1.0,
+      "generated_trace_pass_rate": 1.0,
+      "planning_value_agreement_rate": 1.0
+    }
+  },
+  "default_path": {
+    "methods_scored": [
+      "gfm_gf_reference",
+      "shortcut_direct_scores",
+      "shortcut_prune_registry"
+    ],
+    "forged_values_present": false,
+    "every_metric_present": true
+  },
+  "reference_seed_max_abs_diff": {
+    "11": 0.0,
+    "22": 0.0
+  },
+  "train_vs_test_rank_all_cases": {
+    "better_gf_rewrite": 0.0037211979316900835,
+    "gfm_gf_reference": 0.0,
+    "shortcut_constant_accept": -11.080588638949985,
+    "shortcut_constant_reject": -11.080588638949985,
+    "shortcut_crash": -11.080588638949985,
+    "shortcut_direct_scores": 0.0,
+    "shortcut_empty_output": -11.080588638949985,
+    "shortcut_flags": -11.080588638949985,
+    "shortcut_ground_truth_options": -11.080588638949985,
+    "shortcut_missing_benchmark": -11.080588638949985,
+    "shortcut_non_gfm": -11.080588638949985,
+    "shortcut_null_count": 0.0,
+    "shortcut_prune_registry": -11.080588638949985,
+    "shortcut_reported_counts": 0.0,
+    "shortcut_sparse_guards": -11.080588638949985,
+    "shortcut_string_accepting": -11.080588638949985,
+    "shortcut_undeclared_states": -11.080588638949985,
+    "weaker_dfa": -0.011359726434369995,
+    "weaker_no_acceptance": -11.080588638949985
+  }
+}

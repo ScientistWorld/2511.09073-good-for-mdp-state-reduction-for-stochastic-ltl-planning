@@ -1,0 +1,704 @@
+{
+  "experiments": {
+    "tdr_delayed_response": {
+      "results": {
+        "better_gf_rewrite": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "gfm_gf_reference": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_constant_accept": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_constant_reject": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_crash": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_direct_scores": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_empty_output": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_flags": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_ground_truth_options": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_missing_benchmark": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_non_gfm": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_null_count": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_prune_registry": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_reported_counts": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_sparse_guards": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_string_accepting": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_undeclared_states": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "weaker_dfa": {
+          "state_count_size_weighted_mean": 10.296296296296296,
+          "state_count_per_formula": 10.0,
+          "state_count_sum": 30,
+          "transition_count_sum": 60,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "weaker_no_acceptance": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      }
+    },
+    "lib_signal_change": {
+      "results": {
+        "better_gf_rewrite": {
+          "state_count_size_weighted_mean": 9.846153846153847,
+          "state_count_per_formula": 9.666666666666666,
+          "state_count_sum": 29,
+          "transition_count_sum": 81,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "gfm_gf_reference": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_constant_accept": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_constant_reject": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_crash": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_direct_scores": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_empty_output": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_flags": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_ground_truth_options": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_missing_benchmark": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_non_gfm": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_null_count": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_prune_registry": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_reported_counts": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_sparse_guards": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_string_accepting": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_undeclared_states": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "weaker_dfa": {
+          "state_count_size_weighted_mean": 18.692307692307693,
+          "state_count_per_formula": 18.333333333333332,
+          "state_count_sum": 55,
+          "transition_count_sum": 159,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "weaker_no_acceptance": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 6144,
+          "transition_count_sum": 49152,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      }
+    },
+    "ncs_ordered_sequence": {
+      "results": {
+        "better_gf_rewrite": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "gfm_gf_reference": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_constant_accept": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_constant_reject": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_crash": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_direct_scores": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_empty_output": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_flags": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_ground_truth_options": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_missing_benchmark": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_non_gfm": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_null_count": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_prune_registry": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_reported_counts": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_sparse_guards": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_string_accepting": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_undeclared_states": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "weaker_dfa": {
+          "state_count_size_weighted_mean": 8.714285714285714,
+          "state_count_per_formula": 8.0,
+          "state_count_sum": 32,
+          "transition_count_sum": 64,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "weaker_no_acceptance": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 8192,
+          "transition_count_sum": 65536,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      }
+    },
+    "random_cosafety_gf": {
+      "results": {
+        "better_gf_rewrite": {
+          "state_count_size_weighted_mean": 2.9304347826086956,
+          "state_count_per_formula": 2.8125,
+          "state_count_sum": 45,
+          "transition_count_sum": 126,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "gfm_gf_reference": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_constant_accept": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_constant_reject": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_crash": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_direct_scores": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_empty_output": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_flags": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_ground_truth_options": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_missing_benchmark": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_non_gfm": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_null_count": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_prune_registry": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_reported_counts": {
+          "state_count_size_weighted_mean": 3.765217391304348,
+          "state_count_per_formula": 3.75,
+          "state_count_sum": 60,
+          "transition_count_sum": 171,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "shortcut_sparse_guards": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_string_accepting": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "shortcut_undeclared_states": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        },
+        "weaker_dfa": {
+          "state_count_size_weighted_mean": 3.9260869565217393,
+          "state_count_per_formula": 3.875,
+          "state_count_sum": 62,
+          "transition_count_sum": 185,
+          "semantic_check_pass_rate": 1.0,
+          "generated_trace_pass_rate": 1.0,
+          "planning_value_agreement_rate": 1.0
+        },
+        "weaker_no_acceptance": {
+          "state_count_size_weighted_mean": 2048.0,
+          "state_count_per_formula": 2048.0,
+          "state_count_sum": 32768,
+          "transition_count_sum": 262144,
+          "semantic_check_pass_rate": 0.0,
+          "generated_trace_pass_rate": 0.0,
+          "planning_value_agreement_rate": 0.0
+        }
+      }
+    }
+  }
+}

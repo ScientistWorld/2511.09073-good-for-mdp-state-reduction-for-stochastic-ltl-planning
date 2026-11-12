@@ -2,105 +2,275 @@
   "benchmarks": [
     {
       "name": "tdr_6",
-      "family": "TDR",
-      "n": 6,
-      "formula": "GF(a & X(X(X(X(X(X(b)))))))"
-    },
-    {
-      "name": "tdr_7",
-      "family": "TDR",
-      "n": 7,
-      "formula": "GF(a & X(X(X(X(X(X(X(b))))))))"
+      "experiment": "tdr_delayed_response",
+      "formula": "GF(a & X(X(X(X(X(X(b)))))))",
+      "atoms": [
+        "a",
+        "b"
+      ]
     },
     {
       "name": "tdr_8",
-      "family": "TDR",
-      "n": 8,
-      "formula": "GF(a & X(X(X(X(X(X(X(X(b)))))))))"
-    },
-    {
-      "name": "tdr_9",
-      "family": "TDR",
-      "n": 9,
-      "formula": "GF(a & X(X(X(X(X(X(X(X(X(b))))))))))"
+      "experiment": "tdr_delayed_response",
+      "formula": "GF(a & X(X(X(X(X(X(X(X(b)))))))))",
+      "atoms": [
+        "a",
+        "b"
+      ]
     },
     {
       "name": "tdr_10",
-      "family": "TDR",
-      "n": 10,
-      "formula": "GF(a & X(X(X(X(X(X(X(X(X(X(b)))))))))))"
+      "experiment": "tdr_delayed_response",
+      "formula": "GF(a & X(X(X(X(X(X(X(X(X(X(b)))))))))))",
+      "atoms": [
+        "a",
+        "b"
+      ]
+    },
+    {
+      "name": "lib_5",
+      "experiment": "lib_signal_change",
+      "formula": "GF((a1 & X(!a1)) | (!a1 & X(a1)) | (a2 & X(!a2)) | (!a2 & X(a2)) | (a3 & X(!a3)) | (!a3 & X(a3)) | (a4 & X(!a4)) | (!a4 & X(a4)) | (a5 & X(!a5)) | (!a5 & X(a5)))",
+      "atoms": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5"
+      ]
     },
     {
       "name": "lib_6",
-      "family": "LIB",
-      "n": 6,
-      "formula": "GF(some signal changes value in the next step, 6 signals)"
-    },
-    {
-      "name": "lib_7",
-      "family": "LIB",
-      "n": 7,
-      "formula": "GF(some signal changes value in the next step, 7 signals)"
+      "experiment": "lib_signal_change",
+      "formula": "GF((a1 & X(!a1)) | (!a1 & X(a1)) | (a2 & X(!a2)) | (!a2 & X(a2)) | (a3 & X(!a3)) | (!a3 & X(a3)) | (a4 & X(!a4)) | (!a4 & X(a4)) | (a5 & X(!a5)) | (!a5 & X(a5)) | (a6 & X(!a6)) | (!a6 & X(a6)))",
+      "atoms": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6"
+      ]
     },
     {
       "name": "lib_8",
-      "family": "LIB",
-      "n": 8,
-      "formula": "GF(some signal changes value in the next step, 8 signals)"
+      "experiment": "lib_signal_change",
+      "formula": "GF((a1 & X(!a1)) | (!a1 & X(a1)) | (a2 & X(!a2)) | (!a2 & X(a2)) | (a3 & X(!a3)) | (!a3 & X(a3)) | (a4 & X(!a4)) | (!a4 & X(a4)) | (a5 & X(!a5)) | (!a5 & X(a5)) | (a6 & X(!a6)) | (!a6 & X(a6)) | (a7 & X(!a7)) | (!a7 & X(a7)) | (a8 & X(!a8)) | (!a8 & X(a8)))",
+      "atoms": [
+        "a1",
+        "a2",
+        "a3",
+        "a4",
+        "a5",
+        "a6",
+        "a7",
+        "a8"
+      ]
     },
     {
-      "name": "lib_9",
-      "family": "LIB",
-      "n": 9,
-      "formula": "GF(some signal changes value in the next step, 9 signals)"
+      "name": "ncs_1",
+      "experiment": "ncs_ordered_sequence",
+      "formula": "GF(a & X(b) & X(X(X(c))))",
+      "atoms": [
+        "a",
+        "b",
+        "c"
+      ]
     },
     {
-      "name": "ncs_4",
-      "family": "NCS",
-      "n": 4,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))))"
+      "name": "ncs_3",
+      "experiment": "ncs_ordered_sequence",
+      "formula": "GF(a & X(b) & X(X(X(c))) & X(X(X(X(X(d))))))",
+      "atoms": [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
     },
     {
       "name": "ncs_5",
-      "family": "NCS",
-      "n": 5,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))))"
-    },
-    {
-      "name": "ncs_6",
-      "family": "NCS",
-      "n": 6,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))))"
+      "experiment": "ncs_ordered_sequence",
+      "formula": "GF(a & X(b) & X(X(X(c))) & X(X(X(X(X(d))))) & X(X(X(X(X(X(X(e))))))))",
+      "atoms": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
     },
     {
       "name": "ncs_7",
-      "family": "NCS",
-      "n": 7,
-      "formula": "GF(a & X(b) & X(X(c)) & X(X(X(d))) & X(X(X(X(e)))) & X(X(X(X(X(f))))) & X(X(X(X(X(X(g)))))))"
+      "experiment": "ncs_ordered_sequence",
+      "formula": "GF(a & X(b) & X(X(X(c))) & X(X(X(X(X(d))))) & X(X(X(X(X(X(X(X(X(e))))))))))",
+      "atoms": [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
     },
     {
-      "name": "ncs_8",
-      "family": "NCS",
-      "n": 8,
-      "formula": "GF(nested conjunction sequence over 8 offsets)"
+      "name": "rnd_00",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(((X(r) & r) | p) & F(r) & X(X(q) & p) & X(q & r))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
     },
     {
-      "name": "ncs_9",
-      "family": "NCS",
-      "n": 9,
-      "formula": "GF(nested conjunction sequence over 9 offsets)"
+      "name": "rnd_01",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF((X(X(r)) U r) & F(!q U F(q)))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
     },
     {
-      "name": "ncs_10",
-      "family": "NCS",
-      "n": 10,
-      "formula": "GF(nested conjunction sequence over 10 offsets)"
+      "name": "rnd_02",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(X(((X(r) | r) & X(q)) | X(p | q)))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
     },
     {
-      "name": "ncs_11",
-      "family": "NCS",
-      "n": 11,
-      "formula": "GF(nested conjunction sequence over 11 offsets)"
+      "name": "rnd_03",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(F(X(F(X(q))) | X(F(p))))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_04",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF((!r & X(q)) | (q U (p U X(p))))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_05",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(X((X(q) | p) & X(F(r)) & X(q) & r) & X(F(X(X(!r U q)))))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_06",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(((!q | p | r) & X(X(X(q))) & p) | X(X(p & q)))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_07",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(X(q) U (!p & (!q U F(!q)) & (!q | r) & r))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_08",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF((F(!p) | X(p & q & r)) & X((p U r) & F(r)))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_09",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(X(!r & (p U F(r)) & X(F(!p & !q)) & X(q)))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_10",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF((((p & q) | F(p)) & (X(r) | p)) U F(X(X(p))))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_11",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(F((X(q & r) & p) | F(q)))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_12",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF((X(X(r)) U (X(!r) & q)) | (X(p) & q))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_13",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(F(((X(!q) U (!q & r)) & (p U F(r))) U X(X(p))))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_14",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(X((((!p & r) U r) & X(q) & q & r) | X((p | r) & F(q) & p)))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
+    },
+    {
+      "name": "rnd_15",
+      "experiment": "random_cosafety_gf",
+      "formula": "GF(F((q U F(r)) & F(X(r))) & X(!r U r) & X(X(F(X(!r)))))",
+      "atoms": [
+        "p",
+        "q",
+        "r"
+      ]
     }
   ]
 }

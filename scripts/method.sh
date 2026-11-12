@@ -1,17 +1,22 @@
 #!/bin/bash
-# Run the paper's proposed method.
+# Register the paper's method (direct GFM construction for GF(co-safety)
+# formulas, Section 6) as a constructor and score it on the public paper set.
 #
-# This script trains/runs the paper's method using code in method/.
+# The constructor is method/direct_gfm.py <specs.json> <output.json>; the
+# evaluators run it on their own benchmark specs.
 #
-# Usage:
-#   bash scripts/method.sh
+# Usage: bash scripts/method.sh
 
 set -e
 
 cd /home/user
 
-python method/direct_gfm.py \
-  --benchmarks data/gf_benchmarks.json \
-  --output outputs/results.json
+mkdir -p outputs
+cat > outputs/gfm_gf.method.json <<'JSON'
+{"method": "gfm_gf", "command": ["python", "method/direct_gfm.py"]}
+JSON
 
-bash scripts/evaluate.sh outputs/results.json
+# Convenience artifact: automata for the public benchmark list.
+python method/direct_gfm.py data/gf_benchmarks.json outputs/gfm_gf_public_automata.json
+
+bash scripts/evaluate.sh

@@ -1,22 +1,31 @@
 #!/bin/bash
-# Run a baseline method from the paper.
+# Run a runnable baseline from the hardening audit and score it like any method.
 #
-# Baselines are simple reference methods the paper compares against. 
-# Implement this only if applicable, i.e. the paper has baselines.
-# You do not need to implement all baselines to begin — 
-# just enough to validate that the evaluation pipeline works 
-# and provide a reference point. You can decide to expand more baselines later.
-# Each baseline must be actually run and scored through evaluate.sh
-# so the numbers are verified, not self-reported.
-# You can decide what this baseline script should do yourself.
+# Available baselines (all registered through the same manifest interface):
+#   brute_force_dba  deterministic Buchi automaton of GF(phi) (pending-attempt
+#                    monitor) -- the determinisation the paper's construction avoids
+#   weaker_dfa       the paper's reset construction applied to a deterministic
+#                    automaton for phi instead of a small NFA
+# Owl/Owl-Red and Slim/Slim-Red numbers are paper-reported values in
+# scoring/reference.json (those tools are not packaged).
 #
-# Usage:
-#   bash scripts/baseline.sh <name>
+# Usage: bash scripts/baseline.sh <brute_force_dba|weaker_dfa>
 
 set -e
 
 cd /home/user
 
-echo "No runnable Owl/Slim baseline is packaged; baselines in scoring/reference.json are paper-reported comparison points." >&2
-echo "Use bash scripts/method.sh to reproduce the implemented direct GFM-GF construction." >&2
-exit 2
+NAME="${1:?usage: bash scripts/baseline.sh <brute_force_dba|weaker_dfa>}"
+case "$NAME" in
+  brute_force_dba|weaker_dfa) ;;
+  *) echo "unknown baseline: $NAME" >&2; exit 2 ;;
+esac
+
+DIR="outputs/baseline_$NAME"
+rm -rf "$DIR"
+mkdir -p "$DIR"
+cat > "$DIR/$NAME.method.json" <<JSON
+{"method": "$NAME", "command": ["python", "baseline/gf_baselines.py", "$NAME"]}
+JSON
+python eval/train/evaluate_gf.py --outputs "$DIR" --output "$DIR/scores_train.json"
+python eval/train/evaluate_gf.py --suite paper --outputs "$DIR" --output "$DIR/scores_paper.json"

@@ -1,23 +1,9 @@
 # Train/Test Evaluation Design Notes
 
-## Checks Performed
+Current design (hardening iteration; see `HARDENING.md` for the audit):
 
-- Compared `scripts/evaluate_train.sh` and `scripts/evaluate_test.sh`: train calls `eval/train/evaluate_gf.py` and writes `scoring/scores_train.json`; test calls `eval/test/evaluate_gf.py` and writes `scoring/scores_test.json`.
-- Checked that both scripts discover method artifacts through the evaluator input path rather than hardcoding a method name.
-- Checked that train/test evaluators read method-produced JSON artifacts and do not regenerate the method inline.
-- Grepped for train/test cross-imports inside `eval/train/` and `eval/test/`; none were found.
-- Confirmed that no `scoring/scores_train.json` or `scoring/scores_test.json` stub exists.
-- Ran `bash -n` on both train/test evaluation scripts.
-
-## Changes Made
-
-- Added `generated_trace_pass_rate` to both slices. It evaluates each generated automaton on deterministic pseudo-random periodic words, using different seeds for train and held-out test. This makes shortcut methods that memorize the visible curated traces more likely to separate from methods that implement the actual automaton semantics.
-- Added `transition_count_sum` to both slices. This penalizes oversized transition-enumerating automata that may pass trace checks without improving the compact construction objective.
-- Updated `scoring/reference.json` so every nonzero metric has `higher_is_better`, `coefficient`, and `description`.
-- Reweighted trace metrics slightly: canonical trace agreement remains visible, but the broader generated trace agreement receives higher weight because it better probes semantic generalization.
-
-## Runtime Concerns For Next Iteration
-
-- `jq` was not installed in this environment, so JSON syntax was inspected by reading rather than by a JSON parser.
-- The top-level legacy evaluator `eval/evaluate_gf.py` still contains the original combined benchmark scoring path used by `scripts/evaluate.sh`. It was outside this iteration's allowed edit scope, but future hiding/packaging should ensure a scientist agent only sees `eval/train/` and not held-out test shape through legacy top-level files.
-- The generated trace metric is deterministic and lightweight, but the runner should confirm it does not saturate for trivial always-accepting or always-rejecting automata.
+- **Method interface.** A method is a constructor command registered in `outputs/<name>.method.json`. Each evaluator generates its own benchmark specs, runs `<command> <specs.json> <output.json>` and scores the returned automata. `eval/` never imports `method/`. Train and test use the same interface and no method name is hardcoded. Every manifest on disk is scored.
+- **Evaluator-owned problem.** Formula, atoms and size parameter come only from the evaluator's spec table. The test (`eval/test/`) uses unseen delays, signal counts and NCS rows with renamed atoms, plus 16 random `GF(co-safety)` formulas generated at test time from a seed held only in `eval/test/`. Train (`eval/train/`, listed in `data/gf_benchmarks.json`) uses other parameters and another seed. The two evaluator files share no code; they are deliberate copies with different suites and seeds.
+- **Recomputed numbers.** State counts come from the declared states. Transition counts are distinct `(src, dst, accepting)` triples with a satisfiable guard. Self-reported fields are ignored.
+- **Correctness gate.** Lasso-word probes come in two kinds: label-balanced with near-miss mutations, and unconstrained dense random words. Ground truth is direct LTL semantics on the lasso. The planning check compares, on evaluator-generated MDPs (iid letter chains, mixtures with traps, random MDPs), the optimal value through the MDP × automaton product with the true optimal value. The true value is computed with a deterministic progression monitor, in canonical DNF with absorption. The computation uses MEC decomposition, accepting MECs and max reachability. Extra probes and MDPs are seeded by a hash of the method's own output, so a probe-fitted automaton cannot be precomputed. Any disagreement, malformed output, cap violation (2048 states / 16384 edges), crash or timeout fails the method. A failed method gets the worst value of every metric in every experiment.
+- **Determinism.** All generation uses a SHA-256-seeded splitmix64 RNG, independent of `PYTHONHASHSEED` and of Python's `random` module.

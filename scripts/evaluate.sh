@@ -1,23 +1,12 @@
 #!/bin/bash
-# Evaluation script — the standard way to evaluate work in this environment.
+# Evaluate every registered method (outputs/*.method.json) on the public
+# benchmark set that mirrors the paper's tables (TDR[6..10], LIB[6..9],
+# NCS rows 1..8 of Appendix N) plus the visible random GF(co-safety) formulas,
+# and write scoring/scores.json for comparison with scoring/reference.json.
 #
-# This script must be SELF-CONTAINED using only code in eval/.
-# Do NOT import from method/ — evaluate.sh must work even when the
-# paper's method code is hidden from a scientist agent.
+# This uses only code in eval/; it never imports method/.
 #
-# Design it so that anyone following the same output format can run
-# this script to evaluate their results.
-#
-# OUTPUT CONTRACT: This script MUST write scoring/scores.json containing
-# a JSON dict nested by experiment, e.g.:
-#   {"imagenet_classification": {"top1_accuracy": 82.1, "top5_accuracy": 94.8}}
-# Experiment and metric names must match the keys in scoring/reference.json.
-# This file is read by the system for automated comparison.
-#
-# Example usage:
-#   bash scripts/evaluate.sh outputs/results.json
-#
-# Called from run.sh after training, or independently.
+# Usage: bash scripts/evaluate.sh [outputs_dir] [score_file]
 
 set -e
 
@@ -25,13 +14,7 @@ cd /home/user
 
 mkdir -p scoring
 
-INPUT="${1:-outputs/results.json}"
-OUTPUT="${2:-scoring/scores.json}"
+OUTPUTS_DIR="${1:-outputs}"
+SCORE_FILE="${2:-scoring/scores.json}"
 
-if [ ! -f "$INPUT" ]; then
-  echo "Missing method artifact: $INPUT" >&2
-  echo "Run 'bash scripts/method.sh' first, or pass an explicit artifact path." >&2
-  exit 2
-fi
-
-python eval/evaluate_gf.py --input "$INPUT" --output "$OUTPUT"
+python eval/train/evaluate_gf.py --suite paper --outputs "$OUTPUTS_DIR" --output "$SCORE_FILE"

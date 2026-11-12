@@ -1,28 +1,35 @@
 # Evaluation Targets
 
+All targets are measured by `bash scripts/evaluate_test.sh` (held-out) and `bash scripts/evaluate_train.sh` (visible) on every method registered in `outputs/*.method.json`. Numbers are recomputed from the returned automata.
+
 ## Primary: tdr_delayed_response
-Tests whether compact automata can be constructed for delayed-response repeated-reachability specifications.
-- **Metric**: `state_count_size_weighted_mean` (lower is better)
-- **Run**: `bash scripts/method.sh`, which writes method outputs and then calls `bash scripts/evaluate.sh`
+Compact automata for delayed-response recurring goals.
+- **Metric**: `state_count_size_weighted_mean` (lower is better); also `state_count_per_formula`, `state_count_sum`, `transition_count_sum`.
+- **Paper reference**: proposed construction 45 states over TDR[6..10]; reduced Owl 1984, reduced slim 1002.
 
 ## Constraint: tdr_delayed_response
-The constructed automata must still represent the intended delayed-response condition rather than becoming small by dropping required accepting behavior.
-- **Metrics**: `semantic_check_pass_rate`, `trace_semantics_pass_rate` (higher is better)
+The automata must recognise the formula's language and be good-for-MDPs.
+- **Metrics**: `semantic_check_pass_rate`, `generated_trace_pass_rate`, `planning_value_agreement_rate` (higher is better; any disagreement fails the run).
 
 ## Primary: lib_signal_change
-Tests whether compact automata can be constructed for repeated signal-change liveness specifications.
-- **Metric**: `state_count_size_weighted_mean` (lower is better)
-- **Run**: `bash scripts/method.sh`, which writes method outputs and then calls `bash scripts/evaluate.sh`
+Compact automata for signal-change liveness.
+- **Metric**: `state_count_size_weighted_mean` (lower is better); also `state_count_per_formula`, `state_count_sum`, `transition_count_sum`.
+- **Paper reference**: proposed construction 64 states over LIB[6..9]; reduced Owl 68.
 
 ## Constraint: lib_signal_change
-The constructed automata must still accept recurring signal changes and reject traces where monitored signals remain fixed.
-- **Metrics**: `semantic_check_pass_rate`, `trace_semantics_pass_rate` (higher is better)
+- **Metrics**: `semantic_check_pass_rate`, `generated_trace_pass_rate`, `planning_value_agreement_rate`.
 
 ## Primary: ncs_ordered_sequence
-Tests whether compact automata can be constructed for nested conjunction sequence repeated-reachability specifications from Appendix N/Table 5.
-- **Metric**: `state_count_size_weighted_mean` (lower is better)
-- **Run**: `bash scripts/method.sh`, which writes method outputs and then calls `bash scripts/evaluate.sh`
+Compact automata for nested conjunction sequences (Appendix N).
+- **Metric**: `state_count_size_weighted_mean` (lower is better); also `state_count_per_formula`, `state_count_sum`, `transition_count_sum`.
+- **Paper reference**: proposed construction 60 states over the eight Table 5 rows; reduced slim 1036.
 
 ## Constraint: ncs_ordered_sequence
-The constructed automata must still accept recurring ordered observation sequences and reject traces that omit or misorder required observations.
-- **Metrics**: `semantic_check_pass_rate`, `trace_semantics_pass_rate` (higher is better)
+- **Metrics**: `semantic_check_pass_rate`, `generated_trace_pass_rate`, `planning_value_agreement_rate`.
+
+## Primary: random_cosafety_gf
+Compact automata for randomly generated recurring co-safety goals (headroom experiment; no paper numbers).
+- **Metric**: `state_count_size_weighted_mean` (lower is better); also `state_count_per_formula`, `state_count_sum`, `transition_count_sum`.
+
+## Constraint: random_cosafety_gf
+- **Metrics**: `semantic_check_pass_rate`, `generated_trace_pass_rate`, `planning_value_agreement_rate`.

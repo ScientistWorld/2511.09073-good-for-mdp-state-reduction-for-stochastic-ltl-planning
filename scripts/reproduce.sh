@@ -1,22 +1,18 @@
 #!/bin/bash
 # Reproduce the paper's results end-to-end.
 #
-# This script runs inside the compute container and should call
-# scripts/baseline.sh and scripts/method.sh to run baselines and
-# the paper's method, each of which calls scripts/evaluate.sh.
+# Registers the paper's direct GFM construction as a constructor
+# (outputs/gfm_gf.method.json), scores it on the public paper benchmark set
+# (scoring/scores.json: TDR[6..10]=45, LIB[6..9]=64, NCS rows 1..8=60 states),
+# on the visible train slice and on the held-out test, then validates.
 #
-# Assumes:
-#   - Container is built (environment/container.sif)
-#   - Data and models are downloaded (via scripts/download.sh)
-#   - Working directory is /home/user
-#
-# This is the "gold standard" reproduction — 
-# You do not need to run this, but keep this in good shape
-# so other agents can easily run a full loop of reproduction and get the paper's numbers.
+# Assumes the container is built and the working directory is /home/user.
 
 set -e
 
 cd /home/user
 
 bash scripts/method.sh
+bash scripts/evaluate_train.sh
+bash scripts/evaluate_test.sh
 python validate.py --compare

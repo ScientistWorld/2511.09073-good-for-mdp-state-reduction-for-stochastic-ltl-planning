@@ -1,21 +1,20 @@
 #!/bin/bash
-# Example job script submitted via the end-of-turn YAML block.
+# Job script: hardening audit, then regenerate the reference scores end to end.
 #
-# This runs inside the compute container with:
-#   - Your workspace mounted at /home/user
-#   - GPU(s) available
-#   - No internet access
-#
-# Make sure all data, code, and dependencies are already in the
-# workspace or baked into the container before submitting.
+# Runs inside the compute container (workspace at /home/user, no internet).
 
 set -e
 
 cd /home/user
 
-bash scripts/method.sh
-python validate.py --compare
+# Hardening audit (reference, better/weaker variants, brute force, shortcuts),
+# every case scored by the unmodified hidden evaluator.
+bash redteam/hardening/run_audit.sh
 
-bash scripts/evaluate_train.sh outputs scoring/scores_train.json
-bash scripts/evaluate_test.sh outputs scoring/scores_test.json scoring/scores_train.json
+# Reference end to end: register the method, score it on the public paper set
+# (scoring/scores.json), the train slice and the hidden test.
+rm -rf outputs/audit_all outputs/audit_default outputs/audit_ref
+bash scripts/method.sh
+bash scripts/evaluate_train.sh
+bash scripts/evaluate_test.sh
 python validate.py --compare
